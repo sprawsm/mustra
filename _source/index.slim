@@ -39,6 +39,8 @@ html
               a href="#s-06" data-scroll="smooth" Messages
             li
               a href="#s-07" data-scroll="smooth" Media object
+            li
+              a href="#s-08" data-scroll="smooth" Tabs
         .col.cs-3
           p.upcase Templates
           ul.list-unstyled
@@ -331,6 +333,29 @@ html
             .styleguide-content
               p The media element should be used any time you need a key-value pair in a visual sense. This includes a comment+avatar combo, literal key-value pairs (e.g. two-column tables), etc.
               p The key element accepts an image, or text, while the body acts as a standard container. Entire media element acts as a table and uses no floats for layout.
+
+      section.styleguide-section#s-08
+        .grid
+          .col.cs-12
+            h1.styleguide-divider
+              | Tabs
+              span.styleguide-divider-actions.fade
+                a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+        .grid
+          .col.cs-8
+            ul role="tablist" class="tabs"
+              li
+                a role="tab" class="tab" aria-controls="tab-1" href="#tab-1" Tab 1
+              li
+                a role="tab" class="tab" aria-controls="tab-2" href="#tab-2" Tab 2
+              li
+                a role="tab" class="tab" aria-controls="tab-3" href="#tab-3" Tab 3
+            .tab-panel#tab-1 role="tabpanel" ... tab 1 ...
+            .tab-panel#tab-2 role="tabpanel" ... tab 2 ...
+            .tab-panel#tab-3 role="tabpanel" ... tab 3 ...
+          .col.cs-4
+            .styleguide-content
+              p Basic tabs implementation with support for history API and accessibility features.
 
     .grid
       .col.cs-12

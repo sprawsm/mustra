@@ -3,51 +3,89 @@ $(document).ready(function() {
   // ===========================================================================
   //
   // Controls for a tabbed interface
-  // Originally from http://d.pr/DaUE
-  // Adapted by Superawesøme: https://github.com/sprawsm/sprawsm-tabs
+  // Originally from https://24ways.org/2015/how-tabs-should-work/
   //
   // Example markup:
   //
-  // <div class="js-tabset">
-
-  //   <ul class="js-tabset-nav" role="tablist">
-  //     <li><a href="#tab1">Tab 1</a></li>
-  //     <li><a href="#tab2">Tab 2</a></li>
-  //     <li><a href="#tab3">Tab 3</a></li>
-  //   </ul>
-
-  //   <div class="js-tabset-container">
-  //       <div id="tab1"><p>This is tab 1.</p></div>
-  //       <div id="tab2"><p>This is tab 2.</p></div>
-  //       <div id="tab3"><p>This is tab 3.</p></div>
-  //   </div>
-
+  // <ul role="tablist" class="tabs">
+  //   <li><a role="tab" class="tab" aria-controls="tab-1" href="#tab-1">Tab 1</a></li>
+  //   <li><a role="tab" class="tab" aria-controls="tab-2" href="#tab-2">Tab 2</a></li>
+  //   <li><a role="tab" class="tab" aria-controls="tab-3" href="#tab-3">Tab 3</a></li>
+  // </ul>
+  // <div role="tabpanel" class="panel" id="tab-1">
+  // ... tab 1 ...
+  // </div>
+  // <div role="tabpanel" class="panel" id="tab-2">
+  // ... tab 2 ...
+  // </div>
+  // <div role="tabpanel" class="panel" id="tab-3">
+  // ... tab 3 ...
   // </div>
 
-  $(function () {
-    var tabNavLink = $('.js-tabset-nav a');
-    $('.js-tabset-container > div').hide();
-    tabNavLink.each(function() {
-      $this = $(this);
-      if ($this.parents('li').is(':first-child')) {
-        $this.parent().addClass('active');
-      }
-    });
-    $('.js-tabset-container > div').each(function() {
-       $this = $(this);
-      if ($this.is(':first-child')) {
-        $this.fadeIn(100);
-      }
-    });
-    tabNavLink.click(function () {
-      var tabs = $(this).parents('.js-tabset').find('.js-tabset-container > div');
-      tabs.hide();
-      tabs.filter(this.hash).fadeIn(100);
-      $(this).parents('.js-tabset-nav').children('li').removeClass('active');
-      $(this).parents('li').addClass('active');
-      return false;
-    });
+  // a temp value to cache what we're about to show
+  var target = null;
+
+  // collect all the tabs
+  var tabs = $('.tab').on('click', function () {
+    console.log('click')
+    target = $(this.hash).removeAttr('id');
+    if (location.hash === this.hash) {
+      setTimeout(update);
+    }
+  }).attr('tabindex', '0');
+
+  // get an array of the panel ids (from the anchor hash)
+  var targets = tabs.map(function () {
+    return this.hash;
+  }).get();
+
+  // use those ids to get a jQuery collection of panels
+  var panels = $(targets.join(',')).each(function () {
+    // keep a copy of what the original el.id was
+    $(this).data('old-id', this.id);
   });
+
+  function update() {
+    console.log('update')
+    if (target) {
+      target.attr('id', target.data('old-id'));
+      target = null;
+    }
+
+    var hash = window.location.hash;
+    if (targets.indexOf(hash) !== -1) {
+      return show(hash);
+    }
+
+    if (!hash) {
+      show();
+    }
+  }
+
+  function show(id) {
+    // if no value was given, let's take the first panel
+    if (!id) {
+      id = targets[0];
+    }
+    // remove the selected class from the tabs,
+    // and add it back to the one the user selected
+    tabs.removeClass('active').attr('aria-selected', 'false').filter(function () {
+      return (this.hash === id);
+    }).addClass('active').attr('aria-selected', 'true');
+
+    // now hide all the panels, then filter to
+    // the one we're interested in, and show it
+    panels.hide().attr('aria-hidden', 'true').filter(id).show().attr('aria-hidden', 'false');
+  }
+
+  window.addEventListener('hashchange', update);
+
+  // initialise
+  if (targets.indexOf(window.location.hash) !== -1) {
+    update();
+  } else {
+    show();
+  }
 
   // ===========================================================================
   //

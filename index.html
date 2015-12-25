@@ -69,6 +69,9 @@
             <li>
               <a data-scroll="smooth" href="#s-07">Media object</a>
             </li>
+            <li>
+              <a data-scroll="smooth" href="#s-08">Tabs</a>
+            </li>
           </ul>
         </div>
         <div class="col cs-3">
@@ -618,6 +621,46 @@
               </p>
               <p>
                 The key element accepts an image, or text, while the body acts as a standard container. Entire media element acts as a table and uses no floats for layout.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="styleguide-section" id="s-08">
+        <div class="grid">
+          <div class="col cs-12">
+            <h1 class="styleguide-divider">
+              Tabs<span class="styleguide-divider-actions fade"><a class="button button-xs button-default" data-scroll="smooth" href="#top">back to top</a></span>
+            </h1>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="col cs-8">
+            <ul class="tabs" role="tablist">
+              <li>
+                <a aria-controls="tab-1" class="tab" href="#tab-1" role="tab">Tab 1</a>
+              </li>
+              <li>
+                <a aria-controls="tab-2" class="tab" href="#tab-2" role="tab">Tab 2</a>
+              </li>
+              <li>
+                <a aria-controls="tab-3" class="tab" href="#tab-3" role="tab">Tab 3</a>
+              </li>
+            </ul>
+            <div class="tab-panel" id="tab-1" role="tabpanel">
+              ... tab 1 ...
+            </div>
+            <div class="tab-panel" id="tab-2" role="tabpanel">
+              ... tab 2 ...
+            </div>
+            <div class="tab-panel" id="tab-3" role="tabpanel">
+              ... tab 3 ...
+            </div>
+          </div>
+          <div class="col cs-4">
+            <div class="styleguide-content">
+              <p>
+                Basic tabs implementation with support for history API and accessibility features.
               </p>
             </div>
           </div>
