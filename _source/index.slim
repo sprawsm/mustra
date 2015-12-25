@@ -357,6 +357,20 @@ html
             .styleguide-content
               p Basic tabs implementation with support for history API and accessibility features.
 
+      section.styleguide-section#s-09
+        .grid
+          .col.cs-12
+            h1.styleguide-divider
+              | Overlays
+              span.styleguide-divider-actions.fade
+                a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+        .grid
+          .col.cs-8
+            a href="#my-overlay" class="js-overlay-toggle" Toggle overlay
+          .col.cs-4
+            .styleguide-content
+              p Basic tabs implementation with support for history API and accessibility features.
+
     .grid
       .col.cs-12
         hr
@@ -368,5 +382,14 @@ html
         p Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
         p The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
         p The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+
+    .overlay#my-overlay
+
+      a.js-overlay-close.overlay-close href="#my-overlay" &times;
+
+      .overlay-content
+        .grid.mt-lg.mb-lg
+          .col.cs-12
+            .box.box-default Overlay content.
 
     include _footer

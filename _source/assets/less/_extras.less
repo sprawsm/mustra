@@ -193,7 +193,7 @@
 
 .tabs {
   .clearfix;
-  margin: 0;
+  margin: 0 0 @spacing-type 0;
   padding: 0 0 (@spacing-xs+1) 0;
   border-bottom: 2px solid @color-shaded;
 
@@ -216,4 +216,50 @@
 
   }
 
+}
+
+// ==========
+// Overlays
+
+.overlay {
+  padding: 25px;
+  overflow: auto;
+  position: fixed;
+  background-color: #fff;
+  height: 100vh;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1199;
+  transition: top .25s ease-in-out;
+
+  // Open state
+  &.js-overlay-in {
+    top: 0;
+  }
+
+}
+
+.overlay-close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  font-family: monospace; // Use a monospace font for perfect vertical align
+  line-height: 50px;
+  text-align: center;
+  padding: 0;
+  animation-delay: .25s; // length of the showing animation
+  color: @color-text;
+}
+
+// Disable scrolling on body while modal-is active
+
+.js-overlay-active {
+  overflow: hidden;
 }
