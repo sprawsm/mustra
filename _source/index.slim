@@ -1,0 +1,347 @@
+doctype html
+html
+
+  head
+    title Styleguide
+    include _header
+    link rel="stylesheet" href="assets/css/styleguide.css"
+
+  body#top
+
+    header.page-header
+      .grid
+        .col.cs-12
+          a href="/" class="page-header-logo"
+            img src="http://placehold.it/100x40" alt=""
+          .page-header-text Mustra Styleguide.
+
+    section.styleguide-section
+      .grid
+        .col.cs-12
+          h1.styleguide-divider
+            | Navigation
+            span.styleguide-divider-actions.fade
+              a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+        .col.cs-3.skip-3
+          p.upcase This guide
+          ul.list-unstyled
+            li
+              a href="#s-01" data-scroll="smooth" Titles
+            li
+              a href="#s-02" data-scroll="smooth" Textual elements
+            li
+              a href="#s-03" data-scroll="smooth" Lists
+            li
+              a href="#s-04" data-scroll="smooth" Buttons
+            li
+              a href="#s-05" data-scroll="smooth" Boxes
+            li
+              a href="#s-06" data-scroll="smooth" Messages
+            li
+              a href="#s-07" data-scroll="smooth" Media object
+        .col.cs-3
+          p.upcase Templates
+          ul.list-unstyled
+            li
+              a href="starter.html" Starter
+
+    section.styleguide-section#s-01
+      .grid
+        .col.cs-12
+          h1.styleguide-divider
+            | Titles
+            span.styleguide-divider-actions.fade
+              a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+      .grid
+        .col.cs-8
+          p.pretitle This is a pretitle element.
+          h1.section-title Your main, section title.
+        .col.cs-4
+          .styleguide-content
+            p
+              strong Section titles
+            p Often used as page headings. This style is also mapped to <code>h1</code> and <code>.h1</code>.
+            p They have no top margin, so you don't have to pay attention to margin collapsing. Utilize the spacing classes accordingly.
+            p This example illustrates a title accompanied with a pre-title element which is completely optional.
+      .grid
+        .col.cs-8
+          h1.title This is a standard title.
+        .col.cs-4
+          .styleguide-content
+            p
+              strong Titles
+            p Use them as titles for your text. This style is also mapped to <code>h2</code> and <code>.h2</code>.
+      .grid
+        .col.cs-8
+          h3 A Subtitle
+        .col.cs-4
+          .styleguide-content
+            p
+              strong Subtitles
+            p This style is also mapped to <code>.h3</code> and is best used within text for more granular separation.
+
+    section.styleguide-section#s-02
+      .grid
+        .col.cs-12
+          h1.styleguide-divider
+            | Textual elements
+            span.styleguide-divider-actions.fade
+              a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+      .grid
+        .col.cs-8
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        .col.cs-4
+          .styleguide-content
+            p Style for standard body copy.
+      .grid
+        .col.cs-8
+          ul.list-inline-block
+            li
+              a href="http://funnelnow.com" Standard link
+            li
+              a href="http://funnelnow.com" class="underline" Standard underlined link
+            li
+              a href="http://funnelnow.com" class="link-quiet" Quiet link
+            li
+              a href="http://funnelnow.com" class="link-ui" UI link
+            li
+              strong Bold text with <code>strong</code>
+            li
+              span.strong Bold text with class <code>.strong</code>
+            li
+              span.upcase Uppercase text
+        .col.cs-4
+          .styleguide-content
+            p
+              strong Inline styles
+            p Styles for various often-used inline elements.
+      .grid
+        .col.cs-8
+          p.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          p.text-xs Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .col.cs-4
+          .styleguide-content
+            p Styles for small text, enforces font size. Classes are <code>text-sm</code> and <code>text-xs</code>.
+      .grid
+        .col.cs-8
+          p.text-quiet Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          p.text-quiet.text-sm Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        .col.cs-4
+          .styleguide-content
+            p Quiet text, enforces color and can be combined with other elements.
+      .grid
+        .col.cs-8
+          p.txtl Left-Aligned text.
+          p.txtc Center-Aligned text.
+          p.txtr Right-Aligned text.
+        .col.cs-4
+          .styleguide-content
+            p Text flow control.
+
+    section.styleguide-section#s-03
+      .grid
+        .col.cs-12
+          h1.styleguide-divider
+            | Lists
+            span.styleguide-divider-actions.fade
+              a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+      .grid
+        .col.cs-8
+          ul
+            li List item 1
+            li
+              | List item 2
+              ul
+                li List item 2.1
+            li List item 3
+          ol
+            li List item 1
+            li
+              | List item 2
+              ol
+                li List item 2.2
+            li List item 3
+        .col.cs-4
+          .styleguide-content
+            p Default unordered and ordered lists.
+      .grid
+        .col.cs-8
+          ul.list-unstyled
+            li List item 1
+            li
+              | List item 2
+              ul
+                li List item 2.1
+            li List item 3
+        .col.cs-4
+          .styleguide-content
+            p Unstyled lists.
+      .grid
+        .col.cs-8
+          ul.list-inline
+            li Inline list item 1
+            li Inline list item 2
+            li Inline list item 3
+          ul.list-inline-block
+            li Inline-Block list item 1
+            li Inline-Block list item 2
+            li Inline-Block list item 3
+          ul.list-inline.list-middot
+            li Inline list item 1
+            li Inline list item 2
+            li Inline list item 3
+        .col.cs-4
+          .styleguide-content
+            p
+              strong Inline lists.
+            p The two classes provided, while almost identical <code>.list-inline</code> is meant for inline content, such as text, links and such, while <code>.list-inline-block</code> is meant for inline-block flowing content such as buttons, also useful when you don't want to break the list item's content into lines.
+            p There is also a possiblity to separate list items with dots.
+
+    section.styleguide-section#s-04
+      .grid
+        .col.cs-12
+          h1.styleguide-divider
+            | Buttons
+            span.styleguide-divider-actions.fade
+              a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+      .grid
+        .col.cs-8
+          ul.list-inline
+            li
+              a href="#" class="button button-default" Default button
+            li
+              button type="submit" class="button button-default" Default button
+            li
+              input type="submit" id="" name="" value="Default button" class="button button-default"
+          ul.list-inline-block
+            li
+              a href="#" class="button button-primary" Primary button
+            li
+              button type="submit" class="button button-primary" Primary button
+            li
+              input type="submit" id="" name="" value="Primary button" class="button button-primary"
+          ul.list-inline-block
+            li
+              a href="#" class="button button-success" Success button
+            li
+              button type="submit" class="button button-success" Success button
+            li
+              input type="submit" id="" name="" value="Success button" class="button button-success"
+          ul.list-inline-block
+            li
+              a href="#" class="button button-danger" Danger button
+            li
+              button type="submit" class="button button-danger" Danger button
+            li
+              input type="submit" id="" name="" value="Danger button" class="button button-danger"
+          ul.list-inline-block
+            li
+              a href="#" class="button button-warning" Warning button
+            li
+              button type="submit" class="button button-warning" Warning button
+            li
+              input type="submit" id="" name="" value="Warning button" class="button button-warning"
+          .box.box-default
+            ul.list-inline-block
+              li
+                a href="#" class="button button-invert" Inverted button
+              li
+                button type="submit" class="button button-invert" Inverted button
+              li
+                input type="submit" id="" name="" value="Inverted button" class="button button-invert"
+          ul.list-inline-block
+            li
+              a href="#" class="button button-primary button-xs" X–Small button
+            li
+              a href="#" class="button button-primary button-sm" Small button
+            li
+              a href="#" class="button button-primary button-lg" Large button
+          p
+            a href="#" class="button button-primary button-block" Block level button
+        .col.cs-4
+          .styleguide-content
+            p Various button flavors and sizes.
+
+    section.styleguide-section#s-05
+      .grid
+        .col.cs-12
+          h1.styleguide-divider
+            | Boxes
+            span.styleguide-divider-actions.fade
+              a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+      .grid
+        .col.cs-8
+          .box.box-default This is a default box.
+          .box.box-primary This is a primary box.
+          .box.box-bordered This is a bordered box.
+          .box.box-default.box-lg This is a default box with large padding.
+          .box.box-default.box-sm.text-sm This is a default box with small padding.
+          .box.box-default.box-nopadding This is a default box with no padding.
+        .col.cs-4
+          .styleguide-content
+            p
+              strong Boxes
+            p Boxes in various flavors and sizes. Use them when you need to frame some content. Use the <code>.box-nopadding</code> class in case you want to nest a <code>.grid</code> layout within it.
+
+    section.styleguide-section#s-06
+      .grid
+        .col.cs-12
+          h1.styleguide-divider
+            | Messages
+            span.styleguide-divider-actions.fade
+              a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+      .grid
+        .col.cs-8
+          div style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;"
+            .message.message-default.txtc.animated data-dismissable="fadeOutUp"
+              .message-content This is a default message. Dismissable with <code>.fadeOutUp</code>
+          div style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;"
+            .message.message-danger.txtc
+              .message-content This is a danger message.
+          div style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;"
+            .message.message-success.txtc
+              .message-content This is a success message.
+          div style="position:relative;height: 90px;border:10px solid #ccc;background-color:#ccc;"
+            .message.message-warning.txtc
+              .message-content This is a warning message.
+        .col.cs-4
+          .styleguide-content
+            p
+              strong Messages
+            p Global message styles. Absolutely positioned to the top of the screen by default. In case you need more layout control feel free to use a <code>.grid</code> layout instead of <code>.message-content</code>.
+            p In case you want them to be dismissable, add a class <code>.animated</code> along with an exit class from <a href="http://daneden.github.io/animate.css/">animate.css</a> within a <code>data-dismissable</code> attribute.
+
+      section.styleguide-section#s-07
+        .grid
+          .col.cs-12
+            h1.styleguide-divider
+              | Media object
+              span.styleguide-divider-actions.fade
+                a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+        .grid
+          .col.cs-8
+            .media
+              .media-left
+                .media-object Media key
+              .media-body
+                p Media value.
+                p Anything can go in here.
+          .col.cs-4
+            .styleguide-content
+              p The media element should be used any time you need a key-value pair in a visual sense. This includes a comment+avatar combo, literal key-value pairs (e.g. two-column tables), etc.
+              p The key element accepts an image, or text, while the body acts as a standard container. Entire media element acts as a table and uses no floats for layout.
+
+    .grid
+      .col.cs-12
+        hr
+    .grid.mb-lg
+      .col.cs-8.quiet.text-xs
+        p
+          strong The MIT License (MIT)
+        p Copyright  2016 <a href="http://sprawsm.com/" class="link-quiet">Sprawsm doo</a>
+        p Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        p The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        p The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+
+    include _footer

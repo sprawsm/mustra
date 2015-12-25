@@ -1,0 +1,177 @@
+// Titles
+
+h1,
+.h1,
+.section-title {
+  margin-top: 0;
+  margin-bottom: @spacing-xl;
+  font-size: @font-size-md;
+  font-weight: @font-weight-ultra;
+  line-height: @line-height-heading;
+
+  @media (min-width: @screen-sm) {
+    font-size: @font-size-lg;
+  }
+
+
+  .pretitle + & {
+    margin-top: @spacing-base;
+  }
+
+}
+
+h2,
+.h2,
+.title {
+  margin-top: 0;
+  margin-bottom: @spacing-base;
+  font-size: @font-size-base;
+  font-weight: @font-weight-bold;
+  line-height: @line-height-heading;
+
+  @media (min-width: @screen-sm) {
+    font-size: @font-size-md;
+  }
+
+}
+
+h3,
+.h3 {
+  margin-top: 0;
+  margin-bottom: @spacing-base;
+  font-size: @font-size-base;
+  font-weight: @font-weight-bold;
+}
+
+h4,
+.h4 {
+  margin-top: 0;
+  margin-bottom: @spacing-type;
+  font-size: @font-size-base;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+
+.pretitle {
+  .upcase;
+  margin-top: 0;
+  margin-bottom: @spacing-base;
+  font-size: @font-size-base;
+}
+
+// Text
+
+.text-xs { font-size: @font-size-xs; }
+.text-sm { font-size: @font-size-sm; }
+.text-base { font-size: @font-size-base; }
+.text-md { font-size: @font-size-md; }
+.text-lg { font-size: @font-size-lg; }
+
+.text-quiet {
+  color: @color-quiet;
+}
+
+.txtl { text-align: left; }
+.txtr { text-align: right; }
+.txtc { text-align: center; }
+
+.loud {
+  .title;
+  line-height: @line-height-tight;
+}
+
+figcaption {
+  .text-sm;
+  margin-top: @spacing-base;
+}
+
+.quiet,
+small {
+  font-style: normal !important;
+  color: @color-quiet;
+}
+
+// Links
+
+.link-quiet {
+  .link-variant(@color-quiet, darken(@color-quiet,7%));
+}
+
+.link-ui {
+  .link-variant(@color-text, @color-primary);
+}
+
+// Inline elements
+
+.upcase {
+  text-transform: uppercase;
+  font-weight: @font-weight-light;
+  letter-spacing: .1em;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strong {
+  font-weight: @font-weight-bold;
+}
+
+.ultra {
+  font-weight: @font-weight-ultra;
+}
+
+// Lists
+
+.list-unstyled {
+  padding-left: 0;
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+}
+
+.list-inline,
+.list-inline-block {
+  .list-unstyled;
+
+  li {
+    display: inline;
+    margin-right: @spacing-base;
+    margin-top: @spacing-xs;
+    margin-bottom: @spacing-xs;
+  }
+
+  // Separate list items with a dot
+
+  &.list-middot {
+
+    li:before {
+      content: "•";
+      margin-right: 1em;
+      color: @color-quiet;
+    }
+
+    li:first-child:before {
+      display: none;
+    }
+
+  }
+
+}
+
+.list-inline-block li {
+  display: inline-block;
+}
+
+.list-spaced {
+  > li {
+    margin-top: @spacing-base;
+    margin-bottom: @spacing-base;
+  }
+}

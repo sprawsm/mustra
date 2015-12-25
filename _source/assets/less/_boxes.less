@@ -1,0 +1,56 @@
+// MUSTRA BOXES
+//
+// Container elements with backgrounds and optional padding.
+// In terms of Bootstrap, these would be wells.
+
+.box {
+  .clearfix;
+  margin-top: @spacing-base;
+  margin-bottom: @spacing-base;
+  padding: @spacing-base;
+  border-radius: @border-radius-base;
+
+  // Flavors
+
+  &.box-default {
+    background-color: @color-shaded;
+  }
+
+  &.box-primary {
+    background-color: @color-primary;
+    color: #fff;
+  }
+
+  &.box-bordered {
+    border: 2px solid @color-text;
+    border-radius: 0;
+
+    hr {
+      border-top-width: 2px;
+      border-color: @color-text;
+    }
+
+  }
+
+  // Sizes
+
+  &.box-nopadding {
+    padding: 0;
+  }
+
+  &.box-sm {
+    padding: @spacing-sm;
+  }
+
+  &.box-lg {
+    padding: @spacing-md;
+  }
+
+  // Misc
+
+  .box-hr-full {
+    margin-left: -@spacing-base;
+    margin-right: -@spacing-base;
+  }
+
+}

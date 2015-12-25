@@ -1,0 +1,189 @@
+// MUSTRA EXTRAS
+//
+// Helper classes and misc. stuff.
+
+
+// ==========
+// Clearfix
+
+.clearfix {
+  .clearfix;
+}
+
+// ==========
+// Content visibility
+
+.no-show { // position outside of viewport
+  position: absolute !important;
+  top: -9999px       !important;
+  left: -9999px      !important;
+  visibility: none   !important;
+  display: block     !important;
+  height: 0          !important;
+  width: 0           !important;
+  overflow: hidden   !important;
+}
+
+.hidden { // completely hide content
+  display: none !important;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity .15s ease;
+
+  &.in {
+    opacity: 1;
+  }
+
+}
+
+// ==========
+// Display
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+// ==========
+// Horizontal alignment
+
+.left { float: left !important; }
+
+.right { float: right !important; }
+
+.center { // Assumes element has width
+  float: none !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// ==========
+// Vertical alignment
+
+.valign-top { vertical-align: top !important; }
+.valign-middle { vertical-align: middle !important; }
+.valign-bottom { vertical-align: bottom !important; }
+
+// ==========
+// Responsive images
+
+.img-responsive,
+.contain {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// ==========
+// Margins
+
+.ml-none { margin-left: 0 !important; }
+.ml-xs   { margin-left: @spacing-xs !important; }
+.ml-sm   { margin-left: @spacing-sm !important; }
+.ml-base { margin-left: @spacing-base !important; }
+.ml-md   { margin-left: @spacing-md !important; }
+.ml-lg   { margin-left: @spacing-lg !important; }
+.ml-xl   { margin-left: @spacing-xl !important; }
+
+.mt-none { margin-top: 0 !important; }
+.mt-xs   { margin-top: @spacing-xs !important; }
+.mt-sm   { margin-top: @spacing-sm !important; }
+.mt-base { margin-top: @spacing-base !important; }
+.mt-md   { margin-top: @spacing-md !important; }
+.mt-lg   { margin-top: @spacing-lg !important; }
+.mt-xl   { margin-top: @spacing-xl !important; }
+
+.mr-none { margin-right: 0 !important; }
+.mr-xs   { margin-right: @spacing-xs !important; }
+.mr-sm   { margin-right: @spacing-sm !important; }
+.mr-base { margin-right: @spacing-base !important; }
+.mr-md   { margin-right: @spacing-md !important; }
+.mr-lg   { margin-right: @spacing-lg !important; }
+.mr-xl   { margin-right: @spacing-xl !important; }
+
+.mb-none { margin-bottom: 0 !important; }
+.mb-xs   { margin-bottom: @spacing-xs !important; }
+.mb-sm   { margin-bottom: @spacing-sm !important; }
+.mb-base { margin-bottom: @spacing-base !important; }
+.mb-md   { margin-bottom: @spacing-md !important; }
+.mb-lg   { margin-bottom: @spacing-lg !important; }
+.mb-xl   { margin-bottom: @spacing-xl !important; }
+
+// ==========
+// Backgrounds
+
+.bg-primary { background-color: @color-primary !important; }
+.bg-success { background-color: @color-success !important; }
+.bg-danger { background-color: @color-danger !important; }
+.bg-warning { background-color: @color-warning !important; }
+.bg-shaded { background-color: @color-shaded !important; }
+
+// ==========
+// UI elements
+
+// Media element
+
+.media {
+  margin-bottom: @spacing-type;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.media,
+.media-body {
+  zoom: 1;
+  overflow: hidden;
+}
+
+.media-body {
+  width: 10000px;
+
+  p {
+    margin: 0;
+
+    + p {
+      margin-top: @spacing-type;
+    }
+
+  }
+
+}
+
+.media-object {
+  display: block;
+
+  // Fix collapse in webkit from max-width: 100% and display: table-cell.
+  // &.img-thumbnail {
+  //   max-width: none;
+  // }
+
+}
+
+.media-right,
+.media > .pull-right {
+  padding-left: @grid-gutter;
+}
+
+.media-left,
+.media > .pull-left {
+  padding-right: @grid-gutter;
+}
+
+.media-left,
+.media-right,
+.media-body {
+  display: table-cell;
+  vertical-align: top;
+}

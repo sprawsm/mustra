@@ -1,0 +1,51 @@
+// Clearfix
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Links
+
+.link-variant(@link-color, @link-color-hover) {
+  color: @link-color;
+
+  &:focus,
+  &:hover {
+    color: @link-color-hover;
+  }
+
+}
+
+// Buttons
+
+.button-flavor(@button-color, @button-background-base) {
+  color: @button-color;
+  background: @button-background-base;
+
+  &:focus,
+  &:hover {
+    background: darken(@button-background-base,5%);
+    color: @button-color;
+  }
+
+  &:active {
+    background: darken(@button-background-base,10%);
+  }
+
+}
+
+// User select
+
+.user-select(@select) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select; // IE10+
+          user-select: @select;
+}

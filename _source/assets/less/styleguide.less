@@ -1,0 +1,41 @@
+@import "_variables";
+
+// MUSTRA STYLEGUIDE
+//
+// This stylesheet is scoped to the styleguide page and should not be included
+// anywhere else.
+
+.styleguide-section {
+  margin-top: @spacing-xl;
+
+  .grid {
+    margin-top: @spacing-xl;
+    margin-bottom: @spacing-xl;
+  }
+
+  &:hover .fade {
+    opacity: 1;
+  }
+
+}
+
+.styleguide-divider {
+  font-size: @font-size-xs;
+  font-weight: @font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: @spacing-base;
+  padding-top: @spacing-sm;
+  border-top: 2px solid @color-shaded;
+}
+
+.styleguide-divider-actions {
+  float: right;
+  margin-top: -@spacing-xs;
+}
+
+.styleguide-content {
+  font-size: @font-size-xs;
+  color: @color-quiet;
+}
