@@ -26,9 +26,15 @@
   // Sizing
 
   &.button-xs {
-    font-size: @font-size-xs;
+    font-size: 11.1px;
     text-transform: uppercase;
     padding: .35em .75em;
+
+    @media (min-width: @screen-sm) {
+      font-size: @font-size-xs;
+    }
+
+
   }
 
   &.button-sm {
