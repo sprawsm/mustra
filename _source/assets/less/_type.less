@@ -1,3 +1,21 @@
+// Set base font size
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: @font-family;
+  font-size: @font-size-sm;
+  line-height: @line-height-base;
+  color: @color-text;
+
+  @media (min-width: @screen-sm) {
+    font-size: @font-size-base;
+  }
+
+}
+
 // Titles
 
 h1,
@@ -76,9 +94,15 @@ h4,
 .txtc { text-align: center; }
 
 .lead {
-  .text-md;
+  font-size: 1.25em;
   font-weight: 300;
   line-height: @line-height-tight;
+
+  @media (min-width: @screen-sm) {
+
+  }
+
+
 }
 
 figcaption {
