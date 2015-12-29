@@ -1,5 +1,4 @@
-// ==========================================================================
-// Custom styles
+// MUSTRA CUSTOM STYLES
 
 * { box-sizing: border-box; } // Make life easier
 
@@ -67,23 +66,42 @@ hr {
 }
 
 .page-header-logo {
-  float: left;
-  margin-right: @grid-gutter;
+  display: inline-block;
+  margin-bottom: @spacing-sm;
+
+  svg,
+  img {
+    display: block;
+  }
+
+  @media (min-width: @screen-xs) {
+    float: left;
+    margin-right: @grid-gutter;
+    margin-bottom: 0;
+  }
 }
 
 .page-header-menu {
   .list-inline;
   .text-sm;
-  float: left;
-  margin: 0;
+  margin: 0 0 @spacing-sm 0;
 
   a {
     .link-ui;
   }
 
+  @media (min-width: @screen-xs) {
+    float: left;
+    margin-bottom: 0;
+  }
+
 }
 
 .page-header-text {
-  float: right;
   .text-sm;
+
+  @media (min-width: @screen-xs) {
+    float: right;
+  }
+
 }
