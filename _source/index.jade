@@ -3,16 +3,16 @@ html
 
   head
     title Styleguide
-    include _header
-    link rel="stylesheet" href="assets/css/styleguide.css"
+    include partials/_header
+    link(rel="stylesheet", href="assets/css/styleguide.css")
 
   body#top
 
     .container
 
       header.page-header
-        a href="/" class="page-header-logo"
-          img src="https://i.imgur.com/A0a2nSb.png" width="173" height="40" alt="Mustra"
+        a(href="/", class="page-header-logo")
+          img(src="https://i.imgur.com/A0a2nSb.png", width="173", height="40", alt="Mustra")
         .page-header-text Mustra Styleguide.
 
       section.styleguide-section
@@ -24,40 +24,40 @@ html
         h1.styleguide-divider
           | Navigation
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-3.col-sm-offset-3
             p.upcase This guide
             ul.list-unstyled
               li
-                a href="#s-01" data-scroll="smooth" Titles
+                a(href="#s-01", data-scroll="smooth") Titles
               li
-                a href="#s-02" data-scroll="smooth" Textual elements
+                a(href="#s-02", data-scroll="smooth") Textual elements
               li
-                a href="#s-03" data-scroll="smooth" Lists
+                a(href="#s-03", data-scroll="smooth") Lists
               li
-                a href="#s-04" data-scroll="smooth" Buttons
+                a(href="#s-04", data-scroll="smooth") Buttons
               li
-                a href="#s-05" data-scroll="smooth" Boxes
+                a(href="#s-05", data-scroll="smooth") Boxes
               li
-                a href="#s-06" data-scroll="smooth" Messages
+                a(href="#s-06", data-scroll="smooth") Messages
               li
-                a href="#s-07" data-scroll="smooth" Media object
+                a(href="#s-07", data-scroll="smooth") Media object
               li
-                a href="#s-08" data-scroll="smooth" Tabs
+                a(href="#s-08", data-scroll="smooth") Tabs
               li
-                a href="#s-08" data-scroll="smooth" Flexbox grid
+                a(href="#s-08", data-scroll="smooth") Flexbox grid
           .col-sm-3
             p.upcase Templates
             ul.list-unstyled
               li
-                a href="starter.html" Starter
+                a(href="starter.html") Starter
 
       section.styleguide-section#s-01
         h1.styleguide-divider
           | Titles
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-8
             p.pretitle This is a pretitle element.
@@ -90,7 +90,7 @@ html
         h1.styleguide-divider
           | Textual elements
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-8
             p.lead Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -103,13 +103,13 @@ html
           .col-sm-8
             ul.list-inline-block
               li
-                a href="http://funnelnow.com" Standard link
+                a(href="http://funnelnow.com") Standard link
               li
-                a href="http://funnelnow.com" class="underline" Standard underlined link
+                a(href="http://funnelnow.com", class="underline") Standard underlined link
               li
-                a href="http://funnelnow.com" class="link-quiet" Quiet link
+                a(href="http://funnelnow.com", class="link-quiet") Quiet link
               li
-                a href="http://funnelnow.com" class="link-ui" UI link
+                a(href="http://funnelnow.com", class="link-ui") UI link
               li
                 strong Bold text with <code>strong</code>
               li
@@ -148,7 +148,7 @@ html
         h1.styleguide-divider
           | Lists
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-8
             ul
@@ -205,61 +205,61 @@ html
         h1.styleguide-divider
           | Buttons
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-8
             ul.list-inline-block
               li
-                a href="#" class="button button-default" Default button
+                a(href="#", class="button button-default") Default button
               li
-                button type="submit" class="button button-default" Default button
+                button(type="submit", class="button button-default") Default button
               li
-                input type="submit" id="" name="" value="Default button" class="button button-default"
+                input(type="submit", id="", name="", value="Default button", class="button button-default")
             ul.list-inline-block
               li
-                a href="#" class="button button-primary" Primary button
+                a(href="#", class="button button-primary") Primary button
               li
-                button type="submit" class="button button-primary" Primary button
+                button(type="submit", class="button button-primary") Primary button
               li
-                input type="submit" id="" name="" value="Primary button" class="button button-primary"
+                input(type="submit", id="", name="", value="Primary button", class="button button-primary")
             ul.list-inline-block
               li
-                a href="#" class="button button-success" Success button
+                a(href="#", class="button button-success") Success button
               li
-                button type="submit" class="button button-success" Success button
+                button(type="submit", class="button button-success") Success button
               li
-                input type="submit" id="" name="" value="Success button" class="button button-success"
+                input(type="submit", id="", name="", value="Success button", class="button button-success")
             ul.list-inline-block
               li
-                a href="#" class="button button-danger" Danger button
+                a(href="#", class="button button-danger") Danger button
               li
-                button type="submit" class="button button-danger" Danger button
+                button(type="submit", class="button button-danger") Danger button
               li
-                input type="submit" id="" name="" value="Danger button" class="button button-danger"
+                input(type="submit", id="", name="", value="Danger button", class="button button-danger")
             ul.list-inline-block
               li
-                a href="#" class="button button-warning" Warning button
+                a(href="#", class="button button-warning") Warning button
               li
-                button type="submit" class="button button-warning" Warning button
+                button(type="submit", class="button button-warning") Warning button
               li
-                input type="submit" id="" name="" value="Warning button" class="button button-warning"
+                input(type="submit", id="", name="", value="Warning button", class="button button-warning")
             .box.box-default
               ul.list-inline-block
                 li
-                  a href="#" class="button button-invert" Inverted button
+                  a(href="#", class="button button-invert") Inverted button
                 li
-                  button type="submit" class="button button-invert" Inverted button
+                  button(type="submit", class="button button-invert") Inverted button
                 li
-                  input type="submit" id="" name="" value="Inverted button" class="button button-invert"
+                  input(type="submit", id="", name="", value="Inverted button", class="button button-invert")
             ul.list-inline-block
               li
-                a href="#" class="button button-primary button-xs" X–Small button
+                a(href="#", class="button button-primary button-xs") X–Small button
               li
-                a href="#" class="button button-primary button-sm" Small button
+                a(href="#", class="button button-primary button-sm") Small button
               li
-                a href="#" class="button button-primary button-lg" Large button
+                a(href="#", class="button button-primary button-lg") Large button
             p
-              a href="#" class="button button-primary button-block" Block level button
+              a (href="#", class="button button-primary button-block") Block level button
           .col-sm-4
             .styleguide-content
               p Various button flavors and sizes.
@@ -268,7 +268,7 @@ html
         h1.styleguide-divider
           | Boxes
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-8
             .box.box-default This is a default box.
@@ -287,19 +287,19 @@ html
         h1.styleguide-divider
           | Messages
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-8
-            div style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;"
-              .message.message-default.txtc.animated data-dismissable="fadeOutUp"
+            div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
+              .message.message-default.txtc.animated(data-dismissable="fadeOutUp")
                 .message-content This is a default message. Dismissable with <code>.fadeOutUp</code>
-            div style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;"
+            div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
               .message.message-danger.txtc
                 .message-content This is a danger message.
-            div style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;"
+            div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
               .message.message-success.txtc
                 .message-content This is a success message.
-            div style="position:relative;height: 90px;border:10px solid #ccc;background-color:#ccc;"
+            div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
               .message.message-warning.txtc
                 .message-content This is a warning message.
           .col-sm-4
@@ -313,7 +313,7 @@ html
         h1.styleguide-divider
           | Media object
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-8
             .media
@@ -331,19 +331,19 @@ html
         h1.styleguide-divider
           | Tabs
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-8
-            ul role="tablist" class="tabs"
+            ul(role="tablist", class="tabs")
               li
-                a role="tab" class="tab" aria-controls="tab-1" href="#tab-1" Tab 1
+                a(role="tab", class="tab", aria-controls="tab-1", href="#tab-1") Tab 1
               li
-                a role="tab" class="tab" aria-controls="tab-2" href="#tab-2" Tab 2
+                a(role="tab", class="tab", aria-controls="tab-2", href="#tab-2") Tab 2
               li
-                a role="tab" class="tab" aria-controls="tab-3" href="#tab-3" Tab 3
-            .tab-panel#tab-1 role="tabpanel" ... tab 1 ...
-            .tab-panel#tab-2 role="tabpanel" ... tab 2 ...
-            .tab-panel#tab-3 role="tabpanel" ... tab 3 ...
+                a(role="tab", class="tab", aria-controls="tab-3", href="#tab-3") Tab 3
+            .tab-panel#tab-1(role="tabpanel") ... tab 1 ...
+            .tab-panel#tab-2(role="tabpanel") ... tab 2 ...
+            .tab-panel#tab-3(role="tabpanel") ... tab 3 ...
           .col-sm-4
             .styleguide-content
               p Basic tabs implementation with support for history API and accessibility features.
@@ -352,10 +352,10 @@ html
         h1.styleguide-divider
           | Overlays
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-8
-            a href="#my-overlay" class="js-overlay-toggle" Toggle overlay
+            a(href="#my-overlay", class="js-overlay-toggle") Toggle overlay
           .col-sm-4
             .styleguide-content
               p Basic tabs implementation with support for history API and accessibility features.
@@ -364,7 +364,7 @@ html
         h1.styleguide-divider
           | Flexbox grid
           span.styleguide-divider-actions.fade
-            a href="#top" data-scroll="smooth" class="button button-xs button-default" back to top
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
         .row
           .col-sm-8
             .row
@@ -419,11 +419,11 @@ html
 
     .overlay#my-overlay
 
-      a.js-overlay-close.overlay-close href="#my-overlay" &times;
+      a.js-overlay-close.overlay-close(href="#my-overlay") &times;
 
       .overlay-content
         .container-fluid
           .mt-lg.mb-lg
             .box.box-default Overlay content.
 
-    include _footer
+    include partials/_footer

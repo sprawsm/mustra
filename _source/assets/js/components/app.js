@@ -27,7 +27,7 @@ $(document).ready(function() {
 
   // collect all the tabs
   var tabs = $('.tab').on('click', function () {
-    console.log('click')
+    console.log('click');
     target = $(this.hash).removeAttr('id');
     if (location.hash === this.hash) {
       setTimeout(update);
@@ -46,7 +46,7 @@ $(document).ready(function() {
   });
 
   function update() {
-    console.log('update')
+    console.log('update');
     if (target) {
       target.attr('id', target.data('old-id'));
       target = null;
@@ -219,7 +219,7 @@ $(document).ready(function() {
   // ========================================================================
   // Overlay Effect
   // ========================================================================
-  ​
+
   // Usage Example:
   //
   //   <a href="#overlay-id" class="js-overlay-toggle">Toggle Overlay.</a>
@@ -239,47 +239,46 @@ $(document).ready(function() {
   //   </section>
   //
   // ========================================================================
-  ​
-  ​
+
   var overlayToggle = $('.js-overlay-toggle');
   var overlayClose = $('.js-overlay-close');
   var overlays = $('.overlay');
   var html = $('html');
   var overlayContent = $('.overlay-content');
-  ​
+
   // Handle showing and hiding the modal
 
   overlayToggle.click(function(e) {
-  ​
+
     // Disable scrolling on html
     html.addClass('js-overlay-active');
-  ​
+
     // Show targeted overlay
     overlays.filter(this.hash).addClass('js-overlay-in');
-  ​
+
     // Handle opening animations
     overlays.filter(this.hash).find(overlayContent).addClass('overlay-content--animated');
     overlays.filter(this.hash).find(overlayClose).addClass('overlay-close--animated');
-  ​
+
     e.preventDefault();
-  ​
+
   });
-  ​
+
   // Close the overlay
   overlayClose.click(function(e) {
 
     // Re-enable scrolling on html
     html.removeClass('js-overlay-active');
-  ​
+
     // Hide targeted overlay
     overlays.filter(this.hash).removeClass('js-overlay-in');
-  ​
+
     // Clean up
     overlays.filter(this.hash).find(overlayContent).removeClass('overlay-content--animated');
     overlays.filter(this.hash).find(overlayClose).removeClass('overlay-close--animated');
-  ​
+
     e.preventDefault();
-  ​
+
   });
 
 });
