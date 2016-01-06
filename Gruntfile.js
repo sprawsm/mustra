@@ -181,6 +181,20 @@ module.exports = function(grunt) {
           dest: 'assets/images',
           ext: '.jpg'
         }]
+      },
+      svg: {
+        plugins: [
+            { removeViewBox: false },
+            { removeUselessStrokeAndFill: true },
+            { removeEmptyAttrs: true }
+        ],
+        files: [{
+          expand: true,
+          cwd: '_source/assets/images/',
+          src: ['**/*.svg'],
+          dest: 'assets/images',
+          ext: '.svg'
+        }]
       }
     },
 
