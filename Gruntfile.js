@@ -107,11 +107,9 @@ module.exports = function(grunt) {
     //=======================================================================
     // grunt-contrib-uglify
     //
-    // Concatintates, minifies, and uglifies javascript files.
-    // Two uglify tasks are defined:
-    // jsbase uglify task compiles support scripts for older browsers.
-    // js uglify task compiles plugin(s) which are used througout the
-    // project along with the custom javascript.
+    // Concatintates, minifies, and uglifies javascript files, Compiles
+    // plugin(s) which are used througout theproject along with the custom
+    // javascript.
     //=======================================================================
 
     uglify: {
@@ -145,8 +143,8 @@ module.exports = function(grunt) {
           src: [
             // List of plugins which are used on this project, along with
             // custom made javascript.
-            // '_source/js/vendor/svg-local-storage/svg-local-storage.js',
-            '_source/js/components/app.js'
+            // '_source/assets/js/vendor/svg-local-storage/svg-local-storage.js',
+            '_source/assets/js/components/app.js'
           ],
           dest: 'assets/js/app.min.js'
         }]
