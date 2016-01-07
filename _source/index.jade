@@ -30,23 +30,27 @@ html
             p.upcase This guide
             ul.list-unstyled
               li
-                a(href="#s-01", data-scroll="smooth") Titles
+                a(href="#s-02", data-scroll="smooth") Colors
               li
-                a(href="#s-02", data-scroll="smooth") Textual elements
+                a(href="#s-02", data-scroll="smooth") Titles
               li
-                a(href="#s-03", data-scroll="smooth") Lists
+                a(href="#s-03", data-scroll="smooth") Textual elements
               li
-                a(href="#s-04", data-scroll="smooth") Buttons
+                a(href="#s-04", data-scroll="smooth") Lists
               li
-                a(href="#s-05", data-scroll="smooth") Boxes
+                a(href="#s-05", data-scroll="smooth") Buttons
               li
-                a(href="#s-06", data-scroll="smooth") Messages
+                a(href="#s-06", data-scroll="smooth") Boxes
               li
-                a(href="#s-07", data-scroll="smooth") Media object
+                a(href="#s-07", data-scroll="smooth") Messages
               li
-                a(href="#s-08", data-scroll="smooth") Tabs
+                a(href="#s-08", data-scroll="smooth") Media object
               li
-                a(href="#s-08", data-scroll="smooth") Flexbox grid
+                a(href="#s-09", data-scroll="smooth") Tabs
+              li
+                a(href="#s-10", data-scroll="smooth") Overlays
+              li
+                a(href="#s-11", data-scroll="smooth") Flexbox grid
           .col-sm-3
             p.upcase Templates
             ul.list-unstyled
@@ -54,6 +58,59 @@ html
                 a(href="starter.html") Starter
 
       section.styleguide-section#s-01
+        h1.styleguide-divider
+          | Colors
+          span.styleguide-divider-actions.fade
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+        .row
+          .col-sm-8
+            .row
+              .col-xs-4
+                .box.bg-text.text-light.txtc.text-sm
+                  code @color-text
+              .col-xs-4
+                .box.bg-shaded.txtc.text-sm
+                  code @color-shaded
+              .col-xs-4
+                .box.bg-primary.text-light.txtc.text-sm
+                  code @color-primary
+            .row
+              .col-xs-4
+                .box.bg-success.txtc.text-sm
+                  code @color-success
+              .col-xs-4
+                .box.bg-danger.txtc.text-sm
+                  code @color-danger
+              .col-xs-4
+                .box.bg-warning.txtc.text-sm
+                  code @color-warning
+
+            .row
+              .col-xs-4
+                .box.bg-text.text-light.txtc.text-sm
+                  code @color-light
+              .col-xs-4
+                .box.bg-text.text-shaded.txtc.text-sm
+                  code @color-shaded
+              .col-xs-4
+                .box.bg-light.text-primary.txtc.text-sm
+                  code @color-primary
+            .row
+              .col-xs-4
+                .box.bg-light.text-success.txtc.text-sm
+                  code @color-success
+              .col-xs-4
+                .box.bg-light.text-danger.txtc.text-sm
+                  code @color-danger
+              .col-xs-4
+                .box.bg-light.text-warning.txtc.text-sm
+                  code @color-warning
+          .col-sm-4
+            .styleguide-content
+              p Mustra maps all colors to a LESS variable, and comes with a vibrant default theme, and some basics covered for you.
+              p There are helper classes to color backgrounds (<code>.bg-[variable]</code>) and text (<code>.text-[variable]</code>) respectively.
+
+      section.styleguide-section#s-02
         h1.styleguide-divider
           | Titles
           span.styleguide-divider-actions.fade
@@ -86,7 +143,7 @@ html
                 strong Subtitles
               p This style is also mapped to <code>.h3</code> and is best used within text for more granular separation.
 
-      section.styleguide-section#s-02
+      section.styleguide-section#s-03
         h1.styleguide-divider
           | Textual elements
           span.styleguide-divider-actions.fade
@@ -144,7 +201,7 @@ html
             .styleguide-content
               p Text flow control.
 
-      section.styleguide-section#s-03
+      section.styleguide-section#s-04
         h1.styleguide-divider
           | Lists
           span.styleguide-divider-actions.fade
@@ -201,7 +258,7 @@ html
               p The two classes provided, while almost identical <code>.list-inline</code> is meant for inline content, such as text, links and such, while <code>.list-inline-block</code> is meant for inline-block flowing content such as buttons, also useful when you don't want to break the list item's content into lines.
               p There is also a possiblity to separate list items with dots.
 
-      section.styleguide-section#s-04
+      section.styleguide-section#s-05
         h1.styleguide-divider
           | Buttons
           span.styleguide-divider-actions.fade
@@ -264,7 +321,7 @@ html
             .styleguide-content
               p Various button flavors and sizes.
 
-      section.styleguide-section#s-05
+      section.styleguide-section#s-06
         h1.styleguide-divider
           | Boxes
           span.styleguide-divider-actions.fade
@@ -283,7 +340,7 @@ html
                 strong Boxes
               p Boxes in various flavors and sizes. Use them when you need to frame some content. Use the <code>.box-nopadding</code> class in case you want to nest a <code>.grid</code> layout within it.
 
-      section.styleguide-section#s-06
+      section.styleguide-section#s-07
         h1.styleguide-divider
           | Messages
           span.styleguide-divider-actions.fade
@@ -309,7 +366,7 @@ html
               p Global message styles. Absolutely positioned to the top of the screen by default. In case you need more layout control feel free to use a <code>.grid</code> layout instead of <code>.message-content</code>.
               p In case you want them to be dismissable, add a class <code>.animated</code> along with an exit class from <a href="http://daneden.github.io/animate.css/">animate.css</a> within a <code>data-dismissable</code> attribute.
 
-      section.styleguide-section#s-07
+      section.styleguide-section#s-08
         h1.styleguide-divider
           | Media object
           span.styleguide-divider-actions.fade
@@ -325,9 +382,9 @@ html
           .col-sm-4
             .styleguide-content
               p The media element should be used any time you need a key-value pair in a visual sense. This includes a comment+avatar combo, literal key-value pairs (e.g. two-column tables), etc.
-            p The key element accepts an image, or text, while the body acts as a standard container. Entire media element acts as a table and uses no floats for layout.
+              p The key element accepts an image, or text, while the body acts as a standard container. Entire media element acts as a table and uses no floats for layout.
 
-      section.styleguide-section#s-08
+      section.styleguide-section#s-09
         h1.styleguide-divider
           | Tabs
           span.styleguide-divider-actions.fade
@@ -348,7 +405,7 @@ html
             .styleguide-content
               p Basic tabs implementation with support for history API and accessibility features.
 
-      section.styleguide-section#s-09
+      section.styleguide-section#s-10
         h1.styleguide-divider
           | Overlays
           span.styleguide-divider-actions.fade
@@ -360,7 +417,7 @@ html
             .styleguide-content
               p Basic tabs implementation with support for history API and accessibility features.
 
-      section.styleguide-section#s-10
+      section.styleguide-section#s-11
         h1.styleguide-divider
           | Flexbox grid
           span.styleguide-divider-actions.fade

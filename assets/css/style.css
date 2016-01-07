@@ -4872,6 +4872,12 @@ Copyright (c) 2015 Daniel Eden
 .mb-xl {
   margin-bottom: 80px !important;
 }
+.bg-light {
+  background-color: #fff !important;
+}
+.bg-text {
+  background-color: #343434 !important;
+}
 .bg-primary {
   background-color: #0075FF !important;
 }
@@ -4886,6 +4892,27 @@ Copyright (c) 2015 Daniel Eden
 }
 .bg-shaded {
   background-color: #f4f4f4 !important;
+}
+.text-light {
+  color: #fff !important;
+}
+.text-text {
+  color: #343434 !important;
+}
+.text-primary {
+  color: #0075FF !important;
+}
+.text-success {
+  color: #94ce00 !important;
+}
+.text-danger {
+  color: #ff3019 !important;
+}
+.text-warning {
+  color: #F8E71C !important;
+}
+.text-shaded {
+  color: #f4f4f4 !important;
 }
 .media {
   margin-bottom: 1em;
