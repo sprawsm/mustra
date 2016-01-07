@@ -260,6 +260,69 @@ html
 
       section.styleguide-section#s-05
         h1.styleguide-divider
+          | Tables
+          span.styleguide-divider-actions.fade
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+        .row
+          .col-sm-8
+            table.table
+              caption Table caption
+              tfoot
+                tr
+                  td(colspan="4") Table footer.
+              thead
+                tr
+                  th Header
+                  th Header
+                  th Header
+                  th Header
+              tbody
+                tr
+                  td Cell
+                  td Cell
+                  td Cell
+                  td Cell
+                tr
+                  td Cell
+                  td Cell
+                  td Cell
+                  td Cell
+
+            table.table.table-datatable
+              caption Datatables
+              tfoot
+                tr
+                  td(colspan="4") Fig. 3.4.
+              thead
+                tr
+                  th Header
+                  th Header
+                  th Header
+                  th.txtr.highlight Num.
+              tbody
+                tr
+                  td Cell
+                  td Cell
+                  td Cell
+                  td.txtr.num.highlight
+                    span.left $
+                    | 19.99
+                tr
+                  td Cell
+                  td Cell
+                  td Cell
+                  td.txtr.num.highlight
+                    span.left $
+                    | 123.45
+          .col-sm-4
+            .styleguide-content
+              p
+                strong Tables
+              p Tables come in two formats: standard tables (e.g. when you need to present tabular data in longform text), and datatables (e.g. when you want to present something spreadsheet-like).
+              p The <sode>.num</sode> class, coupled with the <code>.txtr</code> class can be pretty useful within tables when dealing with numbers and you need the figures to line up.
+
+      section.styleguide-section#s-06
+        h1.styleguide-divider
           | Buttons
           span.styleguide-divider-actions.fade
             a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
@@ -321,7 +384,7 @@ html
             .styleguide-content
               p Various button flavors and sizes.
 
-      section.styleguide-section#s-06
+      section.styleguide-section#s-07
         h1.styleguide-divider
           | Boxes
           span.styleguide-divider-actions.fade
@@ -340,7 +403,7 @@ html
                 strong Boxes
               p Boxes in various flavors and sizes. Use them when you need to frame some content. Use the <code>.box-nopadding</code> class in case you want to nest a <code>.grid</code> layout within it.
 
-      section.styleguide-section#s-07
+      section.styleguide-section#s-08
         h1.styleguide-divider
           | Messages
           span.styleguide-divider-actions.fade
@@ -366,7 +429,7 @@ html
               p Global message styles. Absolutely positioned to the top of the screen by default. In case you need more layout control feel free to use a <code>.grid</code> layout instead of <code>.message-content</code>.
               p In case you want them to be dismissable, add a class <code>.animated</code> along with an exit class from <a href="http://daneden.github.io/animate.css/">animate.css</a> within a <code>data-dismissable</code> attribute.
 
-      section.styleguide-section#s-08
+      section.styleguide-section#s-09
         h1.styleguide-divider
           | Media object
           span.styleguide-divider-actions.fade
@@ -384,7 +447,7 @@ html
               p The media element should be used any time you need a key-value pair in a visual sense. This includes a comment+avatar combo, literal key-value pairs (e.g. two-column tables), etc.
               p The key element accepts an image, or text, while the body acts as a standard container. Entire media element acts as a table and uses no floats for layout.
 
-      section.styleguide-section#s-09
+      section.styleguide-section#s-10
         h1.styleguide-divider
           | Tabs
           span.styleguide-divider-actions.fade
@@ -405,7 +468,7 @@ html
             .styleguide-content
               p Basic tabs implementation with support for history API and accessibility features.
 
-      section.styleguide-section#s-10
+      section.styleguide-section#s-11
         h1.styleguide-divider
           | Overlays
           span.styleguide-divider-actions.fade
@@ -417,7 +480,7 @@ html
             .styleguide-content
               p Basic tabs implementation with support for history API and accessibility features.
 
-      section.styleguide-section#s-11
+      section.styleguide-section#s-12
         h1.styleguide-divider
           | Flexbox grid
           span.styleguide-divider-actions.fade
