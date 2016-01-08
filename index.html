@@ -56,6 +56,7 @@
               <li><a href="#s-tabs" data-scroll="smooth">Tabs</a></li>
               <li><a href="#s-overlays" data-scroll="smooth">Overlays</a></li>
               <li><a href="#s-flexbox-grid" data-scroll="smooth">Flexbox grid</a></li>
+              <li><a href="#s-helper-classes" data-scroll="smooth">Helper classes</a></li>
             </ul>
           </div>
           <div class="col-sm-3">
@@ -624,6 +625,39 @@
               <p>The flexbox-based grid uses the same syntax as the Bootstrap's grid, and supports the same features.</p>
               <p>The main thing that makes it a better alternative to the old float-based grid is the fact that it's nestable. Other features that set it apart are modern properties that come with flexbox layout model, such as easy vertical centering through <code>.top/middle/bottom-XX</code> classes, ability to define starting points for the grid (we used to revert floats before) through <code>.left/center/right-XX</code>.</p>
               <p>Find out more at <a href="http://flexboxgrid.com/">flexboxgrid.com</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="s-helper-classes" class="styleguide-section">
+        <h1 class="styleguide-divider">Helper classes<span class="styleguide-divider-actions fade"><a href="#top" data-scroll="smooth" class="button button-xs button-default">back to top</a></span></h1>
+        <div class="row">
+          <div class="col-sm-8">
+            <h2 class="h3">Clearfix</h2>
+            <p>The <code>.clearfix</code> class is a standard one you might have seen before. Add it to a parent or import it into another class in order to clear the parent element of floats.</p>
+            <h2 class="h3">Content visibility</h2>
+            <p>You can control element's visibility using the following classes:</p>
+            <ul>
+              <li><code>.no-show</code> which positions the element outside the viewport with absolute positioning, but doesn't apply <code>display: none</code> to it.</li>
+              <li><code>.hidden</code> hides the element with <code>display: none</code>.</li>
+              <li><code>.fade</code> coupled with <code>.in</code> hides and shows an element using the <code>opacity</code> property (has a transition effect by default as well).</li>
+            </ul>
+            <h2 class="h3">Display</h2>
+            <p>You can force an element's display with literal classes <code>.display-block</code>, <code>.display-inline-block</code>, and <code>.display-inline</code>.</p>
+            <h2 class="h3">Floats</h2>
+            <p>Mustra uses the following classes to horizontally align elements using floats: <code>.left</code>, <code>.right</code>.</p>
+            <p>The <code>.center</code> class is used to center a block-level element horizontally, although it requires that the element has a set width.</p>
+            <h2 class="h3">Responsive figures</h2>
+            <p>In order to prevent figures like images and objects overflow their containers, apply one of the following classes: <code>.contain</code>, or <code>img-responsive</code>.</p>
+            <p>Both classes do the same thing, the first one is specific to Mustra, while the latter is following Bootstrap's convention.</p>
+            <h2 class="h3">Margins</h2>
+            <p>Mustra supplies you with necessary spacing classes your can use to preserve consistency in your UIs.</p>
+            <p>The basic formula is: <code>.m[direction]-[size]</code> where the direction can be <code>l</code> (left), <code>t</code> (top), <code>r</code> (right), or <code>b</code> (bottom), and sizes are: <code>xs</code>, <code>sm</code>, <code>base</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>type</code>.</p>
+            <p>The specific sizing suffix <code>type</code> uses the typographic <code>em</code> value for size (<code>1em</code> by default) and is meant to be used when you e.g. want to insert a custom UI element within longform text, but you want to keep the flow natural.</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="styleguide-content">
+              <p>The…</p>
             </div>
           </div>
         </div>
