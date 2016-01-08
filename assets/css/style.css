@@ -1847,8 +1847,6 @@ small {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35) inset;
 }
 .box {
-  margin-top: 20px;
-  margin-bottom: 20px;
   padding: 20px;
   border-radius: 5px;
 }
@@ -4861,6 +4859,9 @@ Copyright (c) 2015 Daniel Eden
 .ml-xl {
   margin-left: 80px !important;
 }
+.ml-type {
+  margin-left: 1em !important;
+}
 .mt-none {
   margin-top: 0 !important;
 }
@@ -4881,6 +4882,9 @@ Copyright (c) 2015 Daniel Eden
 }
 .mt-xl {
   margin-top: 80px !important;
+}
+.mt-type {
+  margin-top: 1em !important;
 }
 .mr-none {
   margin-right: 0 !important;
@@ -4903,6 +4907,9 @@ Copyright (c) 2015 Daniel Eden
 .mr-xl {
   margin-right: 80px !important;
 }
+.mr-type {
+  margin-right: 1em !important;
+}
 .mb-none {
   margin-bottom: 0 !important;
 }
@@ -4923,6 +4930,9 @@ Copyright (c) 2015 Daniel Eden
 }
 .mb-xl {
   margin-bottom: 80px !important;
+}
+.mb-type {
+  margin-bottom: 1em !important;
 }
 .bg-light {
   background-color: #fff !important;
