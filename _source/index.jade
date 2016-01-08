@@ -1,11 +1,17 @@
-doctype html
-html
+extends layout
 
-  head
-    title Mustra Styleguide
-    include partials/_header
-    link(rel="stylesheet", href="assets/css/styleguide.css")
+mixin sectionLink(s, name)
+  li
+    a(href=s, data-scroll="smooth")= name
 
+//- Add an additional stylesheet needed for teh styleguide
+block append head
+  link(rel="stylesheet", href="assets/css/styleguide.css")
+
+block title
+  title Mustra styleguide
+
+block content
   body#top
 
     .container
@@ -18,7 +24,8 @@ html
       section.styleguide-section
         .row
           .col-sm-8
-            p.lead.mb-none Welcome to Mustra, a simple front-end starting point created by <a href="http://sprawsm.com/">Superawesome</a>.
+            p.lead Welcome to Mustra, a simple front-end starting point created by <a href="http://sprawsm.com/">Superawesome</a>.
+            p.mb-none Feel free to use this page as a starting point for your project's styleguide, or simply delete it and make it your home page.
 
       section.styleguide-section
         h1.styleguide-divider
@@ -29,35 +36,24 @@ html
           .col-sm-3.col-sm-offset-3
             p.upcase This guide
             ul.list-unstyled
-              li
-                a(href="#s-02", data-scroll="smooth") Colors
-              li
-                a(href="#s-02", data-scroll="smooth") Titles
-              li
-                a(href="#s-03", data-scroll="smooth") Textual elements
-              li
-                a(href="#s-04", data-scroll="smooth") Lists
-              li
-                a(href="#s-05", data-scroll="smooth") Buttons
-              li
-                a(href="#s-06", data-scroll="smooth") Boxes
-              li
-                a(href="#s-07", data-scroll="smooth") Messages
-              li
-                a(href="#s-08", data-scroll="smooth") Media object
-              li
-                a(href="#s-09", data-scroll="smooth") Tabs
-              li
-                a(href="#s-10", data-scroll="smooth") Overlays
-              li
-                a(href="#s-11", data-scroll="smooth") Flexbox grid
+              +sectionLink('#s-colors', 'Colors')
+              +sectionLink('#s-titles', 'Titles')
+              +sectionLink('#s-textual-elements', 'Textual elements')
+              +sectionLink('#s-lists', 'Lists')
+              +sectionLink('#s-buttons', 'Buttons')
+              +sectionLink('#s-boxes', 'Boxes')
+              +sectionLink('#s-messages', 'Messages')
+              +sectionLink('#s-media-object', 'Media object')
+              +sectionLink('#s-tabs', 'Tabs')
+              +sectionLink('#s-overlays', 'Overlays')
+              +sectionLink('#s-flexbox-grid', 'Flexbox grid')
           .col-sm-3
             p.upcase Templates
             ul.list-unstyled
               li
                 a(href="starter.html") Starter
 
-      section.styleguide-section#s-01
+      section.styleguide-section#s-colors
         h1.styleguide-divider
           | Colors
           span.styleguide-divider-actions.fade
@@ -110,7 +106,7 @@ html
               p Mustra maps all colors to a LESS variable, and comes with a vibrant default theme, and some basics covered for you.
               p There are helper classes to color backgrounds (<code>.bg-[variable]</code>) and text (<code>.text-[variable]</code>) respectively.
 
-      section.styleguide-section#s-02
+      section.styleguide-section#s-titles
         h1.styleguide-divider
           | Titles
           span.styleguide-divider-actions.fade
@@ -143,7 +139,7 @@ html
                 strong Subtitles
               p This style is also mapped to <code>.h3</code> and is best used within text for more granular separation.
 
-      section.styleguide-section#s-03
+      section.styleguide-section#s-textual-elements
         h1.styleguide-divider
           | Textual elements
           span.styleguide-divider-actions.fade
@@ -201,7 +197,7 @@ html
             .styleguide-content
               p Text flow control.
 
-      section.styleguide-section#s-04
+      section.styleguide-section#s-lists
         h1.styleguide-divider
           | Lists
           span.styleguide-divider-actions.fade
@@ -258,7 +254,7 @@ html
               p The two classes provided, while almost identical <code>.list-inline</code> is meant for inline content, such as text, links and such, while <code>.list-inline-block</code> is meant for inline-block flowing content such as buttons, also useful when you don't want to break the list item's content into lines.
               p There is also a possiblity to separate list items with dots.
 
-      section.styleguide-section#s-05
+      section.styleguide-section#s-tables
         h1.styleguide-divider
           | Tables
           span.styleguide-divider-actions.fade
@@ -321,7 +317,7 @@ html
               p Tables come in two formats: standard tables (e.g. when you need to present tabular data in longform text), and datatables (e.g. when you want to present something spreadsheet-like).
               p The <sode>.num</sode> class, coupled with the <code>.txtr</code> class can be pretty useful within tables when dealing with numbers and you need the figures to line up.
 
-      section.styleguide-section#s-06
+      section.styleguide-section#s-buttons
         h1.styleguide-divider
           | Buttons
           span.styleguide-divider-actions.fade
@@ -384,7 +380,7 @@ html
             .styleguide-content
               p Various button flavors and sizes.
 
-      section.styleguide-section#s-07
+      section.styleguide-section#s-boxes
         h1.styleguide-divider
           | Boxes
           span.styleguide-divider-actions.fade
@@ -403,7 +399,7 @@ html
                 strong Boxes
               p Boxes in various flavors and sizes. Use them when you need to frame some content. Use the <code>.box-nopadding</code> class in case you want to nest a <code>.grid</code> layout within it.
 
-      section.styleguide-section#s-08
+      section.styleguide-section#s-messages
         h1.styleguide-divider
           | Messages
           span.styleguide-divider-actions.fade
@@ -429,7 +425,7 @@ html
               p Global message styles. Absolutely positioned to the top of the screen by default. In case you need more layout control feel free to use a <code>.grid</code> layout instead of <code>.message-content</code>.
               p In case you want them to be dismissable, add a class <code>.animated</code> along with an exit class from <a href="http://daneden.github.io/animate.css/">animate.css</a> within a <code>data-dismissable</code> attribute.
 
-      section.styleguide-section#s-09
+      section.styleguide-section#s-media-object
         h1.styleguide-divider
           | Media object
           span.styleguide-divider-actions.fade
@@ -447,7 +443,7 @@ html
               p The media element should be used any time you need a key-value pair in a visual sense. This includes a comment+avatar combo, literal key-value pairs (e.g. two-column tables), etc.
               p The key element accepts an image, or text, while the body acts as a standard container. Entire media element acts as a table and uses no floats for layout.
 
-      section.styleguide-section#s-10
+      section.styleguide-section#s-tabs
         h1.styleguide-divider
           | Tabs
           span.styleguide-divider-actions.fade
@@ -468,7 +464,7 @@ html
             .styleguide-content
               p Basic tabs implementation with support for history API and accessibility features.
 
-      section.styleguide-section#s-11
+      section.styleguide-section#s-overlays
         h1.styleguide-divider
           | Overlays
           span.styleguide-divider-actions.fade
@@ -480,7 +476,7 @@ html
             .styleguide-content
               p Basic tabs implementation with support for history API and accessibility features.
 
-      section.styleguide-section#s-12
+      section.styleguide-section#s-flexbox-grid
         h1.styleguide-divider
           | Flexbox grid
           span.styleguide-divider-actions.fade
@@ -545,5 +541,3 @@ html
         .container
           .mt-lg.mb-lg
             .box.box-default Overlay content.
-
-    include partials/_footer
