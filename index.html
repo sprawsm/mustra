@@ -74,47 +74,47 @@
             <p>Backgrounds:</p>
             <div class="row">
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-text text-light txtc text-sm"><code>@color-text</code></div>
+                <div class="styleguide-grid-cell bg-text text-light txtc text-sm"><span>@color-text</span></div>
               </div>
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-shaded txtc text-sm"><code>@color-shaded</code></div>
+                <div class="styleguide-grid-cell bg-shaded txtc text-sm"><span>@color-shaded</span></div>
               </div>
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-primary text-light txtc text-sm"><code>@color-primary</code></div>
+                <div class="styleguide-grid-cell bg-primary text-light txtc text-sm"><span>@color-primary</span></div>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-success txtc text-sm"><code>@color-success</code></div>
+                <div class="styleguide-grid-cell bg-success txtc text-sm"><span>@color-success</span></div>
               </div>
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-danger txtc text-sm"><code>@color-danger</code></div>
+                <div class="styleguide-grid-cell bg-danger txtc text-sm"><span>@color-danger</span></div>
               </div>
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-warning txtc text-sm"><code>@color-warning</code></div>
+                <div class="styleguide-grid-cell bg-warning txtc text-sm"><span>@color-warning</span></div>
               </div>
             </div>
             <p class="mt-type">Text:</p>
             <div class="row">
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-text text-light txtc text-sm"><code>@color-light</code></div>
+                <div class="styleguide-grid-cell bg-text text-light txtc text-sm"><span>@color-light</span></div>
               </div>
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-text text-shaded txtc text-sm"><code>@color-shaded</code></div>
+                <div class="styleguide-grid-cell bg-text text-shaded txtc text-sm"><span>@color-shaded</span></div>
               </div>
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-light text-primary txtc text-sm"><code>@color-primary</code></div>
+                <div class="styleguide-grid-cell bg-light text-primary txtc text-sm"><span>@color-primary</span></div>
               </div>
             </div>
             <div class="row">
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-light text-success txtc text-sm"><code>@color-success</code></div>
+                <div class="styleguide-grid-cell bg-light text-success txtc text-sm"><span>@color-success</span></div>
               </div>
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-light text-danger txtc text-sm"><code>@color-danger</code></div>
+                <div class="styleguide-grid-cell bg-light text-danger txtc text-sm"><span>@color-danger</span></div>
               </div>
               <div class="col-xs-4">
-                <div class="styleguide-grid-cell bg-light text-warning txtc text-sm"><code>@color-warning</code></div>
+                <div class="styleguide-grid-cell bg-light text-warning txtc text-sm"><span>@color-warning</span></div>
               </div>
             </div>
           </div>
@@ -654,10 +654,11 @@
             <p>Mustra supplies you with necessary spacing classes your can use to preserve consistency in your UIs.</p>
             <p>The basic formula is: <code>.m[direction]-[size]</code> where the direction can be <code>l</code> (left), <code>t</code> (top), <code>r</code> (right), or <code>b</code> (bottom), and sizes are: <code>xs</code>, <code>sm</code>, <code>base</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>type</code>.</p>
             <p>The specific sizing suffix <code>type</code> uses the typographic <code>em</code> value for size (<code>1em</code> by default) and is meant to be used when you e.g. want to insert a custom UI element within longform text, but you want to keep the flow natural.</p>
+            <p class="quiet text-sm">It's important to note that these classes should not be imported into other classes, as they have the <code>!important</code> flag. They are meant to be used to overcome defaults on a case-by-case basis. In order to keep spacing consistent throughout your UI you should rely on the default spacing variables, and expand from there if you need to.</p>
           </div>
           <div class="col-sm-4">
             <div class="styleguide-content">
-              <p>The…</p>
+              <p>These are the helper classes available in Mustra by default. They are extremely useful for fine-grained control of your UI, and when writing a special class isn't possible or optimal.</p>
             </div>
           </div>
         </div>

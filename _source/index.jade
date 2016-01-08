@@ -65,44 +65,44 @@ block content
             .row
               .col-xs-4
                 .styleguide-grid-cell.bg-text.text-light.txtc.text-sm
-                  code @color-text
+                  span @color-text
               .col-xs-4
                 .styleguide-grid-cell.bg-shaded.txtc.text-sm
-                  code @color-shaded
+                  span @color-shaded
               .col-xs-4
                 .styleguide-grid-cell.bg-primary.text-light.txtc.text-sm
-                  code @color-primary
+                  span @color-primary
             .row
               .col-xs-4
                 .styleguide-grid-cell.bg-success.txtc.text-sm
-                  code @color-success
+                  span @color-success
               .col-xs-4
                 .styleguide-grid-cell.bg-danger.txtc.text-sm
-                  code @color-danger
+                  span @color-danger
               .col-xs-4
                 .styleguide-grid-cell.bg-warning.txtc.text-sm
-                  code @color-warning
+                  span @color-warning
             p.mt-type Text:
             .row
               .col-xs-4
                 .styleguide-grid-cell.bg-text.text-light.txtc.text-sm
-                  code @color-light
+                  span @color-light
               .col-xs-4
                 .styleguide-grid-cell.bg-text.text-shaded.txtc.text-sm
-                  code @color-shaded
+                  span @color-shaded
               .col-xs-4
                 .styleguide-grid-cell.bg-light.text-primary.txtc.text-sm
-                  code @color-primary
+                  span @color-primary
             .row
               .col-xs-4
                 .styleguide-grid-cell.bg-light.text-success.txtc.text-sm
-                  code @color-success
+                  span @color-success
               .col-xs-4
                 .styleguide-grid-cell.bg-light.text-danger.txtc.text-sm
-                  code @color-danger
+                  span @color-danger
               .col-xs-4
                 .styleguide-grid-cell.bg-light.text-warning.txtc.text-sm
-                  code @color-warning
+                  span @color-warning
           .col-sm-4
             .styleguide-content
               p Mustra maps all colors to a LESS variable, and comes with a vibrant default theme, and some basics covered for you.
@@ -558,10 +558,11 @@ block content
             p Mustra supplies you with necessary spacing classes your can use to preserve consistency in your UIs.
             p The basic formula is: <code>.m[direction]-[size]</code> where the direction can be <code>l</code> (left), <code>t</code> (top), <code>r</code> (right), or <code>b</code> (bottom), and sizes are: <code>xs</code>, <code>sm</code>, <code>base</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>type</code>.
             p The specific sizing suffix <code>type</code> uses the typographic <code>em</code> value for size (<code>1em</code> by default) and is meant to be used when you e.g. want to insert a custom UI element within longform text, but you want to keep the flow natural.
+            p.quiet.text-sm It's important to note that these classes should not be imported into other classes, as they have the <code>!important</code> flag. They are meant to be used to overcome defaults on a case-by-case basis. In order to keep spacing consistent throughout your UI you should rely on the default spacing variables, and expand from there if you need to.
 
           .col-sm-4
             .styleguide-content
-              p The…
+              p These are the helper classes available in Mustra by default. They are extremely useful for fine-grained control of your UI, and when writing a special class isn't possible or optimal.
 
       hr.mt-lg.mb-lg
 
