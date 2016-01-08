@@ -183,11 +183,13 @@ module.exports = function(grunt) {
         }]
       },
       svg: {
-        plugins: [
-            { removeViewBox: false },
-            { removeUselessStrokeAndFill: true },
-            { removeEmptyAttrs: true }
-        ],
+        options: {
+          plugins: [
+              { removeViewBox: false },
+              { removeUselessStrokeAndFill: true },
+              { removeEmptyAttrs: true }
+          ]
+        },
         files: [{
           expand: true,
           cwd: '_source/assets/images/',
@@ -263,7 +265,7 @@ module.exports = function(grunt) {
         files: ['_source/**/*.jade', '_source/assets/less/**/*.less', '_source/assets/js/**/*.js'],
 
         // These tasks compiles html pages
-        tasks: ['compile-html-jade'],
+        tasks: ['compile-html'],
 
         options: {
           spawn: false,
@@ -294,7 +296,7 @@ module.exports = function(grunt) {
       imagemin: {
         // When we add, or change image from _source/images folder, imagemin
         // task is run.
-        files: ['_source/assets/images/**/*.jpg', '_source/assets/images/**/*.png'],
+        files: ['_source/assets/images/**/*.jpg', '_source/assets/images/**/*.png', '_source/assets/images/**/*.svg'],
         tasks: ['optimize-images']
       },
 
@@ -353,7 +355,7 @@ module.exports = function(grunt) {
   // grunt.registerTask('default', ['jade', 'uglify', 'jshint', 'less', 'postcss', 'imagemin', 'svgstore']);
   grunt.registerTask('default', ['jade', 'uglify', 'jshint', 'less', 'postcss', 'imagemin']);
   // Build html files from jade files.
-  grunt.registerTask('compile-html-jade', ['jade']);
+  grunt.registerTask('compile-html', ['jade']);
   // Compile less files (first compile less into css, and then run postcss
   // task).
   grunt.registerTask('compile-css', ['less', 'postcss']);
