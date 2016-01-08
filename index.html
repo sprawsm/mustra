@@ -83,6 +83,7 @@
                 <div class="styleguide-grid-cell bg-primary text-light txtc text-sm"><span>@color-primary</span></div>
               </div>
             </div>
+            <p>This sentence has a couple of <strong class="highlight">highlighted words</strong>.</p>
             <div class="row">
               <div class="col-xs-4">
                 <div class="styleguide-grid-cell bg-success txtc text-sm"><span>@color-success</span></div>
@@ -167,7 +168,7 @@
       </section>
       <section id="s-textual-elements" class="styleguide-section">
         <h1 class="styleguide-divider">Textual elements<span class="styleguide-divider-actions fade"><a href="#top" data-scroll="smooth" class="button button-xs button-default">back to top</a></span></h1>
-        <div class="row">
+        <div class="row mb-md">
           <div class="col-sm-8">
             <p class="lead">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -179,7 +180,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row mb-md">
           <div class="col-sm-8">
             <ul class="list-inline-block">
               <li><a href="http://funnelnow.com">Standard link</a></li>
@@ -198,21 +199,23 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row mb-md">
           <div class="col-sm-8">
+            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="text-md">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
           <div class="col-sm-4">
             <div class="styleguide-content">
-              <p>Styles for small text, enforces font size. Classes are <code>text-sm</code> and <code>text-xs</code>.</p>
+              <p>Styles for text sizing, enforces font size. Classes are <code>.text-lg</code>, <code>.text-md</code>, <code>.text-base</code> (for reset), <code>.text-sm</code> and <code>.text-xs</code>.</p>
+              <p>It's important to note that the text sizing classes shouldn't be included into other classes as they contain the <code>!important</code> flag.</p>
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row mb-md">
           <div class="col-sm-8">
             <p class="text-quiet">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p class="text-quiet text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
           <div class="col-sm-4">
             <div class="styleguide-content">
@@ -228,14 +231,14 @@
           </div>
           <div class="col-sm-4">
             <div class="styleguide-content">
-              <p>Text flow control.</p>
+              <p>Text flow control. It's important to note that the text align classes shouldn't be included into other classes as they contain the <code>!important</code> flag.</p>
             </div>
           </div>
         </div>
       </section>
       <section id="s-lists" class="styleguide-section">
         <h1 class="styleguide-divider">Lists<span class="styleguide-divider-actions fade"><a href="#top" data-scroll="smooth" class="button button-xs button-default">back to top</a></span></h1>
-        <div class="row">
+        <div class="row mb-md">
           <div class="col-sm-8">
             <ul>
               <li>List item 1</li>
@@ -262,7 +265,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row mb-md">
           <div class="col-sm-8">
             <ul class="list-unstyled">
               <li>List item 1</li>
@@ -385,7 +388,7 @@
         <h1 class="styleguide-divider">Buttons<span class="styleguide-divider-actions fade"><a href="#top" data-scroll="smooth" class="button button-xs button-default">back to top</a></span></h1>
         <div class="row">
           <div class="col-sm-8">
-            <ul class="list-inline-block">
+            <ul class="list-inline-block mb-md">
               <li><a href="#" class="button button-default">Default button</a></li>
               <li>
                 <button type="submit" class="button button-default">Default button</button>
@@ -394,7 +397,7 @@
                 <input type="submit" id="" name="" value="Default button" class="button button-default">
               </li>
             </ul>
-            <ul class="list-inline-block">
+            <ul class="list-inline-block mb-md">
               <li><a href="#" class="button button-primary">Primary button</a></li>
               <li>
                 <button type="submit" class="button button-primary">Primary button</button>
@@ -403,7 +406,7 @@
                 <input type="submit" id="" name="" value="Primary button" class="button button-primary">
               </li>
             </ul>
-            <ul class="list-inline-block">
+            <ul class="list-inline-block mb-md">
               <li><a href="#" class="button button-success">Success button</a></li>
               <li>
                 <button type="submit" class="button button-success">Success button</button>
@@ -412,7 +415,7 @@
                 <input type="submit" id="" name="" value="Success button" class="button button-success">
               </li>
             </ul>
-            <ul class="list-inline-block">
+            <ul class="list-inline-block mb-md">
               <li><a href="#" class="button button-danger">Danger button</a></li>
               <li>
                 <button type="submit" class="button button-danger">Danger button</button>
@@ -421,7 +424,7 @@
                 <input type="submit" id="" name="" value="Danger button" class="button button-danger">
               </li>
             </ul>
-            <ul class="list-inline-block">
+            <ul class="list-inline-block mb-md">
               <li><a href="#" class="button button-warning">Warning button</a></li>
               <li>
                 <button type="submit" class="button button-warning">Warning button</button>
@@ -430,7 +433,7 @@
                 <input type="submit" id="" name="" value="Warning button" class="button button-warning">
               </li>
             </ul>
-            <div class="box box-default">
+            <div class="box box-default mb-md">
               <ul class="list-inline-block">
                 <li><a href="#" class="button button-invert">Inverted button</a></li>
                 <li>
@@ -441,7 +444,7 @@
                 </li>
               </ul>
             </div>
-            <ul class="list-inline-block">
+            <ul class="list-inline-block mb-md">
               <li><a href="#" class="button button-primary button-xs">X–Small button</a></li>
               <li><a href="#" class="button button-primary button-sm">Small button</a></li>
               <li><a href="#" class="button button-primary button-lg">Large button</a></li>
