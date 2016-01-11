@@ -9,6 +9,8 @@ The goal we had with Mustra was to create a starting point which we could take i
 
 Additionally, we wanted to minimize the gruntwork we needed to do for each codebase handover, things such as concatenation, image optimization, etc. This is why Mustra comes with a preconfigured Gruntfile and package.json which provide you with a basic development environment. 
 
+Lastly, Mustra comes with a boilerplate styleguide as an index file which you can use as your UI library and template index. 
+
 At the moment Mustra will set you up with the following: 
 
 - LESS-based CSS preprocessing 
