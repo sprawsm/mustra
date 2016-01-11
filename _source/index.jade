@@ -37,6 +37,7 @@ block content
             p.upcase This guide
             ul.list-unstyled
               +sectionLink('#s-colors', 'Colors')
+              +sectionLink('#s-font-families', 'Font families')
               +sectionLink('#s-titles', 'Titles')
               +sectionLink('#s-textual-elements', 'Textual elements')
               +sectionLink('#s-lists', 'Lists')
@@ -108,6 +109,35 @@ block content
             .styleguide-content
               p Mustra maps all colors to a LESS variable, and comes with a vibrant default theme, and some basics covered for you.
               p There are helper classes to color backgrounds (<code>.bg-[variable]</code>) and text (<code>.text-[variable]</code>) respectively.
+
+      section.styleguide-section#s-font-families
+        h1.styleguide-divider
+          | Font families
+          span.styleguide-divider-actions.fade
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+        .row
+          .col-sm-8
+            h2.h3 Helvetica Neue, Arial, Helvetica, sans-serif;
+            .box.box-default.mb-sm
+              h3.quiet.upcase.mb-sm Normal
+              | a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+              | A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+              | 1 2 3 4 5 6 7 8 9 0
+            .box.box-default.mb-sm
+              h3.quiet.upcase.mb-sm Bold (400)
+              div(style="font-weight: bold;")
+                | a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+                | A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+                | 1 2 3 4 5 6 7 8 9 0
+            .box.box-default
+              h3.quiet.upcase.mb-sm Italic
+              div(style="font-style: italic;")
+                | a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+                | A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+                | 1 2 3 4 5 6 7 8 9 0
+          .col-sm-4
+            .styleguide-content
+              p By default Mustra uses the tried and true sans-serif font stack which falls back on Helvetica Neue on OS X, and Helvetica (first, if available) or Arial on Windows, and lastly a default sans-serif font on other operating systems.
 
       section.styleguide-section#s-titles
         h1.styleguide-divider
