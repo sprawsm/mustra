@@ -8,6 +8,11 @@
   padding: @spacing-base;
   border-radius: @border-radius-base;
 
+  // Make sure that the boxes don't stick to each other if stacked
+  + .box {
+    margin-top: @spacing-type;
+  }
+
   // Flavors
 
   &.box-default {

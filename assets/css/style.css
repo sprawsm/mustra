@@ -1872,6 +1872,9 @@ small {
 .box:after {
   clear: both;
 }
+.box + .box {
+  margin-top: 1em;
+}
 .box.box-default {
   background-color: #f4f4f4;
 }
