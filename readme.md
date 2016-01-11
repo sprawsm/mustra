@@ -21,3 +21,17 @@ At the moment Mustra will set you up with the following:
 We hope you enjoy using it, and hope it will help you get your work done faster. 
 
 Cheers. 
+
+## Setting up your project 
+
+Here's a quick primer on how to get your Mustra up and running and kick off the front-end development of your project. 
+
+1. Make sure you have Node.js and npm installed, if not go ahead and [install it from the Node.js site](https://nodejs.org/en/). 
+2. Make sure you have the Grunt CLI installed, if not run the following command from your Terminal: `sudo npm install -g grunt-cli` (you may not need `sudo`, but you most likely will). 
+3. Clone a fresh copy of Mustra by typing the following in your Terminal window: `git clone git@gitlab.com:sprawsm/mustra.git`, followed by `cd mustra`, and `git checkout master` (or [download it manually from here](https://gitlab.com/sprawsm/mustra/tree/master)). 
+4. Run grunt in order to install all dependencies by typing the following commaind in Terminal: `npm install grunt --save-dev`. 
+5. You're all set and good to go. 
+
+That's all there is to it. A couple of notes, though: 
+
+- If you have downloaded Mustra manually, make sure you are downloading from the master branch as it's always stable. Even more safe is to [download the latest release](https://gitlab.com/sprawsm/mustra/tags). If you would like to use the newest features, download from the development branch but beware that things might be rough around the edges, or break completely. 
