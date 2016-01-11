@@ -264,6 +264,8 @@ h4,
 .pretitle {
   text-transform: uppercase;
   font-weight: 300;
+  font-size: .65em;
+  font-weight: 700;
   letter-spacing: .1em;
   margin-top: 0;
   margin-bottom: 20px;
@@ -327,6 +329,8 @@ small {
 .upcase {
   text-transform: uppercase;
   font-weight: 300;
+  font-size: .65em;
+  font-weight: 700;
   letter-spacing: .1em;
 }
 .underline {
@@ -392,6 +396,8 @@ small {
   color: #999;
   text-transform: uppercase;
   font-weight: 300;
+  font-size: .65em;
+  font-weight: 700;
   letter-spacing: .1em;
   margin-bottom: 10px;
   text-align: left;
@@ -406,9 +412,9 @@ small {
 .table th {
   text-transform: uppercase;
   font-weight: 300;
-  letter-spacing: .1em;
   font-size: .65em;
   font-weight: 700;
+  letter-spacing: .1em;
   background: #f4f4f4;
 }
 .table tfoot td {
