@@ -32,7 +32,9 @@ Here's a quick primer on how to get your Mustra up and running and kick off the 
 2. Make sure you have the Grunt CLI installed, if not run the following command from your Terminal: `sudo npm install -g grunt-cli` (you may not need `sudo`, but you most likely will). 
 3. Clone a fresh copy of Mustra by typing the following in your Terminal window: `git clone git@gitlab.com:sprawsm/mustra.git`, followed by `cd mustra`, and `git checkout master` (or [download it manually from here](https://gitlab.com/sprawsm/mustra/tree/master)). 
 4. Run grunt in order to install all dependencies by typing the following commaind in Terminal: `npm install grunt --save-dev`. 
-5. You're all set and good to go. 
+5. Run `grunt server` in order to spin up a local server. 
+6. Run `grunt watch` in order to compile files and refresh your browser on every save. For browser refreshing, you will need the [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) extension.
+7. You're all set and good to go. 
 
 That's all there is to it. A couple of notes, though: 
 
