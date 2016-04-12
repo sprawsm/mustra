@@ -1,3 +1,5 @@
 config.codekit
 node_modules
 sftp-config.json
+mustra.sublime-project
+mustra.sublime-workspace
