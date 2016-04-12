@@ -442,40 +442,6 @@ small {
   padding-left: 0;
   padding-right: 0;
 }
-.figure {
-  clear: both;
-  margin-top: 0;
-  margin-bottom: 1em;
-  text-align: center;
-}
-.figure figcaption {
-  text-align: left;
-}
-.figure img,
-.figure iframe,
-.figure video,
-.figure object,
-.figure embed {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.figure.left {
-  clear: none;
-}
-@media (min-width: 481px) {
-  .figure.left {
-    margin-right: 1em;
-  }
-}
-.figure.right {
-  clear: none;
-}
-@media (min-width: 481px) {
-  .figure.right {
-    margin-left: 1em;
-  }
-}
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -1472,6 +1438,40 @@ small {
   background-color: #fff;
   color: #343434;
 }
+.figure {
+  clear: both;
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.figure figcaption {
+  text-align: left;
+}
+.figure img,
+.figure iframe,
+.figure video,
+.figure object,
+.figure embed {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.figure.left {
+  clear: none;
+}
+@media (min-width: 481px) {
+  .figure.left {
+    margin-right: 1em;
+  }
+}
+.figure.right {
+  clear: none;
+}
+@media (min-width: 481px) {
+  .figure.right {
+    margin-left: 1em;
+  }
+}
 /*! Uni-Form - v1.5.0 - 2013-03-31
 * http://sprawsm.com/uni-form/
 * Copyright (c) 2013 Dragan Babic; Licensed MIT */
@@ -1961,6 +1961,43 @@ small {
 }
 .message.message-warning {
   background-color: #F8E71C;
+}
+.overlay {
+  padding: 40px;
+  overflow: auto;
+  position: fixed;
+  background-color: #fff;
+  height: 100vh;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  -webkit-transition: top 0.25s ease-in-out;
+          transition: top 0.25s ease-in-out;
+}
+.overlay.js-overlay-in {
+  top: 0;
+}
+.overlay-close {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1010;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  font-family: monospace;
+  line-height: 50px;
+  text-align: center;
+  padding: 0;
+  -webkit-animation-delay: .25s;
+          animation-delay: .25s;
+  color: #343434;
+}
+.js-overlay-active {
+  overflow: hidden;
 }
 /*!
 Animate.css - http://daneden.me/animate
@@ -5097,43 +5134,6 @@ Copyright (c) 2015 Daniel Eden
 .tabs > li > a.active {
   background-color: #f4f4f4;
   outline: none;
-}
-.overlay {
-  padding: 25px;
-  overflow: auto;
-  position: fixed;
-  background-color: #fff;
-  height: 100vh;
-  top: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1199;
-  -webkit-transition: top 0.25s ease-in-out;
-          transition: top 0.25s ease-in-out;
-}
-.overlay.js-overlay-in {
-  top: 0;
-}
-.overlay-close {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
-  font-family: monospace;
-  line-height: 50px;
-  text-align: center;
-  padding: 0;
-  -webkit-animation-delay: .25s;
-          animation-delay: .25s;
-  color: #343434;
-}
-.js-overlay-active {
-  overflow: hidden;
 }
 * {
   box-sizing: border-box;
