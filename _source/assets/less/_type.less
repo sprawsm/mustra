@@ -111,6 +111,7 @@ h4,
 
 figcaption {
   .text-sm;
+  color: @color-quiet;
   margin-top: @spacing-base;
 }
 
@@ -260,6 +261,43 @@ small {
       padding-right: 0;
     }
 
+  }
+
+}
+
+// Figures
+
+.figure {
+  clear: both;
+  margin-top: 0;
+  margin-bottom: @spacing-type;
+  text-align: center;
+
+  figcaption {
+    text-align: left;
+  }
+
+  img,
+  iframe,
+  video,
+  object,
+  embed {
+    .contain;
+  }
+
+  &.left {
+    clear: none;
+    @media (min-width: @screen-xs) {
+      margin-right: @spacing-type;
+    }
+
+  }
+
+  &.right {
+    clear: none;
+    @media (min-width: @screen-xs) {
+      margin-left: @spacing-type;
+    }
   }
 
 }

@@ -305,6 +305,7 @@ h4,
 }
 figcaption {
   font-size: 15px !important;
+  color: #999;
   margin-top: 20px;
 }
 .quiet,
@@ -440,6 +441,40 @@ small {
   border: none;
   padding-left: 0;
   padding-right: 0;
+}
+.figure {
+  clear: both;
+  margin-top: 0;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.figure figcaption {
+  text-align: left;
+}
+.figure img,
+.figure iframe,
+.figure video,
+.figure object,
+.figure embed {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.figure.left {
+  clear: none;
+}
+@media (min-width: 481px) {
+  .figure.left {
+    margin-right: 1em;
+  }
+}
+.figure.right {
+  clear: none;
+}
+@media (min-width: 481px) {
+  .figure.right {
+    margin-left: 1em;
+  }
 }
 .container {
   margin-right: auto;

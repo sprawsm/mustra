@@ -41,6 +41,7 @@ block content
               +sectionLink('#s-titles', 'Titles')
               +sectionLink('#s-textual-elements', 'Textual elements')
               +sectionLink('#s-lists', 'Lists')
+              +sectionLink('#s-figures', 'Figures')
               +sectionLink('#s-buttons', 'Buttons')
               +sectionLink('#s-boxes', 'Boxes')
               +sectionLink('#s-messages', 'Messages')
@@ -288,6 +289,28 @@ block content
                 strong Inline lists.
               p The two classes provided, while almost identical <code>.list-inline</code> is meant for inline content, such as text, links and such, while <code>.list-inline-block</code> is meant for inline-block flowing content such as buttons, also useful when you don't want to break the list item's content into lines.
               p There is also a possiblity to separate list items with dots.
+
+      section.styleguide-section#s-lists
+        h1.styleguide-divider
+          | Figures
+          span.styleguide-divider-actions.fade
+            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+        .row
+          .col-sm-8
+            figure.figure
+              img(src="http://placehold.it/800x600", alt="")
+              figcaption This is an optional figure caption.
+            figure.figure.left
+              img(src="http://placehold.it/400x300", alt="")
+              figcaption This is an optional figure caption.
+            figure.figure.right
+              img(src="http://placehold.it/400x300", alt="")
+              figcaption This is an optional figure caption.
+
+          .col-sm-4
+            .styleguide-content
+              p These elements accept images, as well as videos through their native <code>video</code> element, as well as through old-school <code>embed</code>, <code>iframe</code>, and <code>object</code>. Although for videos, some JS is needed in order for them to be sized correctly, so make sure you don't remove it from app.js.
+              p Also you can choose to include an optional figure caption, or extend the main <code>.figure</code> class with <code>.left</code> and <code>.right</code> classes in order to float the figures around your content.
 
       section.styleguide-section#s-tables
         h1.styleguide-divider

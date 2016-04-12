@@ -50,6 +50,7 @@
               <li><a href="#s-titles" data-scroll="smooth">Titles</a></li>
               <li><a href="#s-textual-elements" data-scroll="smooth">Textual elements</a></li>
               <li><a href="#s-lists" data-scroll="smooth">Lists</a></li>
+              <li><a href="#s-figures" data-scroll="smooth">Figures</a></li>
               <li><a href="#s-buttons" data-scroll="smooth">Buttons</a></li>
               <li><a href="#s-boxes" data-scroll="smooth">Boxes</a></li>
               <li><a href="#s-messages" data-scroll="smooth">Messages</a></li>
@@ -341,6 +342,28 @@
               <p><strong>Inline lists.</strong></p>
               <p>The two classes provided, while almost identical <code>.list-inline</code> is meant for inline content, such as text, links and such, while <code>.list-inline-block</code> is meant for inline-block flowing content such as buttons, also useful when you don't want to break the list item's content into lines.</p>
               <p>There is also a possiblity to separate list items with dots.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="s-lists" class="styleguide-section">
+        <h1 class="styleguide-divider">Figures<span class="styleguide-divider-actions fade"><a href="#top" data-scroll="smooth" class="button button-xs button-default">back to top</a></span></h1>
+        <div class="row">
+          <div class="col-sm-8">
+            <figure class="figure"><img src="http://placehold.it/800x600" alt="">
+              <figcaption>This is an optional figure caption.</figcaption>
+            </figure>
+            <figure class="figure left"><img src="http://placehold.it/400x300" alt="">
+              <figcaption>This is an optional figure caption.</figcaption>
+            </figure>
+            <figure class="figure right"><img src="http://placehold.it/400x300" alt="">
+              <figcaption>This is an optional figure caption.</figcaption>
+            </figure>
+          </div>
+          <div class="col-sm-4">
+            <div class="styleguide-content">
+              <p>These elements accept images, as well as videos through their native <code>video</code> element, as well as through old-school <code>embed</code>, <code>iframe</code>, and <code>object</code>. Although for videos, some JS is needed in order for them to be sized correctly, so make sure you don't remove it from app.js.</p>
+              <p>Also you can choose to include an optional figure caption, or extend the main <code>.figure</code> class with <code>.left</code> and <code>.right</code> classes in order to float the figures around your content.</p>
             </div>
           </div>
         </div>
