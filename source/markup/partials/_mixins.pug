@@ -1,0 +1,7 @@
+mixin sectionLink(s, name)
+  li
+    a(href=s, data-scroll="smooth")= name
+
+mixin icon(name, extraClass)
+  svg.icon(class=extraClass)
+    use(xlink:href="./assets/images/icons.svg#icon-" + name)
