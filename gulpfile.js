@@ -86,7 +86,7 @@ var favicons = {
 // Fonts paths
 var fonts = {
     src: srcDir + 'fonts/*',
-    dest: destDir + 'assets/css/fonts/'
+    dest: destDir + 'assets/fonts/'
 };
 
 
