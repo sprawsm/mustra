@@ -15,6 +15,24 @@ var srcDir                = 'source/';
 var destDir               = 'web/';
 
 
+// Customized error message
+var errorAlert  = function (error) {
+    var fullMessage = 'Error in **' + error.plugin + '**:' + error.message;
+
+    $.notify.onError({
+        title: error.plugin,
+        message: error.message,
+        sound: 'Frog'
+    })(error);
+
+    fullMessage = colors.bgRed.white(fullMessage);
+
+    console.log(fullMessage);
+
+    this.emit('end');
+};
+
+
 // Shared plugins options
 var options = {
     plumber: {
@@ -24,7 +42,6 @@ var options = {
         showFiles: true
     }
 };
-
 
 // Styles paths
 var css = {
@@ -100,24 +117,6 @@ var files = {
 };
 
 
-// Customized error message
-var errorAlert  = function (error) {
-    var fullMessage = 'Error in **' + error.plugin + '**:' + error.message;
-
-    $.notify.onError({
-        title: error.plugin,
-        message: error.message,
-        sound: 'Frog'
-    })(error);
-
-    fullMessage = colors.bgRed.white(fullMessage);
-
-    console.log(fullMessage);
-
-    this.emit('end');
-};
-
-
 
 // Styles Task
 // Compiles, autoprefixes and minifies styles
@@ -151,6 +150,7 @@ gulp.task('js', function () {
         .pipe($.size(options.size))
         .pipe(gulp.dest(js.dest));
 });
+
 
 
 // Markup Task
