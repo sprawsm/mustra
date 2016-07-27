@@ -13,6 +13,12 @@ body {
   font-size: @font-size-sm;
   line-height: @line-height-base;
   color: @color-text;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @media (min-width: @screen-sm) {
     font-size: @font-size-base;
@@ -135,7 +141,6 @@ small {
 
 .upcase {
   text-transform: uppercase;
-  font-weight: @font-weight-light;
   font-size: .65em;
   font-weight: @font-weight-bold;
   letter-spacing: .1em;
