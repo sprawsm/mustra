@@ -132,7 +132,8 @@ gulp.task('css', function () {
         }))
         .pipe($.size(options.size))
         .pipe($.sourcemaps.write('/'))
-        .pipe(gulp.dest(css.dest));
+        .pipe(gulp.dest(css.dest))
+        .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 
@@ -277,7 +278,7 @@ gulp.task('clean', function () {
 // Watch Task
 // Runs watcher mechanism for runing tasks on file update
 gulp.task('watch', function () {
-    gulp.watch(css.watch, ['css', reload]);
+    gulp.watch(css.watch, ['css']);
     gulp.watch(js.src, ['js', reload]);
     gulp.watch(html.watch, ['html', reload]);
     gulp.watch(images.src, ['images', reload]);
