@@ -1,0 +1,63 @@
+title #{ title }
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="description", content=description)
+meta(name="author", content=author)
+meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+
+//- Facebook Open Graphs tags
+//- Source: https://developers.facebook.com/docs/sharing/webmasters#markup
+//- Sharing Debugger: https://developers.facebook.com/tools/debug/
+meta(property="og:url", content="http://sprawsm.com/" + slug)
+meta(property="og:type", content=ogType)
+meta(property="og:title", content=title)
+meta(property="og:description", content=description)
+meta(property="og:site_name", content=ogSiteName)
+meta(property="og:image", content="assets/images/og-image.png")
+
+//- Domain Insights: https://developers.facebook.com/docs/platforminsights/domains
+meta(property="fb:admins", content=fbAdmins)
+meta(property="fb:app_id", content=fbAppId)
+
+//- Favicons
+include _favicons
+
+//- DNS Prefetch
+//- Source: http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/
+//- Source: https://css-tricks.com/prefetching-preloading-prebrowsing/
+link(rel="dns-prefetch", href="//sprawsm.com")
+link(rel="dns-prefetch", href="//use.typekit.net")
+
+//- Website styles
+link(rel="stylesheet", href="assets/css/styles.css")
+
+//- Advanced Typekit code
+//- Source: https://helpx.adobe.com/typekit/using/embed-codes.html
+//- script.
+//-   (function() {
+//-     var config = {
+//-       kitId: 'CHANGEME',
+//-       scriptTimeout: 3000,
+//-       async: true
+//-     };
+//-     var h = document.getElementsByTagName('html')[0];
+//-     h.className += ' wf-loading';
+//-     var t = setTimeout(function() {
+//-       h.className = h.className.replace(/(\s|^)wf-loading(\s|$)/g, ' ');
+//-       h.className += ' wf-inactive';
+//-     }, config.scriptTimeout);
+//-     var d = false;
+//-     var tk = document.createElement('script');
+//-     tk.src = '//use.typekit.net/' + config.kitId + '.js';
+//-     tk.type = 'text/javascript';
+//-     tk.async = 'true';
+//-     tk.onload = tk.onreadystatechange = function() {
+//-       var rs = this.readyState;
+//-       if (d || rs && rs != 'complete' && rs != 'loaded') return;
+//-       d = true;
+//-       clearTimeout(t);
+//-       try { Typekit.load(config); } catch (e) {}
+//-     };
+//-     var s = document.getElementsByTagName('script')[0];
+//-     s.parentNode.insertBefore(tk, s);
+//-   })();

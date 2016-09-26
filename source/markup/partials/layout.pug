@@ -1,0 +1,24 @@
+doctype html
+html(lang="en", prefix="og: http://ogp.me/ns#")
+
+  block meta
+    - var title = "Mustra front-end starter kit"
+    - var description = "The front-end starter kit from Superawesome"
+    - var author = "sprawsm.com"
+    - var slug = ""
+
+    //- Facebook Open Graph
+    - var ogType = "website"
+    - var ogSiteName = "Mustra"
+    - var fbAdmins = ""
+    - var fbAppId = ""
+
+  include _header
+
+  include _mixins
+
+  block content
+    body
+      p Your content goes here.
+
+  include _footer

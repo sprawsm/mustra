@@ -1,0 +1,16 @@
+script(src="assets/js/app.js")
+
+//- Deferred loading JS
+//- Source: https://varvy.com/pagespeed/defer-loading-javascript.html
+//- script(type="text/javascript").
+  function downloadJSAtOnload() {
+    var element = document.createElement("script");
+    element.src = "assets/js/app.js";
+    document.body.appendChild(element);
+  }
+  if (window.addEventListener)
+    window.addEventListener("load", downloadJSAtOnload, false);
+  else if (window.attachEvent)
+    window.attachEvent("onload", downloadJSAtOnload);
+  else window.onload = downloadJSAtOnload;
+

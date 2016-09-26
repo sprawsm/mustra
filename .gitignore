@@ -1,5 +1,4 @@
-config.codekit
+.DS_Store
 node_modules
-sftp-config.json
-mustra.sublime-project
-mustra.sublime-workspace
+web
+favicon-data.json
