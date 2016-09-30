@@ -11,8 +11,8 @@
   padding-left: @grid-gutter/2;
 
   @media (min-width: @screen-sm) {
-    padding-right: -@grid-gutter;
-    padding-left: -@grid-gutter;
+    padding-right: @grid-gutter;
+    padding-left: @grid-gutter;
   }
 
 }
@@ -35,10 +35,12 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin-right: -(@grid-gutter/2);
+  margin-left: -(@grid-gutter/2);
 
   @media (min-width: @screen-sm) {
-    margin-right: -@grid-gutter/2;
-    margin-left: -@grid-gutter/2;
+    margin-right: -@grid-gutter;
+    margin-left: -@grid-gutter;
   }
 
 }
@@ -323,6 +325,8 @@
 .col-sm-11,
 .col-sm-12 {
   width: 100%;
+  padding-right: @grid-gutter/2;
+  padding-left: @grid-gutter/2;
 }
 
 @media only screen and (min-width: @screen-sm) {
@@ -358,8 +362,8 @@
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: @grid-gutter/2;
-    padding-left: @grid-gutter/2;
+    padding-right: @grid-gutter;
+    padding-left: @grid-gutter;
   }
 
   .col-sm {
@@ -592,6 +596,15 @@
 .col-md-11,
 .col-md-12{
   width: 100%;
+  padding-right: @grid-gutter/2;
+  padding-left: @grid-gutter/2;
+
+  @media (min-width: @screen-sm) {
+    padding-right: @grid-gutter;
+    padding-left: @grid-gutter;
+  }
+  
+
 }
 
 @media only screen and (min-width: @screen-md) {
@@ -627,8 +640,8 @@
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: @grid-gutter/2;
-    padding-left: @grid-gutter/2;
+    padding-right: @grid-gutter;
+    padding-left: @grid-gutter;
   }
 
   .col-md {
@@ -861,6 +874,15 @@
 .col-lg-11,
 .col-lg-12 {
   width: 100%;
+  padding-right: @grid-gutter/2;
+  padding-left: @grid-gutter/2;
+
+  @media (min-width: @screen-sm) {
+    padding-right: @grid-gutter/2;
+    padding-left: @grid-gutter/2;
+  }
+  
+
 }
 
 @media only screen and (min-width: @screen-lg) {
@@ -896,8 +918,8 @@
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    padding-right: @grid-gutter/2;
-    padding-left: @grid-gutter/2;
+    padding-right: @grid-gutter;
+    padding-left: @grid-gutter;
   }
 
   .col-lg {
