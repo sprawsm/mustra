@@ -1,6 +1,37 @@
 $(document).ready(function() {
 
   // ===========================================================================
+  // 
+  // Debouncing function, source: Underscore.js
+  // 
+  // Use this function for stuff like scrolling effects, or window resizing.
+  // 
+  // Example: 
+  // 
+  // var pageScroll = debounce(function() {
+  // $(window).scroll(function() {
+  // ... your taxing stuff goes here
+  // }
+  // }, 250);
+  // 
+  // window.addEventListener('scroll', pageScroll);
+
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+
+  // ===========================================================================
   //
   // Controls for a tabbed interface
   // Originally from https://24ways.org/2015/how-tabs-should-work/
