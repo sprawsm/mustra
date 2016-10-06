@@ -67,7 +67,10 @@ var js = {
 
 // Markup paths and options
 var html = {
-    src: srcDir + 'markup/*.pug',
+    src: [
+        srcDir + 'markup/**/*.pug',
+        '!source/markup/partials/*.pug'
+    ],
     dest: destDir,
     watch: srcDir + 'markup/**/*.pug'
 };
