@@ -361,6 +361,15 @@ $(document).ready(function() {
 
     e.preventDefault();
 
+    // Close things on Esc
+    // if ( $('html').hasClass('.js-overlay-active') ) {
+      $(document).keyup(function(e) { 
+        if (e.keyCode == 27) {
+          overlayClose.click();
+        }
+      });
+    // }
+
   });
 
   // Close the overlay
