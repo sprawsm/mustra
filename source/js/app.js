@@ -98,7 +98,7 @@ $(document).ready(function() {
 
   // collect all the tabs
   var tabs = $('.tab').on('click', function () {
-    console.log('click');
+    // console.log('click');
     target = $(this.hash).removeAttr('id');
     if (location.hash === this.hash) {
       setTimeout(update);
@@ -117,7 +117,7 @@ $(document).ready(function() {
   });
 
   function update() {
-    console.log('update');
+    // console.log('update');
     if (target) {
       target.attr('id', target.data('old-id'));
       target = null;
