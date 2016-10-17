@@ -6,6 +6,15 @@ $(document).ready(function() {
 
   // ===========================================================================
   // 
+  // Dropdowns
+
+  $('.dropdown-toggle').click(function() {
+    $(this).parents('.dropdown').toggleClass('dropdown-active');
+    return false;
+  });
+
+  // ===========================================================================
+  // 
   // Sticky nav
 
   var ph = $('.page-header');

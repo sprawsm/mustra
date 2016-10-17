@@ -47,6 +47,7 @@ block content
             +sectionLink('#s-messages', 'Messages')
             +sectionLink('#s-media-object', 'Media object')
             +sectionLink('#s-tabs', 'Tabs')
+            +sectionLink('#s-dropdowns', 'Dropdowns')
             +sectionLink('#s-overlays', 'Overlays')
             +sectionLink('#s-flexbox-grid', 'Flexbox grid')
             +sectionLink('#s-helper-classes', 'Helper classes')
@@ -497,6 +498,28 @@ block content
           .tab-panel#tab-1(role="tabpanel") ... tab 1 ...
           .tab-panel#tab-2(role="tabpanel") ... tab 2 ...
           .tab-panel#tab-3(role="tabpanel") ... tab 3 ...
+        .col-sm-4
+          .styleguide-content
+            p Basic tabs implementation with support for history API and accessibility features.
+
+    section.styleguide-section#s-dropdowns
+      h1.styleguide-divider
+        | Dropdowns
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          .dropdown
+            a.button.button-primary.dropdown-toggle(href="#") Toggle dropdown
+            ul.dropdown-menu
+              li
+                a(href="#") Dropdown link
+              li
+                a(href="#") Dropdown link
+              li
+                a(href="#") Dropdown link
+              li
+                a(href="#") Dropdown link
         .col-sm-4
           .styleguide-content
             p Basic tabs implementation with support for history API and accessibility features.
