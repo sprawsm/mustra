@@ -15,21 +15,6 @@ $(document).ready(function() {
 
   // ===========================================================================
   // 
-  // Sticky nav
-
-  var ph = $('.page-header');
-      activeClass = "page-header-active";
-      breakpoint = $(window).height() / 5;
-      clone = $('.page-header-fixed');
-
-  // Clone the header
-  ph.clone().appendTo('body').addClass('page-header-fixed');
-
-  // Apply a special class to the original
-  ph.addClass('page-header-static');
-
-  // ===========================================================================
-  // 
   // Debouncing function, source: Underscore.js
   // 
   // Use this function for stuff like scrolling effects, or window resizing.
@@ -58,6 +43,33 @@ $(document).ready(function() {
       if (callNow) func.apply(context, args);
     };
   };
+
+  // ===========================================================================
+  // 
+  // Sticky nav
+
+  var ph = $('.page-header');
+      activeClass = "page-header-active";
+      breakpoint = $(window).height() / 5;
+      clone = $('.page-header-fixed');
+
+  // Clone the header
+  ph.clone().appendTo('body').addClass('page-header-fixed');
+
+  // Apply a special class to the original
+  ph.addClass('page-header-static');
+
+  var pageScroll = debounce(function() {
+    $(window).scroll(function() {
+      if( $(this).scrollTop() > breakpoint ) {
+        $('body').addClass(activeClass);
+      } else {
+        $('body').removeClass(activeClass);
+      }
+    });
+  }, 150);
+
+  window.addEventListener('scroll', pageScroll);
 
   // ===========================================================================
   //

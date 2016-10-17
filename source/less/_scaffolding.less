@@ -59,34 +59,13 @@ hr {
 
 // Page header
 
-// Fixed
-
-.page-header-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-top: @spacing-md;
-  padding-bottom: @spacing-base;
-  z-index: @z-index-page-header-fixed;
-  background-color: red;
-  // Hide it initially
-  opacity: 0;
-  transform: translateY(-100%);
-
-  .page-header-active & {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-}
-
 // Static
 
 .page-header {
   .clearfix;
   margin-top: @spacing-lg;
   margin-bottom: @spacing-lg;
+  transition: all @transition-duration-base @transition-easing;
 }
 
 .page-header-logo {
@@ -115,7 +94,7 @@ hr {
   position: relative;
   width: 32px;
   height: 24px;
-  margin-top: 12px;
+  margin-top: .5em;
   border-top: 4px solid @color-text;
   border-bottom: 4px solid @color-text;
   text-indent: -999px;
@@ -161,7 +140,7 @@ hr {
 
   @media (min-width: @screen-sm) {
     .list-inline;
-    margin: 0 0 @spacing-sm 0;
+    margin: 0;
   }
 
   li {
@@ -180,6 +159,30 @@ hr {
       padding: 1em 0;
     }
 
+  }
+
+}
+
+// Fixed
+
+.page-header-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: @spacing-xs @grid-gutter;
+  margin-top: 0;
+  margin-bottom: 0;
+  z-index: @z-index-page-header-fixed;
+  background-color: @color-light;
+  box-shadow: @box-shadow-base;
+  // Hide it initially
+  opacity: 0;
+  transform: translateY(-100%);
+
+  .page-header-active & {
+    opacity: 1;
+    transform: translateY(0);
   }
 
 }

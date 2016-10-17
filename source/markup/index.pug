@@ -119,7 +119,9 @@ block content
           a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
       .row
         .col-sm-8
-          h2.h3 Helvetica Neue, Arial, Helvetica, sans-serif;
+          p
+            code
+              | -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;
           .box.box-default
             h3.quiet.upcase.mb-sm Normal
             | a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
@@ -139,7 +141,7 @@ block content
               | 1 2 3 4 5 6 7 8 9 0
         .col-sm-4
           .styleguide-content
-            p By default Mustra uses the tried and true sans-serif font stack which falls back on Helvetica Neue on OS X, and Helvetica (first, if available) or Arial on Windows, and lastly a default sans-serif font on other operating systems.
+            p By default Mustra uses the designated system font, and if that fails it falls back on the tried and true sans-serif font stack.
 
     section.styleguide-section#s-titles
       h1.styleguide-divider
