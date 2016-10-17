@@ -1,5 +1,24 @@
 $(document).ready(function() {
 
+  // Global variables
+
+  var screenSm = 768;
+
+  // ===========================================================================
+  // 
+  // Sticky nav
+
+  var ph = $('.page-header');
+      activeClass = "page-header-active";
+      breakpoint = $(window).height() / 5;
+      clone = $('.page-header-fixed');
+
+  // Clone the header
+  ph.clone().appendTo('body').addClass('page-header-fixed');
+
+  // Apply a special class to the original
+  ph.addClass('page-header-static');
+
   // ===========================================================================
   // 
   // Debouncing function, source: Underscore.js
@@ -167,9 +186,9 @@ $(document).ready(function() {
   //
   // Example markup:
   //
-  // <nav class="nav">
-  //   <a href="#" class="hamburger">menu</a>
-  //   <ul class="nav-menu">
+  // <nav class="page-header-menu-wrap">
+  //   <a href="#" class="hamburger">Show menu</a>
+  //   <ul class="page-header-menu hamburgered">
   //     ...
   //   </ul>
   // </nav>
@@ -178,17 +197,17 @@ $(document).ready(function() {
 
     var windowWidth = $(window).width();
 
-    if (windowWidth < 768) {
+    if (windowWidth < screenSm) {
 
-      $('.nav-menu').addClass('nav-menu-hide');
+      $('.page-header-menu').addClass('hamburgered');
 
       $('.hamburger').unbind('click').click(function() {
-        $('.nav-menu').toggleClass('nav-menu-hide');
+        $('.page-header-menu').toggleClass('hamburgered');
         return false;
       });
     }
-    else if (windowWidth > 768) {
-      $('.nav-menu').show();
+    else if (windowWidth > screenSm) {
+      $('.page-header-menu').show();
     }
 
   }
