@@ -8,607 +8,606 @@ block append meta
   link(rel="stylesheet", href="assets/css/styleguide.css")
 
 block content
-  body#top
 
-    .container
+  .container
 
-      header.page-header
-        a(href="/", class="page-header-logo")
-          img(src="https://i.imgur.com/A0a2nSb.png", width="173", height="40", alt="Mustra")
-        .page-header-text Mustra Styleguide.
+    header.page-header
+      a(href="/", class="page-header-logo")
+        img(src="https://i.imgur.com/A0a2nSb.png", width="173", height="40", alt="Mustra")
+      .page-header-text Mustra Styleguide.
 
-      section.styleguide-section
-        h1.styleguide-divider
-          | Navigation
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-3.col-sm-offset-3
-            p.upcase This guide
-            ul.list-unstyled
-              +sectionLink('#s-colors', 'Colors')
-              +sectionLink('#s-font-families', 'Font families')
-              +sectionLink('#s-titles', 'Titles')
-              +sectionLink('#s-textual-elements', 'Textual elements')
-              +sectionLink('#s-lists', 'Lists')
-              +sectionLink('#s-buttons', 'Buttons')
-              +sectionLink('#s-boxes', 'Boxes')
-              +sectionLink('#s-messages', 'Messages')
-              +sectionLink('#s-media-object', 'Media object')
-              +sectionLink('#s-tabs', 'Tabs')
-              +sectionLink('#s-overlays', 'Overlays')
-              +sectionLink('#s-flexbox-grid', 'Flexbox grid')
-              +sectionLink('#s-helper-classes', 'Helper classes')
-          .col-sm-3
-            p.upcase Templates
-            ul.list-unstyled
-              li
-                a(href="#") Template
+    section.styleguide-section
+      h1.styleguide-divider
+        | Navigation
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-3.col-sm-offset-3
+          p.upcase This guide
+          ul.list-unstyled
+            +sectionLink('#s-colors', 'Colors')
+            +sectionLink('#s-font-families', 'Font families')
+            +sectionLink('#s-titles', 'Titles')
+            +sectionLink('#s-textual-elements', 'Textual elements')
+            +sectionLink('#s-lists', 'Lists')
+            +sectionLink('#s-buttons', 'Buttons')
+            +sectionLink('#s-boxes', 'Boxes')
+            +sectionLink('#s-messages', 'Messages')
+            +sectionLink('#s-media-object', 'Media object')
+            +sectionLink('#s-tabs', 'Tabs')
+            +sectionLink('#s-overlays', 'Overlays')
+            +sectionLink('#s-flexbox-grid', 'Flexbox grid')
+            +sectionLink('#s-helper-classes', 'Helper classes')
+        .col-sm-3
+          p.upcase Templates
+          ul.list-unstyled
+            li
+              a(href="#") Template
 
-      section.styleguide-section#s-colors
-        h1.styleguide-divider
-          | Colors
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            p Backgrounds:
-            .row
-              .col-xs-4
-                .styleguide-grid-cell.bg-text.text-light.txtc.text-sm
-                  span @color-text
-              .col-xs-4
-                .styleguide-grid-cell.bg-shaded.txtc.text-sm
-                  span @color-shaded
-              .col-xs-4
-                .styleguide-grid-cell.bg-primary.text-light.txtc.text-sm
-                  span @color-primary
-            .row.mb-type
-              .col-xs-4
-                .styleguide-grid-cell.bg-success.txtc.text-sm
-                  span @color-success
-              .col-xs-4
-                .styleguide-grid-cell.bg-danger.txtc.text-sm
-                  span @color-danger
-              .col-xs-4
-                .styleguide-grid-cell.bg-warning.txtc.text-sm
-                  span @color-warning
-            p This sentence has a couple of <strong class="highlight">highlighted words</strong>.
-            p Text:
-            .row
-              .col-xs-4
-                .styleguide-grid-cell.bg-text.text-light.txtc.text-sm
-                  span @color-light
-              .col-xs-4
-                .styleguide-grid-cell.bg-text.text-shaded.txtc.text-sm
-                  span @color-shaded
-              .col-xs-4
-                .styleguide-grid-cell.bg-light.text-primary.txtc.text-sm
-                  span @color-primary
-            .row
-              .col-xs-4
-                .styleguide-grid-cell.bg-light.text-success.txtc.text-sm
-                  span @color-success
-              .col-xs-4
-                .styleguide-grid-cell.bg-light.text-danger.txtc.text-sm
-                  span @color-danger
-              .col-xs-4
-                .styleguide-grid-cell.bg-light.text-warning.txtc.text-sm
-                  span @color-warning
-          .col-sm-4
-            .styleguide-content
-              p Mustra maps all colors to a LESS variable, and comes with a vibrant default theme, and some basics covered for you.
-              p There are helper classes to color backgrounds (<code>.bg-[variable]</code>) and text (<code>.text-[variable]</code>) respectively.
+    section.styleguide-section#s-colors
+      h1.styleguide-divider
+        | Colors
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          p Backgrounds:
+          .row
+            .col-xs-4
+              .styleguide-grid-cell.bg-text.text-light.txtc.text-sm
+                span @color-text
+            .col-xs-4
+              .styleguide-grid-cell.bg-shaded.txtc.text-sm
+                span @color-shaded
+            .col-xs-4
+              .styleguide-grid-cell.bg-primary.text-light.txtc.text-sm
+                span @color-primary
+          .row.mb-type
+            .col-xs-4
+              .styleguide-grid-cell.bg-success.txtc.text-sm
+                span @color-success
+            .col-xs-4
+              .styleguide-grid-cell.bg-danger.txtc.text-sm
+                span @color-danger
+            .col-xs-4
+              .styleguide-grid-cell.bg-warning.txtc.text-sm
+                span @color-warning
+          p This sentence has a couple of <strong class="highlight">highlighted words</strong>.
+          p Text:
+          .row
+            .col-xs-4
+              .styleguide-grid-cell.bg-text.text-light.txtc.text-sm
+                span @color-light
+            .col-xs-4
+              .styleguide-grid-cell.bg-text.text-shaded.txtc.text-sm
+                span @color-shaded
+            .col-xs-4
+              .styleguide-grid-cell.bg-light.text-primary.txtc.text-sm
+                span @color-primary
+          .row
+            .col-xs-4
+              .styleguide-grid-cell.bg-light.text-success.txtc.text-sm
+                span @color-success
+            .col-xs-4
+              .styleguide-grid-cell.bg-light.text-danger.txtc.text-sm
+                span @color-danger
+            .col-xs-4
+              .styleguide-grid-cell.bg-light.text-warning.txtc.text-sm
+                span @color-warning
+        .col-sm-4
+          .styleguide-content
+            p Mustra maps all colors to a LESS variable, and comes with a vibrant default theme, and some basics covered for you.
+            p There are helper classes to color backgrounds (<code>.bg-[variable]</code>) and text (<code>.text-[variable]</code>) respectively.
 
-      section.styleguide-section#s-font-families
-        h1.styleguide-divider
-          | Font families
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            h2.h3 Helvetica Neue, Arial, Helvetica, sans-serif;
-            .box.box-default
-              h3.quiet.upcase.mb-sm Normal
+    section.styleguide-section#s-font-families
+      h1.styleguide-divider
+        | Font families
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          h2.h3 Helvetica Neue, Arial, Helvetica, sans-serif;
+          .box.box-default
+            h3.quiet.upcase.mb-sm Normal
+            | a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+            | A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+            | 1 2 3 4 5 6 7 8 9 0
+          .box.box-default
+            h3.quiet.upcase.mb-sm Bold (400)
+            div(style="font-weight: bold;")
               | a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
               | A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
               | 1 2 3 4 5 6 7 8 9 0
-            .box.box-default
-              h3.quiet.upcase.mb-sm Bold (400)
-              div(style="font-weight: bold;")
-                | a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
-                | A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
-                | 1 2 3 4 5 6 7 8 9 0
-            .box.box-default
-              h3.quiet.upcase.mb-sm Italic
-              div(style="font-style: italic;")
-                | a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
-                | A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
-                | 1 2 3 4 5 6 7 8 9 0
-          .col-sm-4
-            .styleguide-content
-              p By default Mustra uses the tried and true sans-serif font stack which falls back on Helvetica Neue on OS X, and Helvetica (first, if available) or Arial on Windows, and lastly a default sans-serif font on other operating systems.
+          .box.box-default
+            h3.quiet.upcase.mb-sm Italic
+            div(style="font-style: italic;")
+              | a b c d e f g h i j k l m n o p q r s t u v w x y z <br>
+              | A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>
+              | 1 2 3 4 5 6 7 8 9 0
+        .col-sm-4
+          .styleguide-content
+            p By default Mustra uses the tried and true sans-serif font stack which falls back on Helvetica Neue on OS X, and Helvetica (first, if available) or Arial on Windows, and lastly a default sans-serif font on other operating systems.
 
-      section.styleguide-section#s-titles
-        h1.styleguide-divider
-          | Titles
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            p.pretitle This is a pretitle element.
-            h1.section-title Your main, section title.
-          .col-sm-4
-            .styleguide-content
-              p
-                strong Section titles
-              p Often used as page headings. This style is also mapped to <code>h1</code> and <code>.h1</code>.
-              p They have no top margin, so you don't have to pay attention to margin collapsing. Utilize the spacing classes accordingly.
-              p This example illustrates a title accompanied with a pre-title element which is completely optional.
-        .row
-          .col-sm-8
-            h1.title This is a standard title.
-          .col-sm-4
-            .styleguide-content
-              p
-                strong Titles
-              p Use them as titles for your text. This style is also mapped to <code>h2</code> and <code>.h2</code>.
-        .row
-          .col-sm-8
-            h3 A Subtitle
-          .col-sm-4
-            .styleguide-content
-              p
-                strong Subtitles
-              p This style is also mapped to <code>.h3</code> and is best used within text for more granular separation.
-
-      section.styleguide-section#s-textual-elements
-        h1.styleguide-divider
-          | Textual elements
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row.mb-md
-          .col-sm-8
-            p.lead Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          .col-sm-4
-            .styleguide-content
-              p Style for leading, and standard body copy.
-        .row.mb-md
-          .col-sm-8
-            ul.list-inline-block
-              li
-                a(href="http://funnelnow.com") Standard link
-              li
-                a(href="http://funnelnow.com", class="underline") Standard underlined link
-              li
-                a(href="http://funnelnow.com", class="link-quiet") Quiet link
-              li
-                a(href="http://funnelnow.com", class="link-ui") UI link
-              li
-                strong Bold text with <code>strong</code>
-              li
-                span.strong Bold text with class <code>.strong</code>
-              li
-                span.upcase Uppercase text
-          .col-sm-4
-            .styleguide-content
-              p
-                strong Inline styles
-              p Styles for various often-used inline elements.
-        .row.mb-md
-          .col-sm-8
-            p.text-lg Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            p.text-md Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            p.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            p.text-xs Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          .col-sm-4
-            .styleguide-content
-              p Styles for text sizing, enforces font size. Classes are <code>.text-lg</code>, <code>.text-md</code>, <code>.text-base</code> (for reset), <code>.text-sm</code> and <code>.text-xs</code>.
-              p It's important to note that the text sizing classes shouldn't be included into other classes as they contain the <code>!important</code> flag.
-        .row.mb-md
-          .col-sm-8
-            p.text-quiet Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          .col-sm-4
-            .styleguide-content
-              p Quiet text, enforces color and can be combined with other elements.
-        .row
-          .col-sm-8
-            p.txtl Left-Aligned text.
-            p.txtc Center-Aligned text.
-            p.txtr Right-Aligned text.
-          .col-sm-4
-            .styleguide-content
-              p Text flow control. It's important to note that the text align classes shouldn't be included into other classes as they contain the <code>!important</code> flag.
-
-      section.styleguide-section#s-lists
-        h1.styleguide-divider
-          | Lists
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row.mb-md
-          .col-sm-8
-            ul
-              li List item 1
-              li
-                | List item 2
-                ul
-                  li List item 2.1
-              li List item 3
-            ol
-              li List item 1
-              li
-                | List item 2
-                ol
-                  li List item 2.2
-              li List item 3
-          .col-sm-4
-            .styleguide-content
-              p Default unordered and ordered lists.
-        .row.mb-md
-          .col-sm-8
-            ul.list-unstyled
-              li List item 1
-              li
-                | List item 2
-                ul
-                  li List item 2.1
-              li List item 3
-          .col-sm-4
-            .styleguide-content
-              p Unstyled lists.
-        .row
-          .col-sm-8
-            ul.list-inline
-              li Inline list item 1
-              li Inline list item 2
-              li Inline list item 3
-            ul.list-inline-block
-              li Inline-Block list item 1
-              li Inline-Block list item 2
-              li Inline-Block list item 3
-            ul.list-inline.list-middot
-              li Inline list item 1
-              li Inline list item 2
-              li Inline list item 3
-          .col-sm-4
-            .styleguide-content
-              p
-                strong Inline lists.
-              p The two classes provided, while almost identical <code>.list-inline</code> is meant for inline content, such as text, links and such, while <code>.list-inline-block</code> is meant for inline-block flowing content such as buttons, also useful when you don't want to break the list item's content into lines.
-              p There is also a possiblity to separate list items with dots.
-
-      section.styleguide-section#s-tables
-        h1.styleguide-divider
-          | Tables
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            table.table
-              caption Table caption
-              tfoot
-                tr
-                  td(colspan="4") Table footer.
-              thead
-                tr
-                  th Header
-                  th Header
-                  th Header
-                  th Header
-              tbody
-                tr
-                  td Cell
-                  td Cell
-                  td Cell
-                  td Cell
-                tr
-                  td Cell
-                  td Cell
-                  td Cell
-                  td Cell
-
-            table.table.table-datatable
-              caption Datatables
-              tfoot
-                tr
-                  td(colspan="4") Fig. 3.4.
-              thead
-                tr
-                  th Header
-                  th Header
-                  th Header
-                  th.txtr.highlight Num.
-              tbody
-                tr
-                  td Cell
-                  td Cell
-                  td Cell
-                  td.txtr.num.highlight
-                    span.left $
-                    | 19.99
-                tr
-                  td Cell
-                  td Cell
-                  td Cell
-                  td.txtr.num.highlight
-                    span.left $
-                    | 123.45
-          .col-sm-4
-            .styleguide-content
-              p
-                strong Tables
-              p Tables come in two formats: standard tables (e.g. when you need to present tabular data in longform text), and datatables (e.g. when you want to present something spreadsheet-like).
-              p The <sode>.num</sode> class, coupled with the <code>.txtr</code> class can be pretty useful within tables when dealing with numbers and you need the figures to line up.
-
-      section.styleguide-section#s-buttons
-        h1.styleguide-divider
-          | Buttons
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            ul.list-inline-block.mb-md
-              li
-                a(href="#", class="button button-default") Default button
-              li
-                button(type="submit", class="button button-default") Default button
-              li
-                input(type="submit", id="", name="", value="Default button", class="button button-default")
-            ul.list-inline-block.mb-md
-              li
-                a(href="#", class="button button-primary") Primary button
-              li
-                button(type="submit", class="button button-primary") Primary button
-              li
-                input(type="submit", id="", name="", value="Primary button", class="button button-primary")
-            ul.list-inline-block.mb-md
-              li
-                a(href="#", class="button button-success") Success button
-              li
-                button(type="submit", class="button button-success") Success button
-              li
-                input(type="submit", id="", name="", value="Success button", class="button button-success")
-            ul.list-inline-block.mb-md
-              li
-                a(href="#", class="button button-danger") Danger button
-              li
-                button(type="submit", class="button button-danger") Danger button
-              li
-                input(type="submit", id="", name="", value="Danger button", class="button button-danger")
-            ul.list-inline-block.mb-md
-              li
-                a(href="#", class="button button-warning") Warning button
-              li
-                button(type="submit", class="button button-warning") Warning button
-              li
-                input(type="submit", id="", name="", value="Warning button", class="button button-warning")
-            .box.box-default.mb-md
-              ul.list-inline-block
-                li
-                  a(href="#", class="button button-invert") Inverted button
-                li
-                  button(type="submit", class="button button-invert") Inverted button
-                li
-                  input(type="submit", id="", name="", value="Inverted button", class="button button-invert")
-            ul.list-inline-block.mb-md
-              li
-                a(href="#", class="button button-primary button-xs") X–Small button
-              li
-                a(href="#", class="button button-primary button-sm") Small button
-              li
-                a(href="#", class="button button-primary button-lg") Large button
+    section.styleguide-section#s-titles
+      h1.styleguide-divider
+        | Titles
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          p.pretitle This is a pretitle element.
+          h1.section-title Your main, section title.
+        .col-sm-4
+          .styleguide-content
             p
-              a(href="#", class="button button-primary button-block") Block level button
-          .col-sm-4
-            .styleguide-content
-              p Various button flavors and sizes.
+              strong Section titles
+            p Often used as page headings. This style is also mapped to <code>h1</code> and <code>.h1</code>.
+            p They have no top margin, so you don't have to pay attention to margin collapsing. Utilize the spacing classes accordingly.
+            p This example illustrates a title accompanied with a pre-title element which is completely optional.
+      .row
+        .col-sm-8
+          h1.title This is a standard title.
+        .col-sm-4
+          .styleguide-content
+            p
+              strong Titles
+            p Use them as titles for your text. This style is also mapped to <code>h2</code> and <code>.h2</code>.
+      .row
+        .col-sm-8
+          h3 A Subtitle
+        .col-sm-4
+          .styleguide-content
+            p
+              strong Subtitles
+            p This style is also mapped to <code>.h3</code> and is best used within text for more granular separation.
 
-      section.styleguide-section#s-boxes
-        h1.styleguide-divider
-          | Boxes
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            .box.box-default This is a default box.
-            .box.box-primary This is a primary box.
-            .box.box-bordered This is a bordered box.
-            .box.box-default.box-lg This is a default box with large padding.
-            .box.box-default.box-sm.text-sm This is a default box with small padding.
-            .box.box-default.box-nopadding This is a default box with no padding.
-          .col-sm-4
-            .styleguide-content
-              p
-                strong Boxes
-              p Boxes in various flavors and sizes. Use them when you need to frame some content. Use the <code>.box-nopadding</code> class in case you want to nest a <code>.grid</code> layout within it.
-              p By default boxes don't have any margins.
+    section.styleguide-section#s-textual-elements
+      h1.styleguide-divider
+        | Textual elements
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row.mb-md
+        .col-sm-8
+          p.lead Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        .col-sm-4
+          .styleguide-content
+            p Style for leading, and standard body copy.
+      .row.mb-md
+        .col-sm-8
+          ul.list-inline-block
+            li
+              a(href="http://funnelnow.com") Standard link
+            li
+              a(href="http://funnelnow.com", class="underline") Standard underlined link
+            li
+              a(href="http://funnelnow.com", class="link-quiet") Quiet link
+            li
+              a(href="http://funnelnow.com", class="link-ui") UI link
+            li
+              strong Bold text with <code>strong</code>
+            li
+              span.strong Bold text with class <code>.strong</code>
+            li
+              span.upcase Uppercase text
+        .col-sm-4
+          .styleguide-content
+            p
+              strong Inline styles
+            p Styles for various often-used inline elements.
+      .row.mb-md
+        .col-sm-8
+          p.text-lg Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          p.text-md Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          p.text-sm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          p.text-xs Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .col-sm-4
+          .styleguide-content
+            p Styles for text sizing, enforces font size. Classes are <code>.text-lg</code>, <code>.text-md</code>, <code>.text-base</code> (for reset), <code>.text-sm</code> and <code>.text-xs</code>.
+            p It's important to note that the text sizing classes shouldn't be included into other classes as they contain the <code>!important</code> flag.
+      .row.mb-md
+        .col-sm-8
+          p.text-quiet Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .col-sm-4
+          .styleguide-content
+            p Quiet text, enforces color and can be combined with other elements.
+      .row
+        .col-sm-8
+          p.txtl Left-Aligned text.
+          p.txtc Center-Aligned text.
+          p.txtr Right-Aligned text.
+        .col-sm-4
+          .styleguide-content
+            p Text flow control. It's important to note that the text align classes shouldn't be included into other classes as they contain the <code>!important</code> flag.
 
-      section.styleguide-section#s-messages
-        h1.styleguide-divider
-          | Messages
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
-              .message.message-default.txtc.animated(data-dismissable="fadeOutUp")
-                .message-content This is a default message. Dismissable with <code>.fadeOutUp</code>
-            div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
-              .message.message-danger.txtc
-                .message-content This is a danger message.
-            div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
-              .message.message-success.txtc
-                .message-content This is a success message.
-            div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
-              .message.message-warning.txtc
-                .message-content This is a warning message.
-          .col-sm-4
-            .styleguide-content
-              p
-                strong Messages
-              p Global message styles. Absolutely positioned to the top of the screen by default. In case you need more layout control feel free to use a <code>.grid</code> layout instead of <code>.message-content</code>.
-              p In case you want them to be dismissable, add a class <code>.animated</code> along with an exit class from <a href="http://daneden.github.io/animate.css/">animate.css</a> within a <code>data-dismissable</code> attribute.
+    section.styleguide-section#s-lists
+      h1.styleguide-divider
+        | Lists
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row.mb-md
+        .col-sm-8
+          ul
+            li List item 1
+            li
+              | List item 2
+              ul
+                li List item 2.1
+            li List item 3
+          ol
+            li List item 1
+            li
+              | List item 2
+              ol
+                li List item 2.2
+            li List item 3
+        .col-sm-4
+          .styleguide-content
+            p Default unordered and ordered lists.
+      .row.mb-md
+        .col-sm-8
+          ul.list-unstyled
+            li List item 1
+            li
+              | List item 2
+              ul
+                li List item 2.1
+            li List item 3
+        .col-sm-4
+          .styleguide-content
+            p Unstyled lists.
+      .row
+        .col-sm-8
+          ul.list-inline
+            li Inline list item 1
+            li Inline list item 2
+            li Inline list item 3
+          ul.list-inline-block
+            li Inline-Block list item 1
+            li Inline-Block list item 2
+            li Inline-Block list item 3
+          ul.list-inline.list-middot
+            li Inline list item 1
+            li Inline list item 2
+            li Inline list item 3
+        .col-sm-4
+          .styleguide-content
+            p
+              strong Inline lists.
+            p The two classes provided, while almost identical <code>.list-inline</code> is meant for inline content, such as text, links and such, while <code>.list-inline-block</code> is meant for inline-block flowing content such as buttons, also useful when you don't want to break the list item's content into lines.
+            p There is also a possiblity to separate list items with dots.
 
-      section.styleguide-section#s-media-object
-        h1.styleguide-divider
-          | Media object
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            .media
-              .media-left
-                .media-object Media key
-              .media-body
-                p Media value.
-                p Anything can go in here.
-          .col-sm-4
-            .styleguide-content
-              p The media element should be used any time you need a key-value pair in a visual sense. This includes a comment+avatar combo, literal key-value pairs (e.g. two-column tables), etc.
-              p The key element accepts an image, or text, while the body acts as a standard container. Entire media element acts as a table and uses no floats for layout.
+    section.styleguide-section#s-tables
+      h1.styleguide-divider
+        | Tables
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          table.table
+            caption Table caption
+            tfoot
+              tr
+                td(colspan="4") Table footer.
+            thead
+              tr
+                th Header
+                th Header
+                th Header
+                th Header
+            tbody
+              tr
+                td Cell
+                td Cell
+                td Cell
+                td Cell
+              tr
+                td Cell
+                td Cell
+                td Cell
+                td Cell
 
-      section.styleguide-section#s-tabs
-        h1.styleguide-divider
-          | Tabs
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            ul(role="tablist", class="tabs")
+          table.table.table-datatable
+            caption Datatables
+            tfoot
+              tr
+                td(colspan="4") Fig. 3.4.
+            thead
+              tr
+                th Header
+                th Header
+                th Header
+                th.txtr.highlight Num.
+            tbody
+              tr
+                td Cell
+                td Cell
+                td Cell
+                td.txtr.num.highlight
+                  span.left $
+                  | 19.99
+              tr
+                td Cell
+                td Cell
+                td Cell
+                td.txtr.num.highlight
+                  span.left $
+                  | 123.45
+        .col-sm-4
+          .styleguide-content
+            p
+              strong Tables
+            p Tables come in two formats: standard tables (e.g. when you need to present tabular data in longform text), and datatables (e.g. when you want to present something spreadsheet-like).
+            p The <sode>.num</sode> class, coupled with the <code>.txtr</code> class can be pretty useful within tables when dealing with numbers and you need the figures to line up.
+
+    section.styleguide-section#s-buttons
+      h1.styleguide-divider
+        | Buttons
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          ul.list-inline-block.mb-md
+            li
+              a(href="#", class="button button-default") Default button
+            li
+              button(type="submit", class="button button-default") Default button
+            li
+              input(type="submit", id="", name="", value="Default button", class="button button-default")
+          ul.list-inline-block.mb-md
+            li
+              a(href="#", class="button button-primary") Primary button
+            li
+              button(type="submit", class="button button-primary") Primary button
+            li
+              input(type="submit", id="", name="", value="Primary button", class="button button-primary")
+          ul.list-inline-block.mb-md
+            li
+              a(href="#", class="button button-success") Success button
+            li
+              button(type="submit", class="button button-success") Success button
+            li
+              input(type="submit", id="", name="", value="Success button", class="button button-success")
+          ul.list-inline-block.mb-md
+            li
+              a(href="#", class="button button-danger") Danger button
+            li
+              button(type="submit", class="button button-danger") Danger button
+            li
+              input(type="submit", id="", name="", value="Danger button", class="button button-danger")
+          ul.list-inline-block.mb-md
+            li
+              a(href="#", class="button button-warning") Warning button
+            li
+              button(type="submit", class="button button-warning") Warning button
+            li
+              input(type="submit", id="", name="", value="Warning button", class="button button-warning")
+          .box.box-default.mb-md
+            ul.list-inline-block
               li
-                a(role="tab", class="tab", aria-controls="tab-1", href="#tab-1") Tab 1
+                a(href="#", class="button button-invert") Inverted button
               li
-                a(role="tab", class="tab", aria-controls="tab-2", href="#tab-2") Tab 2
+                button(type="submit", class="button button-invert") Inverted button
               li
-                a(role="tab", class="tab", aria-controls="tab-3", href="#tab-3") Tab 3
-            .tab-panel#tab-1(role="tabpanel") ... tab 1 ...
-            .tab-panel#tab-2(role="tabpanel") ... tab 2 ...
-            .tab-panel#tab-3(role="tabpanel") ... tab 3 ...
-          .col-sm-4
-            .styleguide-content
-              p Basic tabs implementation with support for history API and accessibility features.
-
-      section.styleguide-section#s-overlays
-        h1.styleguide-divider
-          | Overlays
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            a(href="#my-overlay", class="js-overlay-toggle") Toggle overlay
-          .col-sm-4
-            .styleguide-content
-              p Basic tabs implementation with support for history API and accessibility features.
-
-      section.styleguide-section#s-flexbox-grid
-        h1.styleguide-divider
-          | Flexbox grid
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-            .row
-              .col-xs-12
-                .styleguide-grid-cell
-            .row
-              .col-xs-1
-                .styleguide-grid-cell
-              .col-xs-11
-                .styleguide-grid-cell
-            .row
-              .col-xs-2
-                .styleguide-grid-cell
-              .col-xs-10
-                .styleguide-grid-cell
-            .row
-              .col-xs-3
-                .styleguide-grid-cell
-              .col-xs-9
-                .styleguide-grid-cell
-            .row
-              .col-xs-4
-                .styleguide-grid-cell
-              .col-xs-8
-                .styleguide-grid-cell
-            .row
-              .col-xs-5
-                .styleguide-grid-cell
-              .col-xs-7
-                .styleguide-grid-cell
-            .row
-              .col-xs-6
-                .styleguide-grid-cell
-              .col-xs-6
-                .styleguide-grid-cell
-          .col-sm-4
-            .styleguide-content
-              p The flexbox-based grid uses the same syntax as the Bootstrap's grid, and supports the same features.
-              p The main thing that makes it a better alternative to the old float-based grid is the fact that it's nestable. Other features that set it apart are modern properties that come with flexbox layout model, such as easy vertical centering through <code>.top/middle/bottom-XX</code> classes, ability to define starting points for the grid (we used to revert floats before) through <code>.left/center/right-XX</code>.
-              p Find out more at <a href="http://flexboxgrid.com/">flexboxgrid.com</a>.
-
-      section.styleguide-section#s-helper-classes
-        h1.styleguide-divider
-          | Helper classes
-          span.styleguide-divider-actions.fade
-            a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
-        .row
-          .col-sm-8
-
-            h2.h3 Clearfix
-            p The <code>.clearfix</code> class is a standard one you might have seen before. Add it to a parent or import it into another class in order to clear the parent element of floats.
-
-            h2.h3 Content visibility
-            p You can control element's visibility using the following classes:
-            ul
-              li <code>.no-show</code> which positions the element outside the viewport with absolute positioning, but doesn't apply <code>display: none</code> to it.
-              li <code>.hidden</code> hides the element with <code>display: none</code>.
-              li <code>.fade</code> coupled with <code>.in</code> hides and shows an element using the <code>opacity</code> property (has a transition effect by default as well).
-
-            h2.h3 Display
-            p You can force an element's display with literal classes <code>.display-block</code>, <code>.display-inline-block</code>, and <code>.display-inline</code>.
-
-            h2.h3 Floats
-            p Mustra uses the following classes to horizontally align elements using floats: <code>.left</code>, <code>.right</code>.
-            p The <code>.center</code> class is used to center a block-level element horizontally, although it requires that the element has a set width.
-
-            h2.h3 Responsive figures
-            p In order to prevent figures like images and objects overflow their containers, apply one of the following classes: <code>.contain</code>, or <code>img-responsive</code>.
-            p Both classes do the same thing, the first one is specific to Mustra, while the latter is following Bootstrap's convention.
-
-            h2.h3 Margins
-            p Mustra supplies you with necessary spacing classes your can use to preserve consistency in your UIs.
-            p The basic formula is: <code>.m[direction]-[size]</code> where the direction can be <code>l</code> (left), <code>t</code> (top), <code>r</code> (right), or <code>b</code> (bottom), and sizes are: <code>xs</code>, <code>sm</code>, <code>base</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>type</code>.
-            p The specific sizing suffix <code>type</code> uses the typographic <code>em</code> value for size (<code>1em</code> by default) and is meant to be used when you e.g. want to insert a custom UI element within longform text, but you want to keep the flow natural.
-            p.quiet.text-sm It's important to note that these classes should not be imported into other classes, as they have the <code>!important</code> flag. They are meant to be used to overcome defaults on a case-by-case basis. In order to keep spacing consistent throughout your UI you should rely on the default spacing variables, and expand from there if you need to.
-
-          .col-sm-4
-            .styleguide-content
-              p These are the helper classes available in Mustra by default. They are extremely useful for fine-grained control of your UI, and when writing a special class isn't possible or optimal.
-
-      hr.mt-lg.mb-lg
-
-      .row.mb-lg
-        .col-sm-8.quiet.text-xs
+                input(type="submit", id="", name="", value="Inverted button", class="button button-invert")
+          ul.list-inline-block.mb-md
+            li
+              a(href="#", class="button button-primary button-xs") X–Small button
+            li
+              a(href="#", class="button button-primary button-sm") Small button
+            li
+              a(href="#", class="button button-primary button-lg") Large button
           p
-            strong The MIT License (MIT)
-          p Copyright  2016 <a href="http://sprawsm.com/" class="link-quiet">Sprawsm doo</a>
-          p Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-          p The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-          p The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+            a(href="#", class="button button-primary button-block") Block level button
+        .col-sm-4
+          .styleguide-content
+            p Various button flavors and sizes.
 
-      figure.figure
-        iframe(width="560", height="315", src="https://www.youtube.com/embed/9NJcNcW1xH4", frameborder="0", allowfullscreen, data-action="fluid-video")
+    section.styleguide-section#s-boxes
+      h1.styleguide-divider
+        | Boxes
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          .box.box-default This is a default box.
+          .box.box-primary This is a primary box.
+          .box.box-bordered This is a bordered box.
+          .box.box-default.box-lg This is a default box with large padding.
+          .box.box-default.box-sm.text-sm This is a default box with small padding.
+          .box.box-default.box-nopadding This is a default box with no padding.
+        .col-sm-4
+          .styleguide-content
+            p
+              strong Boxes
+            p Boxes in various flavors and sizes. Use them when you need to frame some content. Use the <code>.box-nopadding</code> class in case you want to nest a <code>.grid</code> layout within it.
+            p By default boxes don't have any margins.
 
-      figure.figure.video-aspect-ratio
-        iframe(width="560", height="315", src="https://www.youtube.com/embed/9NJcNcW1xH4", frameborder="0", allowfullscreen)
+    section.styleguide-section#s-messages
+      h1.styleguide-divider
+        | Messages
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
+            .message.message-default.txtc.animated(data-dismissable="fadeOutUp")
+              .message-content This is a default message. Dismissable with <code>.fadeOutUp</code>
+          div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
+            .message.message-danger.txtc
+              .message-content This is a danger message.
+          div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
+            .message.message-success.txtc
+              .message-content This is a success message.
+          div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
+            .message.message-warning.txtc
+              .message-content This is a warning message.
+        .col-sm-4
+          .styleguide-content
+            p
+              strong Messages
+            p Global message styles. Absolutely positioned to the top of the screen by default. In case you need more layout control feel free to use a <code>.grid</code> layout instead of <code>.message-content</code>.
+            p In case you want them to be dismissable, add a class <code>.animated</code> along with an exit class from <a href="http://daneden.github.io/animate.css/">animate.css</a> within a <code>data-dismissable</code> attribute.
 
-    .overlay#my-overlay
+    section.styleguide-section#s-media-object
+      h1.styleguide-divider
+        | Media object
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          .media
+            .media-left
+              .media-object Media key
+            .media-body
+              p Media value.
+              p Anything can go in here.
+        .col-sm-4
+          .styleguide-content
+            p The media element should be used any time you need a key-value pair in a visual sense. This includes a comment+avatar combo, literal key-value pairs (e.g. two-column tables), etc.
+            p The key element accepts an image, or text, while the body acts as a standard container. Entire media element acts as a table and uses no floats for layout.
 
-      a.js-overlay-close.overlay-close(href="#my-overlay") &times;
+    section.styleguide-section#s-tabs
+      h1.styleguide-divider
+        | Tabs
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          ul(role="tablist", class="tabs")
+            li
+              a(role="tab", class="tab", aria-controls="tab-1", href="#tab-1") Tab 1
+            li
+              a(role="tab", class="tab", aria-controls="tab-2", href="#tab-2") Tab 2
+            li
+              a(role="tab", class="tab", aria-controls="tab-3", href="#tab-3") Tab 3
+          .tab-panel#tab-1(role="tabpanel") ... tab 1 ...
+          .tab-panel#tab-2(role="tabpanel") ... tab 2 ...
+          .tab-panel#tab-3(role="tabpanel") ... tab 3 ...
+        .col-sm-4
+          .styleguide-content
+            p Basic tabs implementation with support for history API and accessibility features.
 
-      .overlay-content
-        .container
-          .mt-lg.mb-lg
-            .box.box-default Overlay content.
+    section.styleguide-section#s-overlays
+      h1.styleguide-divider
+        | Overlays
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          a(href="#my-overlay", class="js-overlay-toggle") Toggle overlay
+        .col-sm-4
+          .styleguide-content
+            p Basic tabs implementation with support for history API and accessibility features.
+
+    section.styleguide-section#s-flexbox-grid
+      h1.styleguide-divider
+        | Flexbox grid
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+          .row
+            .col-xs-12
+              .styleguide-grid-cell
+          .row
+            .col-xs-1
+              .styleguide-grid-cell
+            .col-xs-11
+              .styleguide-grid-cell
+          .row
+            .col-xs-2
+              .styleguide-grid-cell
+            .col-xs-10
+              .styleguide-grid-cell
+          .row
+            .col-xs-3
+              .styleguide-grid-cell
+            .col-xs-9
+              .styleguide-grid-cell
+          .row
+            .col-xs-4
+              .styleguide-grid-cell
+            .col-xs-8
+              .styleguide-grid-cell
+          .row
+            .col-xs-5
+              .styleguide-grid-cell
+            .col-xs-7
+              .styleguide-grid-cell
+          .row
+            .col-xs-6
+              .styleguide-grid-cell
+            .col-xs-6
+              .styleguide-grid-cell
+        .col-sm-4
+          .styleguide-content
+            p The flexbox-based grid uses the same syntax as the Bootstrap's grid, and supports the same features.
+            p The main thing that makes it a better alternative to the old float-based grid is the fact that it's nestable. Other features that set it apart are modern properties that come with flexbox layout model, such as easy vertical centering through <code>.top/middle/bottom-XX</code> classes, ability to define starting points for the grid (we used to revert floats before) through <code>.left/center/right-XX</code>.
+            p Find out more at <a href="http://flexboxgrid.com/">flexboxgrid.com</a>.
+
+    section.styleguide-section#s-helper-classes
+      h1.styleguide-divider
+        | Helper classes
+        span.styleguide-divider-actions.fade
+          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      .row
+        .col-sm-8
+
+          h2.h3 Clearfix
+          p The <code>.clearfix</code> class is a standard one you might have seen before. Add it to a parent or import it into another class in order to clear the parent element of floats.
+
+          h2.h3 Content visibility
+          p You can control element's visibility using the following classes:
+          ul
+            li <code>.no-show</code> which positions the element outside the viewport with absolute positioning, but doesn't apply <code>display: none</code> to it.
+            li <code>.hidden</code> hides the element with <code>display: none</code>.
+            li <code>.fade</code> coupled with <code>.in</code> hides and shows an element using the <code>opacity</code> property (has a transition effect by default as well).
+
+          h2.h3 Display
+          p You can force an element's display with literal classes <code>.display-block</code>, <code>.display-inline-block</code>, and <code>.display-inline</code>.
+
+          h2.h3 Floats
+          p Mustra uses the following classes to horizontally align elements using floats: <code>.left</code>, <code>.right</code>.
+          p The <code>.center</code> class is used to center a block-level element horizontally, although it requires that the element has a set width.
+
+          h2.h3 Responsive figures
+          p In order to prevent figures like images and objects overflow their containers, apply one of the following classes: <code>.contain</code>, or <code>img-responsive</code>.
+          p Both classes do the same thing, the first one is specific to Mustra, while the latter is following Bootstrap's convention.
+
+          h2.h3 Margins
+          p Mustra supplies you with necessary spacing classes your can use to preserve consistency in your UIs.
+          p The basic formula is: <code>.m[direction]-[size]</code> where the direction can be <code>l</code> (left), <code>t</code> (top), <code>r</code> (right), or <code>b</code> (bottom), and sizes are: <code>xs</code>, <code>sm</code>, <code>base</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>type</code>.
+          p The specific sizing suffix <code>type</code> uses the typographic <code>em</code> value for size (<code>1em</code> by default) and is meant to be used when you e.g. want to insert a custom UI element within longform text, but you want to keep the flow natural.
+          p.quiet.text-sm It's important to note that these classes should not be imported into other classes, as they have the <code>!important</code> flag. They are meant to be used to overcome defaults on a case-by-case basis. In order to keep spacing consistent throughout your UI you should rely on the default spacing variables, and expand from there if you need to.
+
+        .col-sm-4
+          .styleguide-content
+            p These are the helper classes available in Mustra by default. They are extremely useful for fine-grained control of your UI, and when writing a special class isn't possible or optimal.
+
+    hr.mt-lg.mb-lg
+
+    .row.mb-lg
+      .col-sm-8.quiet.text-xs
+        p
+          strong The MIT License (MIT)
+        p Copyright  2016 <a href="http://sprawsm.com/" class="link-quiet">Sprawsm doo</a>
+        p Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        p The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        p The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+
+    figure.figure
+      iframe(width="560", height="315", src="https://www.youtube.com/embed/9NJcNcW1xH4", frameborder="0", allowfullscreen, data-action="fluid-video")
+
+    figure.figure.video-aspect-ratio
+      iframe(width="560", height="315", src="https://www.youtube.com/embed/9NJcNcW1xH4", frameborder="0", allowfullscreen)
+
+  .overlay#my-overlay
+
+    a.js-overlay-close.overlay-close(href="#my-overlay") &times;
+
+    .overlay-content
+      .container
+        .mt-lg.mb-lg
+          .box.box-default Overlay content.
