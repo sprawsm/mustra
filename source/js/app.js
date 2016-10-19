@@ -5,7 +5,7 @@ $(document).ready(function() {
   var screenSm = 768;
 
   // ===========================================================================
-  // 
+  //
   // Dropdowns
 
   $('.dropdown-toggle').click(function() {
@@ -14,19 +14,19 @@ $(document).ready(function() {
   });
 
   // ===========================================================================
-  // 
+  //
   // Debouncing function, source: Underscore.js
-  // 
+  //
   // Use this function for stuff like scrolling effects, or window resizing.
-  // 
-  // Example: 
-  // 
+  //
+  // Example:
+  //
   // var pageScroll = debounce(function() {
   // $(window).scroll(function() {
   // ... your taxing stuff goes here
   // }
   // }, 250);
-  // 
+  //
   // window.addEventListener('scroll', pageScroll);
 
   function debounce(func, wait, immediate) {
@@ -45,7 +45,7 @@ $(document).ready(function() {
   };
 
   // ===========================================================================
-  // 
+  //
   // Sticky nav
 
   var ph = $('.page-header');
@@ -146,7 +146,7 @@ $(document).ready(function() {
 
     // now hide all the panels, then filter to
     // the one we're interested in, and show it
-    panels.hide().attr('aria-hidden', 'true').filter(id).show().attr('aria-hidden', 'false');
+    panels.removeClass('active').attr('aria-hidden', 'true').filter(id).addClass('active').attr('aria-hidden', 'false');
   }
 
   window.addEventListener('hashchange', update);
@@ -375,7 +375,7 @@ $(document).ready(function() {
 
     // Close things on Esc
     // if ( $('html').hasClass('.js-overlay-active') ) {
-      $(document).keyup(function(e) { 
+      $(document).keyup(function(e) {
         if (e.keyCode == 27) {
           overlayClose.click();
         }
