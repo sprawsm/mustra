@@ -181,7 +181,7 @@ $(document).ready(function() {
   // Open external links in new window
   // Originally from https://css-tricks.com/snippets/jquery/open-external-links-in-new-window/
 
-  $('a').each(function() {
+  $('a').not('a[href*="mailto"]').each(function() {
      var a = new RegExp('/' + window.location.host + '/');
      if(!a.test(this.href)) {
          $(this).click(function(event) {
