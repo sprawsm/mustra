@@ -2,23 +2,30 @@ doctype html
 html(lang="en", prefix="og: http://ogp.me/ns#")
 
   block meta
-    - var title = "Mustra front-end starter kit"
+    - var siteName = "Mustra"
+    - var title = "Front-end starter kit"
     - var description = "The front-end starter kit from Superawesome"
     - var author = "sprawsm.com"
+    - var url = "http://www.dalmatiasun.com/"
     - var slug = ""
 
     //- Facebook Open Graph
     - var ogType = "website"
     - var ogSiteName = "Mustra"
+    - var ogImage = "assets/images/og-image.png"
     - var fbAdmins = ""
     - var fbAppId = ""
+
+    //- Twitter Card
+    - var twtCard = "summary"
+    - var twtAuthor = "@sprawsm"
 
   include _header
 
   include _mixins
 
   body
-    
+
     block content
       p Your content goes here.
 
