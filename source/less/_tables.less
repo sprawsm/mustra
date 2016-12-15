@@ -1,0 +1,59 @@
+// MUSTRA TABLES
+//
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  caption {
+    .upcase;
+    color: @color-quiet;
+    margin-bottom: @spacing-sm;
+    text-align: left;
+    font-size: @font-size-xs;
+  }
+
+  th,
+  td {
+    padding: @spacing-sm;
+    border-bottom: 2px solid @color-text;
+    text-align: left;
+  }
+
+  th {
+    .upcase;
+    background: @color-shaded;
+  }
+
+  tfoot td {
+    color: @color-quiet;
+    font-size: @font-size-sm;
+    border-bottom: none;
+  }
+}
+
+//
+// Variations
+//
+
+.table-datatable {
+  font-size: @font-size-sm;
+
+  th,
+  td {
+    border: 1px solid @color-text;
+    padding: @spacing-xs @spacing-sm;
+  }
+
+  th {
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: inherit;
+  }
+
+  tfoot td {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
