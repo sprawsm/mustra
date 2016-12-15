@@ -35,7 +35,6 @@
   &.in {
     opacity: 1;
   }
-
 }
 
 // ==========
@@ -157,63 +156,6 @@
 
 .num {
   font-family: monospace;
-}
-
-// Media element
-
-.media {
-  margin-bottom: @spacing-type;
-
-  &:first-child {
-    margin-top: 0;
-  }
-}
-
-.media,
-.media-body {
-  zoom: 1;
-  overflow: hidden;
-}
-
-.media-body {
-  width: 10000px;
-
-  p {
-    margin: 0;
-
-    + p {
-      margin-top: @spacing-type;
-    }
-
-  }
-
-}
-
-.media-object {
-  display: block;
-
-  // Fix collapse in webkit from max-width: 100% and display: table-cell.
-  // &.img-thumbnail {
-  //   max-width: none;
-  // }
-
-}
-
-.media-right,
-.media > .pull-right {
-  padding-left: @grid-gutter;
-}
-
-.media-left,
-.media > .pull-left {
-  padding-right: @grid-gutter;
-}
-
-.media-left,
-.media-right,
-.media-body {
-  display: table-cell;
-  vertical-align: top;
 }
 
 // ==========
