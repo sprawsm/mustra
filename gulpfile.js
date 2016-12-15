@@ -7,7 +7,7 @@ var path                  = require('path');
 var runSequence           = require('run-sequence');
 var browserSync           = require('browser-sync');
 var reload                = browserSync.reload;
-
+var exec                  = require('child_process').exec;
 
 // Global paths
 var npmVendorsDir         = 'node_modules/';
@@ -303,6 +303,19 @@ gulp.task('server', function () {
     gulp.start('watch');
 });
 
+
+
+// Deploy Task
+// Deploys files to the server (server data are located in dploy.yaml)
+gulp.task('deploy', function (cb) {
+    var deployCommand = './node_modules/dploy/bin/dploy';
+
+    exec(deployCommand, function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+});
 
 
 // Default and Utility Tasks

@@ -1,0 +1,9 @@
+staging:
+    scheme: sftp
+    host: YOUR FTP HOST
+    user: YOUR FTP USER
+    pass: YOUR FTP PASSWORD
+    path:
+        local: "web/"
+        remote:
+    exclude: []
