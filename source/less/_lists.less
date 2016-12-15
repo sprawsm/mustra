@@ -1,0 +1,59 @@
+// MUSTRA LISTS
+//
+// Basic list styles
+
+//
+// Lists
+//
+
+.list-unstyled {
+  padding-left: 0;
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
+.list-inline,
+.list-inline-block {
+  .list-unstyled;
+
+  li {
+    display: inline;
+    margin-right: @spacing-base;
+    margin-top: @spacing-xs;
+    margin-bottom: @spacing-xs;
+  }
+
+  // Separate list items with a dot
+
+  &.list-middot {
+
+    li:before {
+      content: "•";
+      margin-right: 1em;
+      color: @color-quiet;
+    }
+
+    li:first-child:before {
+      display: none;
+    }
+
+  }
+
+}
+
+.list-inline-block li {
+  display: inline-block;
+}
+
+.list-spaced {
+  > li {
+    margin-top: @spacing-base;
+    margin-bottom: @spacing-base;
+  }
+}
