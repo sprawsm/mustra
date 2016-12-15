@@ -614,6 +614,12 @@ block content
           p In order to prevent figures like images and objects overflow their containers, apply one of the following classes: <code>.contain</code>, or <code>img-responsive</code>.
           p Both classes do the same thing, the first one is specific to Mustra, while the latter is following Bootstrap's convention.
 
+          h2.h3 Responsive videos
+          p In order to maintain aspect ratio of embedded videos, apply <code>.video-aspect-ratio</code> to its container.
+
+          figure.video-aspect-ratio
+            iframe(width="560", height="315", src="https://www.youtube.com/embed/9NJcNcW1xH4", frameborder="0", allowfullscreen)
+
           h2.h3 Margins
           p Mustra supplies you with necessary spacing classes your can use to preserve consistency in your UIs.
           p The basic formula is: <code>.m[direction]-[size]</code> where the direction can be <code>l</code> (left), <code>t</code> (top), <code>r</code> (right), or <code>b</code> (bottom), and sizes are: <code>xs</code>, <code>sm</code>, <code>base</code>, <code>md</code>, <code>lg</code>, <code>xl</code>, and <code>type</code>.
@@ -634,12 +640,6 @@ block content
         p Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
         p The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
         p The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
-
-    figure.figure
-      iframe(width="560", height="315", src="https://www.youtube.com/embed/9NJcNcW1xH4", frameborder="0", allowfullscreen, data-action="fluid-video")
-
-    figure.figure.video-aspect-ratio
-      iframe(width="560", height="315", src="https://www.youtube.com/embed/9NJcNcW1xH4", frameborder="0", allowfullscreen)
 
   .overlay#my-overlay
 
