@@ -18,92 +18,91 @@
   line-height: 1;
   border: none;
   border-radius: 50px;
-  // text-shadow: 0 -1px 0 rgba(0,0,0,.5);
   white-space: nowrap;
   transition: all .15s ease;
   .user-select(none);
+}
 
-  // Sizing
+//
+// Flavors
+//
 
-  &.button-xs {
-    font-size: 11.1px;
-    text-transform: uppercase;
-    padding: .35em .75em;
+.button-default {
+  .button-flavor(@color-text, @color-shaded);
+}
 
-    @media (min-width: @screen-sm) {
-      font-size: @font-size-xs;
-    }
+.button-primary {
+  .button-flavor(#fff, @color-primary);
+}
 
+.button-secondary {
+  .button-flavor(@color-text, #fff);
 
+  &:focus,
+  &:hover {
+    background-color: #fff;
+    color: @color-link;
   }
 
-  &.button-sm {
-    padding: @button-spacing-vertical-sm @button-spacing-horizontal-sm;
-    font-size: @font-size-sm;
+}
+
+.button-success {
+  .button-flavor(#fff, @color-success);
+}
+
+.button-danger {
+  .button-flavor(#fff, @color-danger);
+}
+
+.button-warning {
+  .button-flavor(@color-text, @color-warning);
+}
+
+.button-invert {
+  .button-flavor(@color-link, #fff);
+
+  &:focus,
+  &:hover {
+    background-color: #fff;
+    color: @color-text;
   }
+}
 
-  &.button-lg {
-    font-size: @font-size-md;
-    padding: .5em 1.5em;
+
+// Disabled buttons
+
+// .button-disabled,
+// .button-disabled:focus,
+// .button-disabled:hover {
+//   background: #dfdfdf;
+//   color: #999;
+//   cursor: default;
+// }
+
+//
+// Sizes
+//
+
+.button-xs {
+  font-size: 11.1px;
+  text-transform: uppercase;
+  padding: .35em .75em;
+
+  @media (min-width: @screen-sm) {
+    font-size: @font-size-xs;
   }
+}
 
-  &.button-block {
-    display: block;
-  }
+.button-sm {
+  padding: @button-spacing-vertical-sm @button-spacing-horizontal-sm;
+  font-size: @font-size-sm;
+}
 
-  // Flavors
+.button-lg {
+  font-size: @font-size-md;
+  padding: .5em 1.5em;
+}
 
-  &.button-default {
-    .button-flavor(@color-text,@color-shaded);
-    text-shadow: none;
-  }
-
-  &.button-primary {
-    .button-flavor(#fff,@color-primary);
-  }
-
-  &.button-secondary {
-    .button-flavor(@color-text,#fff);
-
-    &:focus,
-    &:hover {
-      background-color: #fff;
-      color: @color-link;
-    }
-
-  }
-
-  &.button-success {
-    .button-flavor(#fff,@color-success);
-  }
-
-  &.button-danger {
-    .button-flavor(#fff,@color-danger);
-  }
-
-  &.button-warning {
-    .button-flavor(@color-text,@color-warning);
-  }
-
-  &.button-invert {
-    .button-flavor(@color-link,#fff);
-
-    &:focus,
-    &:hover {
-      background-color: #fff;
-      color: @color-text;
-    }
-
-  }
-
-  // Disabled buttons
-
-  // &.button-disabled,
-  // &.button-disabled:focus,
-  // &.button-disabled:hover {
-  //   background: #dfdfdf;
-  //   color: #999;
-  //   cursor: default;
-  // }
-
+.button-block {
+  display: block;
 }
