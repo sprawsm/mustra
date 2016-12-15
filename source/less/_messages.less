@@ -1,3 +1,8 @@
+// ==========
+//  MUSTRA MESSAGES
+//
+// Basic message styles in various flavors.
+
 .message {
   position: absolute;
   top: 0;
@@ -8,29 +13,32 @@
   &.animated {
     cursor: pointer;
   }
+}
 
-  .message-content {
+//
+// Elements
+//
 
-  }
+.message-content {}
 
-  // Flavors
+//
+// Flavors
+//
 
-  &.message-default {
-    background-color: #fff;
-  }
+.message-default {
+  background-color: #fff;
+}
 
-  &.message-success {
-    background-color: @color-success;
-    color: #fff;
-  }
+.message-success {
+  background-color: @color-success;
+  color: #fff;
+}
 
-  &.message-danger {
-    background-color: @color-danger;
-    color: #fff;
-  }
+.message-danger {
+  background-color: @color-danger;
+  color: #fff;
+}
 
-  &.message-warning {
-    background-color: @color-warning;
-  }
-
+.message-warning {
+  background-color: @color-warning;
 }
