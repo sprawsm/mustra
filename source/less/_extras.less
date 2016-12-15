@@ -157,3 +157,23 @@
 .num {
   font-family: monospace;
 }
+
+//
+// Contain 16:9 aspect ratio for the <iframe> element.
+// For 4:3 aspect ratio padding-botton of .video-aspect-ratio
+// element should be set to 75%.
+.video-aspect-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
