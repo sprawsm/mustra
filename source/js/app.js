@@ -4,6 +4,7 @@ $(document).ready(function() {
 
   var $window = $(window);
   var $body = $('body');
+  var $anchors = $('a');
   var screenSm = 768;
   var debounceDelay = 250;
   var throttleDelay = 250;
@@ -59,14 +60,16 @@ $(document).ready(function() {
   // Open external links in new window
   // Originally from https://css-tricks.com/snippets/jquery/open-external-links-in-new-window/
 
-  $('a').not('a[href*="mailto"]').each(function() {
+  $anchors.not('a[href*="mailto"]').each(function() {
      var a = new RegExp('/' + window.location.host + '/');
-     if(!a.test(this.href)) {
-         $(this).click(function(event) {
-             event.preventDefault();
-             event.stopPropagation();
-             window.open(this.href, '_blank');
-         });
+
+     if (!a.test(this.href)) {
+       $(this).on('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          window.open(this.href, '_blank');
+       });
      }
   });
 
@@ -165,11 +168,11 @@ $(document).ready(function() {
     });
   });
 
-  var $anchors = $('a');
-  var tabHashPrefix = 'tab-';
 
   // ===========================================================================
   // Bootstrap tabs update
+
+  var tabHashPrefix = 'tab-';
 
   function afterTabShown(e) {
     e.preventDefault();
