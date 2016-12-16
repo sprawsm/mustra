@@ -1,44 +1,111 @@
-// ==========
-// Overlays
+// MUSTRA OVERLAYS
+//
 
+// Overlay dimm
 .overlay {
-  padding: @spacing-md;
-  overflow: auto;
+  width: 100%;
   position: fixed;
-  background-color: #fff;
-  height: 100vh;
-  top: 100%;
-  left: 0;
+  top: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(0, 110%, 0);
+  transition: opacity @transition-duration-base, visibility @transition-duration-base;
   z-index: @zindex-overlay;
-  transition: top @transition-duration-base @transition-easing;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
 
-  // Open state
-  &.js-overlay-in {
-    top: 0;
+  // When visible
+  &.in {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.overlay-close {
-  display: block;
+// Content
+.overlay-content {
+  width: 100%;
+  height: 100%;
+  padding-bottom: @spacing-lg;
   position: absolute;
-  top: 0;
-  right: 0;
-  z-index: @zindex-overlay-close;
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
-  font-family: monospace; // Use a monospace font for perfect vertical align
-  line-height: 50px;
-  text-align: center;
-  padding: 0;
-  animation-delay: .25s; // length of the showing animation
-  color: @color-text;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform: translate3d(0, 110%, 0);
+  transition: transform @transition-duration-base .3s;
+  overflow-y: auto;
+
+  // When visible
+  .in & {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
-// Disable scrolling on body while modal-is active
+// Inner content wrapper (animated)
+.overlay-content-inner {
+  position: relative;
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: opacity .6s .7s, transform .6s .7s;
 
-.js-overlay-active {
+  // When visible
+  .in & {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// Close link/button
+.overlay-close {
+  display: block;
+  width: @overlay-close-size;
+  height: @overlay-close-size;
+  position: fixed;
+  top: @spacing-base;
+  right: @spacing-base;
+  padding: @overlay-close-padding;
+  fill: @color-text;
+  opacity: 0;
+  transform: translate3d(0, 50%, 0);
+  transition: opacity @transition-duration-base .7s, transform @transition-duration-base .7s;
+  z-index: @zindex-overlay-close;
+
+  // Fix icon and add transition
+  .icon {
+    display: block;
+    transition: transform @transition-duration-fast;
+  }
+
+  &:hover,
+  &:focus {
+    .icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  // When visible
+  .in & {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// Title
+.overlay-title {
+  margin-top: @spacing-md;
+  margin-bottom: @spacing-md;
+  text-align: center;
+
+  @media (min-width: @screen-sm) {
+    margin-bottom: @spacing-xl;
+  }
+}
+
+// Kill the scroll on the body
+.modal-open {
   overflow: hidden;
 }

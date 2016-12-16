@@ -525,7 +525,7 @@ block content
                 a(href="#") Dropdown link
         .col-sm-4
           .styleguide-content
-            p Basic tabs implementation with support for history API and accessibility features.
+            p Simple dropdown implementation.
 
     section.styleguide-section#s-overlays
       h1.styleguide-divider
@@ -534,10 +534,10 @@ block content
           a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
       .row
         .col-sm-8
-          a(href="#my-overlay", class="js-overlay-toggle") Toggle overlay
+          a(href="#my-overlay", data-toggle="modal") Toggle overlay
         .col-sm-4
           .styleguide-content
-            p Basic tabs implementation with support for history API and accessibility features.
+            p Custom overlay styles based on Bootstrap modal library.
 
     section.styleguide-section#s-flexbox-grid
       h1.styleguide-divider
@@ -641,11 +641,18 @@ block content
         p The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
         p The software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
 
-  .overlay#my-overlay
-
-    a.js-overlay-close.overlay-close(href="#my-overlay") &times;
+  aside.overlay#my-overlay(role="dialog", aria-label="My Overlay", tabindex="-1")
 
     .overlay-content
-      .container
-        .mt-lg.mb-lg
-          .box.box-default Overlay content.
+
+      a.overlay-close(href="#", data-dismiss="modal" aria-label="Close")
+        +icon("cross")
+
+      h3.overlay-title Title
+
+      .overlay-content-inner
+
+        .container
+
+          .mt-lg.mb-lg
+            .box.box-default Overlay content.
