@@ -6,15 +6,6 @@ $(document).ready(function() {
 
   // ===========================================================================
   //
-  // Dropdowns
-
-  $('.dropdown-toggle').click(function() {
-    $(this).parents('.dropdown').toggleClass('dropdown-active');
-    return false;
-  });
-
-  // ===========================================================================
-  //
   // Debouncing function, source: Underscore.js
   //
   // Use this function for stuff like scrolling effects, or window resizing.

@@ -59,6 +59,7 @@ var js = {
     src: [
         npmVendorsDir + 'jquery/dist/jquery.js',
         npmVendorsDir + 'bootstrap/js/modal.js',
+        npmVendorsDir + 'bootstrap/js/dropdown.js',
         srcDir + 'js/app.js'
     ],
     dest: destDir + 'assets/js/',

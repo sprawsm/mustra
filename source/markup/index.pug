@@ -513,19 +513,19 @@ block content
       .row
         .col-sm-8
           .dropdown
-            a.button.button-primary.dropdown-toggle(href="#") Toggle dropdown
-            ul.dropdown-menu
+            a.button.button-primary.dropdown-toggle(href="#", data-toggle="dropdown", aria-haspopup="true" aria-expanded="false") Toggle dropdown
+            ul.dropdown-menu(arial-label="Dropdow")
               li
-                a(href="#") Dropdown link
+                a.dropdown-item(href="#") Dropdown link
               li
-                a(href="#") Dropdown link
+                a.dropdown-item(href="#") Dropdown link
               li
-                a(href="#") Dropdown link
+                a.dropdown-item(href="#") Dropdown link
               li
-                a(href="#") Dropdown link
+                a.dropdown-item(href="#") Dropdown link
         .col-sm-4
           .styleguide-content
-            p Simple dropdown implementation.
+            p Simple Bootstrap dropdown implementation.
 
     section.styleguide-section#s-overlays
       h1.styleguide-divider
