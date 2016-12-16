@@ -23,22 +23,21 @@
   padding: @spacing-sm;
   border: 2px solid @color-shaded;
 
-  &.active {
+  .active & {
     background-color: @color-shaded;
     outline: none;
   }
 }
 
-// Tab panels
+// Tab content
 
-.tab-panel {
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity @transition-duration-base;
+// Hide tabbable panes to start, show them when `.active`
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
 
-  &.active {
-    height: auto;
-    opacity: 1;
+  > .active {
+    display: block;
   }
 }

@@ -60,6 +60,8 @@ var js = {
         npmVendorsDir + 'jquery/dist/jquery.js',
         npmVendorsDir + 'bootstrap/js/modal.js',
         npmVendorsDir + 'bootstrap/js/dropdown.js',
+        npmVendorsDir + 'bootstrap/js/transition.js',
+        npmVendorsDir + 'bootstrap/js/tab.js',
         srcDir + 'js/jquery.throttle-debounce.js',
         srcDir + 'js/app.js'
     ],

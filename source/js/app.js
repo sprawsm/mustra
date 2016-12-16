@@ -38,93 +38,6 @@ $(document).ready(function() {
 
   // ===========================================================================
   //
-  // Controls for a tabbed interface
-  // Originally from https://24ways.org/2015/how-tabs-should-work/
-  //
-  // Example markup:
-  //
-  // <ul role="tablist" class="tabs">
-  //   <li><a role="tab" class="tab" aria-controls="tab-1" href="#tab-1">Tab 1</a></li>
-  //   <li><a role="tab" class="tab" aria-controls="tab-2" href="#tab-2">Tab 2</a></li>
-  //   <li><a role="tab" class="tab" aria-controls="tab-3" href="#tab-3">Tab 3</a></li>
-  // </ul>
-  // <div role="tabpanel" class="panel" id="tab-1">
-  // ... tab 1 ...
-  // </div>
-  // <div role="tabpanel" class="panel" id="tab-2">
-  // ... tab 2 ...
-  // </div>
-  // <div role="tabpanel" class="panel" id="tab-3">
-  // ... tab 3 ...
-  // </div>
-
-  // a temp value to cache what we're about to show
-  var target = null;
-
-  // collect all the tabs
-  var tabs = $('.tab').on('click', function () {
-    // console.log('click');
-    target = $(this.hash).removeAttr('id');
-    if (location.hash === this.hash) {
-      setTimeout(update);
-    }
-  }).attr('tabindex', '0');
-
-  // get an array of the panel ids (from the anchor hash)
-  var targets = tabs.map(function () {
-    return this.hash;
-  }).get();
-
-  // use those ids to get a jQuery collection of panels
-  var panels = $(targets.join(',')).each(function () {
-    // keep a copy of what the original el.id was
-    $(this).data('old-id', this.id);
-  });
-
-  function update() {
-    // console.log('update');
-    if (target) {
-      target.attr('id', target.data('old-id'));
-      target = null;
-    }
-
-    var hash = window.location.hash;
-    if (targets.indexOf(hash) !== -1) {
-      return show(hash);
-    }
-
-    if (!hash) {
-      show();
-    }
-  }
-
-  function show(id) {
-    // if no value was given, let's take the first panel
-    if (!id) {
-      id = targets[0];
-    }
-    // remove the selected class from the tabs,
-    // and add it back to the one the user selected
-    tabs.removeClass('active').attr('aria-selected', 'false').filter(function () {
-      return (this.hash === id);
-    }).addClass('active').attr('aria-selected', 'true');
-
-    // now hide all the panels, then filter to
-    // the one we're interested in, and show it
-    panels.removeClass('active').attr('aria-hidden', 'true').filter(id).addClass('active').attr('aria-hidden', 'false');
-  }
-
-  window.addEventListener('hashchange', update);
-
-  // initialise
-  if (targets.indexOf(window.location.hash) !== -1) {
-    update();
-  } else {
-    show();
-  }
-
-  // ===========================================================================
-  //
   // Smooth scroll-to links
   // Originally from http://stackoverflow.com/a/7717572/764886
   //
@@ -252,12 +165,53 @@ $(document).ready(function() {
     });
   });
 
+  var $anchors = $('a');
+  var tabHashPrefix = 'tab-';
+
+  // ===========================================================================
+  // Bootstrap tabs update
+
+  function afterTabShown(e) {
+    e.preventDefault();
+
+    // Update location hash
+    var hash = e.target.hash.substr(1);
+
+    if (hash === '') {
+      hash = $(e.target).data('target').substr(1);
+    }
+
+    window.location.hash = tabHashPrefix +  hash;
+  }
+
+  // Select tabs from on location hash
+
+  function selectTabFromLocationHash() {
+    var hash = location.hash;
+
+    if (hash === '') {
+      return;
+    }
+
+    var $tab = $anchors.filter('[href="' + hash.replace(tabHashPrefix,'') + '"]');
+
+    // If someone uses data-target instead of href for id
+    if ($tab.length === 0) {
+      $tab = $anchors.filter('[data-target="' + hash.replace('tab-','') + '"]');
+    }
+
+    $tab.tab('show');
+  }
+
+  // Detect Bootstrape tab shown event
+  $('[data-toggle="tab"]').on('shown.bs.tab', afterTabShown);
 
   /**
    * Initialization
    */
   var init = function () {
     updatePageHeaderPosition();
+    selectTabFromLocationHash();
   };
 
   var onResize = function () {};
@@ -271,5 +225,4 @@ $(document).ready(function() {
   $window.on('scroll', $.throttle(throttleDelay, onScroll));
 
   init();
-
 });
