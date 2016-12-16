@@ -60,6 +60,7 @@ var js = {
         npmVendorsDir + 'jquery/dist/jquery.js',
         npmVendorsDir + 'bootstrap/js/modal.js',
         npmVendorsDir + 'bootstrap/js/dropdown.js',
+        srcDir + 'js/jquery.throttle-debounce.js',
         srcDir + 'js/app.js'
     ],
     dest: destDir + 'assets/js/',

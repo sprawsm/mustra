@@ -2,65 +2,39 @@ $(document).ready(function() {
 
   // Global variables
 
+  var $window = $(window);
+  var $body = $('body');
   var screenSm = 768;
-
-  // ===========================================================================
-  //
-  // Debouncing function, source: Underscore.js
-  //
-  // Use this function for stuff like scrolling effects, or window resizing.
-  //
-  // Example:
-  //
-  // var pageScroll = debounce(function() {
-  // $(window).scroll(function() {
-  // ... your taxing stuff goes here
-  // }
-  // }, 250);
-  //
-  // window.addEventListener('scroll', pageScroll);
-
-  function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  };
+  var debounceDelay = 250;
+  var throttleDelay = 250;
 
   // ===========================================================================
   //
   // Sticky nav
 
-  var ph = $('.page-header');
-      activeClass = "page-header-active";
-      breakpoint = $(window).height() / 5;
-      clone = $('.page-header-fixed');
+  var $pageHeader = $('.page-header');
+  var pageHeaderActiveClass = "page-header-active";
+  var pageHeaderStaticClass = "page-header-static";
+  var pageHeaderFixedClass = "page-header-fixed";
+  var pageHeaderBreakpoint = $window.height() / 5;
 
   // Clone the header
-  ph.clone().appendTo('body').addClass('page-header-fixed');
+  $pageHeader
+    .clone()
+    .appendTo('body')
+    .addClass(pageHeaderFixedClass);
 
   // Apply a special class to the original
-  ph.addClass('page-header-static');
+  $pageHeader.addClass(pageHeaderStaticClass);
 
-  var pageScroll = debounce(function() {
-    $(window).scroll(function() {
-      if( $(this).scrollTop() > breakpoint ) {
-        $('body').addClass(activeClass);
-      } else {
-        $('body').removeClass(activeClass);
-      }
-    });
-  }, 150);
-
-  window.addEventListener('scroll', pageScroll);
+  // Update page header position on init/scroll
+  function updatePageHeaderPosition() {
+    if ($window.scrollTop() > pageHeaderBreakpoint) {
+      $body.addClass(pageHeaderActiveClass);
+    } else {
+      $body.removeClass(pageHeaderActiveClass);
+    }
+  }
 
   // ===========================================================================
   //
@@ -277,4 +251,25 @@ $(document).ready(function() {
       });
     });
   });
+
+
+  /**
+   * Initialization
+   */
+  var init = function () {
+    updatePageHeaderPosition();
+  };
+
+  var onResize = function () {};
+
+  var onScroll = function () {
+    updatePageHeaderPosition();
+  };
+
+  $window.on('resize', $.debounce(debounceDelay, onResize));
+
+  $window.on('scroll', $.throttle(throttleDelay, onScroll));
+
+  init();
+
 });
