@@ -46,13 +46,16 @@ $(document).ready(function() {
   //
   // <a href="#anchor" class="scroll-to">I will scroll</a>
 
-  var smoothScrollLink = $('[data-scroll="smooth"]');
+  var $htmlAndBody = $('html, body');
+  var $smoothScrollLinks = $('[data-scroll="smooth"]');
+  var scrollDuration = 500;
 
-  smoothScrollLink.click(function(){
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
-    return false;
+  $smoothScrollLinks.on('click', function (e) {
+    e.preventDefault();
+    
+    $htmlAndBody.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, scrollDuration);
   });
 
   // ===========================================================================
