@@ -159,18 +159,23 @@ $(document).ready(function() {
   // ===========================================================================
   // Messages
 
-  var safMsg = $('.message.animated');
+  var $messages = $('.message.animated');
 
-  safMsg.each(function() {
-    var safMsgDismissStyle = $(this).attr('data-dismissable');
-    $(this).click(function() {
-      $(this).addClass(safMsgDismissStyle).delay(1000).queue(function(next) {
-        $(this).hide();
-        next();
-      });
+  $messages.each(function () {
+    var messageDismissStyle = $(this).attr('data-dismissable');
+    
+    $(this).on('click', function (e) {
+      e.preventDefault();
+      
+      $(this)
+        .addClass(messageDismissStyle)
+        .delay(1000)
+        .queue(function(next) {
+          $(this).hide();
+          next();
+        });
     });
   });
-
 
   // ===========================================================================
   // Bootstrap tabs update
