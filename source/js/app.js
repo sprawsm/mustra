@@ -98,28 +98,28 @@ $(document).ready(function() {
   //   </ul>
   // </nav>
 
-  function hamburger() {
+  var hamburgerSelector = '.hamburger';
+  var hamburgeredClass = 'hamburgered';
+  var pageHeaderMenuSelector = '.page-header-menu';
 
-    var windowWidth = $(window).width();
+  function updateHamburgerVisibility() {
+    var windowWidth = $window.width();
 
     if (windowWidth < screenSm) {
 
-      $('.page-header-menu').addClass('hamburgered');
+      $(pageHeaderMenuSelector).addClass(hamburgeredClass);
 
-      $('.hamburger').unbind('click').click(function() {
-        $('.page-header-menu').toggleClass('hamburgered');
-        return false;
+      $(hamburgerSelector)
+        .off('click')
+        .on('click', function (e) {
+          e.preventDefault();
+          
+          $(pageHeaderMenuSelector).toggleClass(hamburgeredClass);
       });
+    } else if (windowWidth > screenSm) {
+      $(pageHeaderMenuSelector).show();
     }
-    else if (windowWidth > screenSm) {
-      $('.page-header-menu').show();
-    }
-
   }
-
-  hamburger();
-
-  $(window).resize(hamburger);
 
   // ===========================================================================
   // Equalizers
@@ -218,9 +218,12 @@ $(document).ready(function() {
   var init = function () {
     updatePageHeaderPosition();
     selectTabFromLocationHash();
+    updateHamburgerVisibility();
   };
 
-  var onResize = function () {};
+  var onResize = function () {
+    updateHamburgerVisibility();
+  };
 
   var onScroll = function () {
     updatePageHeaderPosition();
