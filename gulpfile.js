@@ -33,16 +33,6 @@ var errorAlert  = function (error) {
 };
 
 
-// Shared plugins options
-var options = {
-    plumber: {
-        errorHandler: errorAlert
-    },
-    size: {
-        showFiles: true
-    }
-};
-
 // Styles paths
 var css = {
     src: [
@@ -125,6 +115,59 @@ var files = {
 };
 
 
+// Shared plugins options
+var options = {
+    plumber: {
+        errorHandler: errorAlert
+    },
+    less: {
+        compress: true
+    },
+    autoprefixer: {
+        browsers: ['last 3 versions']
+    },
+    size: {
+        showFiles: true
+    },
+    favicons: {
+        masterPicture: favicons.src,
+        dest: favicons.dest,
+        iconsPath: favicons.dest,
+        design: {
+            ios: {
+                pictureAspect: 'noChange'
+            },
+            desktopBrowser: {},
+            windows: {
+                pictureAspect: 'noChange',
+                backgroundColor: '#da532c',
+                onConflict: 'override'
+            },
+            androidChrome: {
+                pictureAspect: 'noChange',
+                themeColor: '#ffffff',
+                manifest: {
+                    name: favicons.androidName,
+                    display: 'browser',
+                    orientation: 'notSet',
+                    onConflict: 'override',
+                    declared: true
+                }
+            },
+            safariPinnedTab: {
+                pictureAspect: 'blackAndWhite',
+                themeColor: '#0075FF'
+            }
+        },
+        settings: {
+            scalingAlgorithm: 'Mitchell',
+            errorOnImageTooSmall: false
+        },
+        markupFile: favicons.dataFile
+    }
+};
+
+
 
 // Styles Task
 // Compiles, autoprefixes and minifies styles
@@ -132,12 +175,8 @@ gulp.task('css', function () {
     return gulp.src(css.src)
         .pipe($.plumber(options.plumber))
         .pipe($.sourcemaps.init())
-        .pipe($.less({
-            compress: true
-        }))
-        .pipe($.autoprefixer({
-            browsers: ['last 3 versions']
-        }))
+        .pipe($.less(options.less))
+        .pipe($.autoprefixer(options.autoprefixer))
         .pipe($.size(options.size))
         .pipe($.sourcemaps.write('/'))
         .pipe(gulp.dest(css.dest))
@@ -212,42 +251,7 @@ gulp.task('icons', function () {
 // Favicons Task
 // Makes favicon files from one master image
 gulp.task('favicons', function(done) {
-    return $.realFavicon.generateFavicon({
-        masterPicture: favicons.src,
-        dest: favicons.dest,
-        iconsPath: favicons.dest,
-        design: {
-            ios: {
-                pictureAspect: 'noChange'
-            },
-            desktopBrowser: {},
-            windows: {
-                pictureAspect: 'noChange',
-                backgroundColor: '#da532c',
-                onConflict: 'override'
-            },
-            androidChrome: {
-                pictureAspect: 'noChange',
-                themeColor: '#ffffff',
-                manifest: {
-                    name: favicons.androidName,
-                    display: 'browser',
-                    orientation: 'notSet',
-                    onConflict: 'override',
-                    declared: true
-                }
-            },
-            safariPinnedTab: {
-                pictureAspect: 'blackAndWhite',
-                themeColor: '#0075FF'
-            }
-        },
-        settings: {
-            scalingAlgorithm: 'Mitchell',
-            errorOnImageTooSmall: false
-        },
-        markupFile: favicons.dataFile
-    }, function() {
+    return $.realFavicon.generateFavicon(options.favicons, function () {
         done();
     });
 });
@@ -328,4 +332,5 @@ gulp.task('assets', ['css', 'js', 'images', 'icons', 'fonts', 'favicons']);
 gulp.task('build', function (callback) {
     runSequence('clean', ['html', 'assets', 'copy'], callback);
 });
+gulp.task('start', ['server']);
 gulp.task('default', ['build']);
