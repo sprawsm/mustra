@@ -238,8 +238,8 @@ gulp.task('favicons', function(done) {
                 }
             },
             safariPinnedTab: {
-                pictureAspect: 'silhouette',
-                themeColor: '#5bbad5'
+                pictureAspect: 'blackAndWhite',
+                themeColor: '#0075FF'
             }
         },
         settings: {
