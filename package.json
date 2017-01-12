@@ -36,13 +36,12 @@
     "gulp-newer": "^1.1.*",
     "gulp-size": "^1.1.*",
     "gulp-real-favicon": "^0.2.*",
-    "gulp-exec": "^2.1.*",
+    "gulp-rsync": "^0.0.*",
     "path": "^0.12.*",
     "del": "^2.2.*",
     "colors": "^1.1.*",
     "run-sequence": "^1.2.*",
     "browser-sync": "^2.12.*",
-    "dploy": "^1.2.*",
     "bootstrap ": "^3.3.*"
   }
 }

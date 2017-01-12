@@ -7,7 +7,6 @@ var path                  = require('path');
 var runSequence           = require('run-sequence');
 var browserSync           = require('browser-sync');
 var reload                = browserSync.reload;
-var exec                  = require('child_process').exec;
 
 // Global paths
 var npmVendorsDir         = 'node_modules/';
@@ -164,6 +163,22 @@ var options = {
             errorOnImageTooSmall: false
         },
         markupFile: favicons.dataFile
+    },
+    rsync: {
+        root: destDir,
+        hostname: 'server hostname or IP address',
+        username: 'ssh username',
+        destination: 'destination path e.g. /var/www/user-name/public_html/project-name',
+        archive: true,
+        incremental: true,
+        recursive: true,
+        compress: true,
+        clean: true,
+        silent: false,
+        progress: false,
+        command: false,
+        dryrun: false,
+        exclude: []
     }
 };
 
@@ -315,16 +330,12 @@ gulp.task('server', function () {
 
 
 // Deploy Task
-// Deploys files to the server (server data are located in dploy.yaml)
-gulp.task('deploy', function (cb) {
-    var deployCommand = './node_modules/dploy/bin/dploy';
-
-    exec(deployCommand, function (err, stdout, stderr) {
-        console.log(stdout);
-        console.log(stderr);
-        cb(err);
-    });
+// Synchorizes files with the destination server (uses rsync)
+gulp.task('deploy', function () {
+  return gulp.src(destDir)
+    .pipe($.rsync(options.rsync));
 });
+
 
 
 // Default and Utility Tasks
