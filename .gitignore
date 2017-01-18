@@ -3,3 +3,4 @@ node_modules
 web
 favicon-data.json
 *.sublime-workspace
+secret.json

@@ -7,6 +7,7 @@ var path                  = require('path');
 var runSequence           = require('run-sequence');
 var browserSync           = require('browser-sync');
 var reload                = browserSync.reload;
+var secret                = require('./secret.json');
 
 // Global paths
 var npmVendorsDir         = 'node_modules/';
@@ -166,9 +167,9 @@ var options = {
     },
     rsync: {
         root: destDir,
-        hostname: 'server hostname or IP address',
-        username: 'ssh username',
-        destination: 'destination path e.g. /var/www/user-name/public_html/project-name',
+        hostname: secret.hostname,
+        username: secret.username,
+        destination: secret.destination,
         archive: true,
         incremental: true,
         recursive: true,
@@ -332,8 +333,8 @@ gulp.task('server', function () {
 // Deploy Task
 // Synchorizes files with the destination server (uses rsync)
 gulp.task('deploy', function () {
-  return gulp.src(destDir)
-    .pipe($.rsync(options.rsync));
+    return gulp.src(destDir)
+        .pipe($.rsync(options.rsync));
 });
 
 
