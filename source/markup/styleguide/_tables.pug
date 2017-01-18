@@ -1,0 +1,60 @@
+section.styleguide-section#s-tables
+  +sectionHeading("Tables")
+
+  .row
+    .col-sm-8
+      table.table
+        caption Table caption
+        tfoot
+          tr
+            td(colspan="4") Table footer.
+        thead
+          tr
+            th Header
+            th Header
+            th Header
+            th Header
+        tbody
+          tr
+            td Cell
+            td Cell
+            td Cell
+            td Cell
+          tr
+            td Cell
+            td Cell
+            td Cell
+            td Cell
+
+      table.table.table-datatable
+        caption Datatables
+        tfoot
+          tr
+            td(colspan="4") Fig. 3.4.
+        thead
+          tr
+            th Header
+            th Header
+            th Header
+            th.txtr.highlight Num.
+        tbody
+          tr
+            td Cell
+            td Cell
+            td Cell
+            td.txtr.num.highlight
+              span.left $
+              | 19.99
+          tr
+            td Cell
+            td Cell
+            td Cell
+            td.txtr.num.highlight
+              span.left $
+              | 123.45
+    .col-sm-4
+      .styleguide-content
+        p
+          strong Tables
+        p Tables come in two formats: standard tables (e.g. when you need to present tabular data in longform text), and datatables (e.g. when you want to present something spreadsheet-like).
+        p The <sode>.num</sode> class, coupled with the <code>.txtr</code> class can be pretty useful within tables when dealing with numbers and you need the figures to line up.

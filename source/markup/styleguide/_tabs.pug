@@ -1,0 +1,21 @@
+section.styleguide-section#s-tabs
+  +sectionHeading("Tabs")
+
+  .row
+    .col-sm-8
+      ul(role="tablist", class="tabs")
+        li(role="presentation" class="active")
+          a(href="#tab-1", class="tab", role="tab", aria-controls="tab-1", data-toggle="tab") Tab 1
+        li(role="presentation")
+          a(href="#tab-2", class="tab", role="tab", aria-controls="tab-2", data-toggle="tab") Tab 2
+        li(role="presentation")
+          a(href="#", class="tab", data-target="#tab-3", role="tab", aria-controls="tab-3", data-toggle="tab") Tab 3
+
+      .tab-content
+        .tab-pane.fade.in.active(role="tabpanel", id="tab-1") ... tab 1 ...
+        .tab-pane.fade(role="tabpanel", id="tab-2") ... tab 2 ...
+        .tab-pane.fade(role="tabpanel", id="tab-3") ... tab 3 ...
+
+    .col-sm-4
+      .styleguide-content
+        p Bootstrap tabs implementation with support for history API and accessibility features.
