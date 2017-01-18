@@ -4,9 +4,16 @@ append meta
   - var title = "Mustra styleguide"
   - var useDotHTMLExtension = false;
 
-//- Add an additional stylesheet needed for teh styleguide
+//- Add an additional stylesheet needed for the styleguide
 block append meta
   link(rel="stylesheet", href="assets/css/styleguide.css")
+
+//- Mixins for the styleguide
+mixin sectionHeading(name)
+  h1.styleguide-divider
+    =name
+    span.styleguide-divider-actions.fade
+      a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
 
 block content
 
@@ -29,10 +36,8 @@ block content
               a(href="#") Nav link
 
     section.styleguide-section
-      h1.styleguide-divider
-        | Navigation
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Navigation")
+
       .row
         .col-sm-3.col-sm-offset-3
           p.upcase This guide
@@ -58,10 +63,8 @@ block content
               a(href="#") Template
 
     section.styleguide-section#s-colors
-      h1.styleguide-divider
-        | Colors
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Colors")
+
       .row
         .col-sm-8
           p Backgrounds:
@@ -113,10 +116,8 @@ block content
             p There are helper classes to color backgrounds (<code>.bg-[variable]</code>) and text (<code>.text-[variable]</code>) respectively.
 
     section.styleguide-section#s-font-families
-      h1.styleguide-divider
-        | Font families
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Font families")
+
       .row
         .col-sm-8
           p
@@ -144,10 +145,8 @@ block content
             p By default Mustra uses the designated system font, and if that fails it falls back on the tried and true sans-serif font stack.
 
     section.styleguide-section#s-titles
-      h1.styleguide-divider
-        | Titles
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Titles")
+
       .row
         .col-sm-8
           p.pretitle This is a pretitle element.
@@ -177,10 +176,8 @@ block content
             p This style is also mapped to <code>.h3</code> and is best used within text for more granular separation.
 
     section.styleguide-section#s-textual-elements
-      h1.styleguide-divider
-        | Textual elements
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Textual elements")
+
       .row.mb-md
         .col-sm-8
           p.lead Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -237,10 +234,8 @@ block content
             p Text flow control. It's important to note that the text align classes shouldn't be included into other classes as they contain the <code>!important</code> flag.
 
     section.styleguide-section#s-lists
-      h1.styleguide-divider
-        | Lists
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Lists")
+
       .row.mb-md
         .col-sm-8
           ul
@@ -294,10 +289,8 @@ block content
             p There is also a possiblity to separate list items with dots.
 
     section.styleguide-section#s-tables
-      h1.styleguide-divider
-        | Tables
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Tables")
+
       .row
         .col-sm-8
           table.table
@@ -357,10 +350,8 @@ block content
             p The <sode>.num</sode> class, coupled with the <code>.txtr</code> class can be pretty useful within tables when dealing with numbers and you need the figures to line up.
 
     section.styleguide-section#s-buttons
-      h1.styleguide-divider
-        | Buttons
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Buttons")
+
       .row
         .col-sm-8
           ul.list-inline-block.mb-md
@@ -420,10 +411,8 @@ block content
             p Various button flavors and sizes.
 
     section.styleguide-section#s-boxes
-      h1.styleguide-divider
-        | Boxes
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Boxes")
+
       .row
         .col-sm-8
           .box.box-default This is a default box.
@@ -440,10 +429,8 @@ block content
             p By default boxes don't have any margins.
 
     section.styleguide-section#s-messages
-      h1.styleguide-divider
-        | Messages
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Messages")
+
       .row
         .col-sm-8
           div(style="position:relative;height: 80px;border:10px solid #ccc;background-color:#ccc;")
@@ -466,10 +453,8 @@ block content
             p In case you want them to be dismissable, add a class <code>.animated</code> along with an exit class from <a href="http://daneden.github.io/animate.css/">animate.css</a> within a <code>data-dismissable</code> attribute.
 
     section.styleguide-section#s-media-object
-      h1.styleguide-divider
-        | Media object
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Media object")
+
       .row
         .col-sm-8
           .media
@@ -484,10 +469,8 @@ block content
             p The key element accepts an image, or text, while the body acts as a standard container. Media element uses flexbox for layout.
 
     section.styleguide-section#s-tabs
-      h1.styleguide-divider
-        | Tabs
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Tabs")
+
       .row
         .col-sm-8
           ul(role="tablist", class="tabs")
@@ -508,10 +491,8 @@ block content
             p Bootstrap tabs implementation with support for history API and accessibility features.
 
     section.styleguide-section#s-dropdowns
-      h1.styleguide-divider
-        | Dropdowns
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Dropdowns")
+
       .row
         .col-sm-8
           .dropdown
@@ -530,10 +511,8 @@ block content
             p Simple Bootstrap dropdown implementation.
 
     section.styleguide-section#s-overlays
-      h1.styleguide-divider
-        | Overlays
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Overlays")
+
       .row
         .col-sm-8
           a(href="#my-overlay", data-toggle="modal") Toggle overlay
@@ -542,10 +521,8 @@ block content
             p Custom overlay styles based on Bootstrap modal library.
 
     section.styleguide-section#s-flexbox-grid
-      h1.styleguide-divider
-        | Flexbox grid
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Flexbox grid")
+
       .row
         .col-sm-8
           .row
@@ -588,10 +565,8 @@ block content
             p Find out more at <a href="http://flexboxgrid.com/">flexboxgrid.com</a>.
 
     section.styleguide-section#s-helper-classes
-      h1.styleguide-divider
-        | Helper classes
-        span.styleguide-divider-actions.fade
-          a(href="#top", data-scroll="smooth", class="button button-xs button-default") back to top
+      +sectionHeading("Helper classes")
+
       .row
         .col-sm-8
 
