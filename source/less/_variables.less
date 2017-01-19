@@ -110,3 +110,64 @@
 
 @overlay-close-size:                  46px;
 @overlay-close-padding:               15px;
+
+// ==========
+// Forms
+
+// Form group
+@form-group-margin-bottom:            @grid-gutter / 2;
+
+// Input
+@input-padding-x:                     @spacing-sm;
+@input-padding-y:                     @spacing-sm;
+@input-font-size:                     @font-size-base;
+@input-line-height:                   1;
+
+@input-bg:                            @color-light;
+@input-bg-disabled:                   @color-shaded;
+
+@input-color:                         @color-text;
+@input-border-color:                  @border-color;
+@input-border-width:                  1px;
+@input-btn-border-width:              1px;
+@input-border-radius:                 @border-radius-base;
+
+@input-bg-focus:                      @input-bg;
+@input-border-focus:                  @color-primary;
+@input-color-focus:                   @input-color;
+
+@input-transition:                    border-color @transition-duration-fast @transition-easing;
+
+// Input size variations
+@input-padding-x-sm:                  @spacing-xs;
+@input-padding-y-sm:                  @spacing-xs;
+
+@input-padding-x-lg:                  @spacing-sm;
+@input-padding-y-lg:                  @spacing-sm;
+
+// Check (radio or checkbox)
+@form-check-margin-bottom:            @spacing-xs;
+@form-check-input-gutter:             1.25rem;
+
+@form-check-inline-margin-x:          @spacing-base;
+@form-check-disabled-color:           #adadad;
+
+// Placeholder
+@input-color-placeholder:             @color-quiet;
+@input-placeholder-focus-offset:      7.5%;
+@input-placeholder-transition:        transform @transition-duration-fast @transition-easing, opacity @transition-duration-fast @transition-easing;
+
+// Form text (help block)
+@form-text-color:                     @color-quiet;
+@form-text-font-size:                 @font-size-sm;
+@form-text-margin-top:                @spacing-xs;
+
+// Input group
+@input-group-addon-bg:                @color-shaded;
+@input-group-addon-border-color:      @input-border-color;
+
+// Form validation
+@form-feedback-margin-top:            @form-text-margin-top;
+@input-color-success:                 @color-success;
+@input-color-warning:                 @color-warning;
+@input-color-danger:                  @color-danger;
