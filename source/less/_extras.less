@@ -67,11 +67,32 @@
 }
 
 // ==========
+// Positioning
+
+.position-relative { position: relative; }
+
+// ==========
 // Vertical alignment
 
 .valign-top { vertical-align: top; }
 .valign-middle { vertical-align: middle; }
 .valign-bottom { vertical-align: bottom; }
+
+// ==========
+// Block alignment
+
+.block-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.block-vcenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 // ==========
 // Responsive images
@@ -123,6 +144,18 @@
 .mb-type { margin-bottom: @spacing-type; }
 
 // ==========
+// Text colors
+
+.text-light { color: @color-light; }
+.text-default { color: @color-text; }
+.text-primary { color: @color-primary; }
+.text-success { color: @color-success; }
+.text-danger { color: @color-danger; }
+.text-danger { color: @color-danger; }
+.text-warning { color: @color-warning; }
+.text-shaded { color: @color-shaded; }
+
+// ==========
 // Backgrounds
 
 .bg-light { background-color: @color-light; }
@@ -139,30 +172,46 @@
 // UI elements
 
 // ==========
-// Numerals
+// Numerals (lining figures)
 //
 // For use in e.g. tables when you need figures to line up
 
 .num {
-  font-family: monospace;
+  // if your font doesn't support lining figures, you can use a monospaced font.
+  // font-family: monospace;
+  font-feature-settings: 'tnum';
+  -webkit-font-feature-settings: 'tnum';
+  -moz-font-feature-settings: 'tnum';
 }
 
 //
 // Contain 16:9 aspect ratio for the <iframe> element.
 // For 4:3 aspect ratio padding-botton of .video-aspect-ratio
 // element should be set to 75%.
-.video-aspect-ratio {
+.responsive-embed {
+  // square by itself
   position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 25px;
+  padding-bottom: 100%;
   height: 0;
   overflow: hidden;
 
-  iframe {
+  &.responsive-embed-16-9 {
+    padding-bottom: 56.25%;
+  }
+
+  &.responsive-embed-4-3 {
+    padding-bottom: 75%;
+  }
+
+  video,
+  iframe,
+  object,
+  embed {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 100%;
     height: 100%;
   }
 }
