@@ -51,6 +51,21 @@
   display: inline-block;
 }
 
+// Fix for right-aligned lists
+.list-inline li,
+.list-inline-block li {
+  .rtl &,
+  .txtr &,
+  .txtr&,
+  .txtr-sm &,
+  .txtr-sm&,
+  .txtr-md &,
+  .txtr-md& {
+    margin-right: 0;
+    margin-left: @spacing-sm;
+  }
+}
+
 .list-spaced {
   > li {
     margin-top: @spacing-base;
