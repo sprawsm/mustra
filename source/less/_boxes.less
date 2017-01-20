@@ -5,13 +5,18 @@
 
 .box {
   .clearfix;
-  padding: @spacing-base;
+  padding: @grid-gutter;
   border-radius: @border-radius-base;
 
   // Make sure that the boxes don't stick to each other if stacked
   + .box {
     margin-top: @spacing-type;
   }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
 }
 
 //
@@ -20,21 +25,61 @@
 
 .box-default {
   background-color: @color-shaded;
+
+  &.box-bordered {
+    border-color: darken(@color-shaded, 10%);
+  }
+
 }
 
 .box-primary {
   background-color: @color-primary;
   color: #fff;
+
+  &.box-bordered {
+    border-color: darken(@color-primary, 15%);
+  }
+
+}
+
+.box-warning {
+  background-color: @color-warning;
+
+  &.box-bordered {
+    border-color: darken(@color-warning, 10%);
+  }
+
+}
+
+.box-success {
+  background-color: @color-success;
+
+  &.box-bordered {
+    border-color: darken(@color-success, 7%);
+  }
+
+}
+
+.box-danger {
+  background-color: @color-danger;
+
+  &.box-bordered {
+    border-color: darken(@color-danger, 20%);
+  }
+
+}
+
+.box-light {
+  background-color: @color-light;
+
+  &.box-bordered {
+    border-color: darken(@color-light, 20%);
+  }
+
 }
 
 .box-bordered {
   border: 2px solid @border-color;
-  border-radius: 0;
-
-  hr {
-    border-top-width: 2px;
-    border-color: @color-text;
-  }
 }
 
 //
@@ -50,7 +95,7 @@
 }
 
 .box-lg {
-  padding: @spacing-md;
+  padding: @spacing-lg;
 }
 
 //
@@ -58,6 +103,12 @@
 //
 
 .box-hr-full {
-  margin-left: -@spacing-base;
-  margin-right: -@spacing-base;
+  margin-left: -@grid-gutter;
+  margin-right: -@grid-gutter;
+  border-radius: 0;
+}
+
+.box-outset {
+  margin-left: -@grid-gutter;
+  margin-right: -@grid-gutter;
 }
