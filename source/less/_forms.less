@@ -163,8 +163,7 @@ textarea {
 // Indent the labels to position radios/checkboxes as hanging controls.
 
 .form-check {
-  position: relative;
-  display: block;
+  align-items: center;
   margin-bottom: @form-check-margin-bottom;
 
   &.is-disabled {
@@ -176,20 +175,15 @@ textarea {
 }
 
 .form-check-label {
-  padding-left: @form-check-input-gutter;
   margin-bottom: 0; // Override default `<label>` bottom margin
   cursor: pointer;
+  display: flex;
+  align-items: baseline;
 }
 
 .form-check-input {
-  position: absolute;
-  top: -2px;
-  margin-left: -@form-check-input-gutter;
+  flex: none;
   margin-right: @spacing-sm;
-
-  &:only-child {
-    position: relative;
-  }
 }
 
 // Radios and checkboxes on same line
@@ -199,6 +193,11 @@ textarea {
   + .form-check-inline {
     margin-left: @form-check-inline-margin-x;
   }
+
+  .form-check-label {
+    align-items: baseline;
+  }
+
 }
 
 // Horizontal forms
