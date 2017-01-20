@@ -116,7 +116,23 @@ h4,
 // Alignment
 
 .txtl { text-align: left !important; }
+
 .txtr { text-align: right !important; }
+
+// only on screens larger than @screen-sm
+.txtr-sm {
+  @media (min-width: @screen-sm) {
+    text-align: right !important;
+  }
+}
+
+// only on screens larger than @screen-md
+.txtr-md {
+  @media (min-width: @screen-md) {
+    text-align: right !important;
+  }
+}
+
 .txtc { text-align: center !important; }
 
 // Misc
