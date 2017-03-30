@@ -2,6 +2,7 @@ doctype html
 html(lang="en", prefix="og: http://ogp.me/ns#")
 
   block meta
+    //- General
     - var siteName = "Mustra"
     - var siteUrl = "https://www.sprawsm.com/"
     - var title = "Front-end starter kit"
@@ -10,10 +11,17 @@ html(lang="en", prefix="og: http://ogp.me/ns#")
     - var slug = ""
     - var useDotHTMLExtension = true;
 
+    //- Paths
+    - var assetsPath = "assets/"
+    - var imagesPath = assetsPath + "images/"
+    - var cssPath = assetsPath + "css/"
+    - var jsPath = assetsPath + "js/"
+    - var faviconsPath = imagesPath + "favicons/"
+
     //- Facebook Open Graph
     - var ogType = "website"
     - var ogSiteName = "Mustra"
-    - var ogImage = "assets/images/og-image.png"
+    - var ogImage = "og-image.png"
     - var fbAdmins = ""
     - var fbAppId = ""
 
