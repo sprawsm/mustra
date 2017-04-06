@@ -52,7 +52,7 @@ $(document).ready(function() {
 
   $smoothScrollLinks.on('click', function (e) {
     e.preventDefault();
-    
+
     $htmlAndBody.animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, scrollDuration);
@@ -113,7 +113,7 @@ $(document).ready(function() {
         .off('click')
         .on('click', function (e) {
           e.preventDefault();
-          
+
           $(pageHeaderMenuSelector).toggleClass(hamburgeredClass);
       });
     } else if (windowWidth > screenSm) {
@@ -163,10 +163,10 @@ $(document).ready(function() {
 
   $messages.each(function () {
     var messageDismissStyle = $(this).attr('data-dismissable');
-    
+
     $(this).on('click', function (e) {
       e.preventDefault();
-      
+
       $(this)
         .addClass(messageDismissStyle)
         .delay(1000)
@@ -208,6 +208,49 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
+  // ===========================================================================
+  // Handle responsive breadcrumbs
+  //
+
+  var $breadcrumbs = $('.js-breadcrumbs');
+  var $breadcrumbsMoreAction = $breadcrumbs.find('.breadcrumb-more');
+  var $breadcrumbsDropdown = $breadcrumbsMoreAction.find('.dropdown-menu');
+  var breadcrumbsItemSelector = '.breadcrumb-item';
+  var visibleBreadcrumbsItemsSelector = '> .breadcrumb-item:not(.breadcrumb-more)';
+  var hiddenClass = 'hidden';
+
+  function handleBreadcrumbs() {
+    var navWidth = 0;
+    var moreWidth = $breadcrumbsMoreAction.outerWidth(true);
+    var $visibleItems = $breadcrumbs.find(visibleBreadcrumbsItemsSelector);
+    var availableSpace = $breadcrumbs.parent().width() - moreWidth;
+
+    $visibleItems.each(function () {
+        navWidth += $(this).outerWidth(true);
+    });
+
+    if (navWidth > availableSpace) {
+      var $lastItem = $visibleItems.not(':last-child').last();
+
+      $lastItem.attr('data-width', $lastItem.outerWidth(true));
+      $lastItem.prependTo($breadcrumbsDropdown);
+
+      handleBreadcrumbs();
+    } else {
+      var $firstMoreElement = $breadcrumbsDropdown.find(breadcrumbsItemSelector).first();
+
+      if (navWidth + $firstMoreElement.data('width') < availableSpace) {
+        $firstMoreElement.insertBefore($breadcrumbsMoreAction);
+      }
+    }
+
+    if ($breadcrumbsDropdown.find(breadcrumbsItemSelector).length > 0) {
+      $breadcrumbsMoreAction.removeClass(hiddenClass);
+    } else {
+      $breadcrumbsMoreAction.addClass(hiddenClass);
+    }
+  }
+  
   // ===========================================================================
   // Bootstrap tabs update
 
@@ -255,10 +298,12 @@ $(document).ready(function() {
     updatePageHeaderPosition();
     selectTabFromLocationHash();
     updateHamburgerVisibility();
+    handleBreadcrumbs();
   };
 
   var onResize = function () {
     updateHamburgerVisibility();
+    handleBreadcrumbs();
   };
 
   var onScroll = function () {

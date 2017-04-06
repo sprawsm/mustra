@@ -3,33 +3,24 @@
 
 // Overlay dimm
 .overlay {
-  width: 100%;
+  display: none;
+  overflow: hidden;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0,0,0,.25);
-  filter: blur(5px);
-  opacity: 0;
-  visibility: hidden;
-  transform: translate3d(0, 110%, 0);
-  transition: opacity @transition-duration-base, visibility @transition-duration-base;
   z-index: @zindex-overlay;
   -webkit-overflow-scrolling: touch;
-  outline: 0;
 
-  // When visible
-  &.in {
-    filter: blur(0);
-    opacity: 1;
-    visibility: visible;
-    transform: translate3d(0, 0, 0);
-  }
+  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // https://github.com/twbs/bootstrap/pull/10951.
+  outline: 0;
 }
 
 // Content
 .overlay-content {
+  position: relative;
   width: 100%;
   height: 100%;
   padding-bottom: @spacing-lg;
@@ -38,12 +29,13 @@
   left: 0;
   background-color: #fff;
   transform: translate3d(0, 110%, 0);
-  transition: transform @transition-duration-base .3s;
+  transition: transform @transition-duration-base;
   overflow-y: auto;
 
   // When visible
   .in & {
     transform: translate3d(0, 0, 0);
+    transition-delay: @transition-duration-base;
   }
 }
 
@@ -112,4 +104,25 @@
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
+}
+
+// Modal background
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.25);
+  z-index: @zindex-overlay - 1;
+  transition: opacity @transition-duration-base;
+
+  // Fade for backdrop
+  &.fade {
+    opacity: 0;
+  }
+
+  &.in {
+    opacity: 1;
+  }
 }

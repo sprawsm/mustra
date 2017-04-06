@@ -16,7 +16,7 @@ head
   meta(property="og:title", content=pageTitle)
   meta(property="og:description", content=description)
   meta(property="og:site_name", content=ogSiteName)
-  meta(property="og:image", content=siteUrl + ogImage)
+  meta(property="og:image", content=siteUrl + imagesPath + ogImage)
 
   //- Twitter cards
   meta(name="twitter:card", content=twtCard)
@@ -38,7 +38,7 @@ head
   link(rel="dns-prefetch", href="//use.typekit.net")
 
   //- Website styles
-  link(rel="stylesheet", href="assets/css/styles.css")
+  link(rel="stylesheet", href=cssPath + "styles.css")
 
   //- Advanced Typekit code
   //- Source: https://helpx.adobe.com/typekit/using/embed-codes.html

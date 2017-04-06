@@ -6,7 +6,7 @@ append meta
 
 //- Add an additional stylesheet needed for the styleguide
 block append meta
-  link(rel="stylesheet", href="assets/css/styleguide.css")
+  link(rel="stylesheet", href=cssPath + "styleguide.css")
 
 //- Mixins for the styleguide
 mixin sectionHeading(name)
@@ -45,6 +45,7 @@ block content
             +sectionLink('#s-colors', 'Colors')
             +sectionLink('#s-font-families', 'Font families')
             +sectionLink('#s-titles', 'Titles')
+            +sectionLink('#s-breadcrumbs', 'Breadcrumbs')
             +sectionLink('#s-textual-elements', 'Textual elements')
             +sectionLink('#s-lists', 'Lists')
             +sectionLink('#s-forms', 'Forms')
@@ -61,7 +62,7 @@ block content
             +sectionLink('#s-helper-classes', 'Helper classes')
         .col-sm-3
           p.upcase Mockups
-          p.quiet.text-sm Link up your mockups from here. 
+          p.quiet.text-sm Link up your mockups from here.
           //- ul.list-unstyled
           //-   li
           //-     a(href="#") Template
@@ -71,6 +72,8 @@ block content
     include styleguide/_font-families
 
     include styleguide/_titles
+
+    include styleguide/_breadcrumbs
 
     include styleguide/_textual-elements
 

@@ -7,7 +7,10 @@ var path                  = require('path');
 var runSequence           = require('run-sequence');
 var browserSync           = require('browser-sync');
 var reload                = browserSync.reload;
-var secret                = require('./secret.json');
+var fs                    = require('fs');
+var secret                = fs.existsSync('./secret.json') ?
+                            require('./secret.json') :
+                            require('./secret.example.json');
 
 // Global paths
 var npmVendorsDir         = 'node_modules/';
