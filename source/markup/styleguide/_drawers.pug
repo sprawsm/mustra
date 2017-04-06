@@ -1,0 +1,16 @@
+section.styleguide-section#s-drawers
+  +sectionHeading("Drawers")
+
+  .row
+    .col-sm-8
+      a(href="#my-drawer", data-toggle="drawer") Toggle drawer
+    .col-sm-4
+      .styleguide-content
+        p Custom drawer with support for left (<code>.drawer-left</code> and by default), and right (<code>.drawer-right</code>) placement.
+
+aside.drawer#my-drawer(role="menu", aria-label="My Drawer", tabindex="-1")
+  a.drawer-close(href="#my-drawer", data-toggle="drawer" aria-label="Close")
+    <svg width="100%" height="100%" viewBox="0 0 32 32" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path d="M26.96,1.504l-10.96,10.96l-10.96,-10.96l-3.536,3.536l10.96,10.96l-10.96,10.96l3.536,3.536l10.96,-10.96l10.96,10.96l3.536,-3.536l-10.96,-10.96l10.96,-10.96l-3.536,-3.536Z" style="fill:#FFF;fill-rule:nonzero;"/></svg>
+
+  .drawer-content.scrollfix
+    p This is a drawer.
