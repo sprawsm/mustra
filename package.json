@@ -20,7 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "jquery": "^3.0.*",
-    "bootstrap ": "^3.3.*"
+    "bootstrap ": "^3.3.*",
+    "svg4everybody ": "^2.1.*"
   },
   "devDependencies": {
     "gulp": "^3.9.*",
