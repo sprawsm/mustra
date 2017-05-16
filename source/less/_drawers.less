@@ -13,7 +13,7 @@
   transition: transform @transition-duration-base, visibility @transition-duration-base;
   z-index: @zindex-drawer;
   -webkit-overflow-scrolling: touch;
-  overflow: auto;
+  overflow: hidden;
   background-color: @color-primary;
   color: @color-light;
   font-size: @font-size-sm;
@@ -27,7 +27,6 @@
   @media (min-width: @screen-md) {
     width: @drawer-width;
   }
-  
 
   &.drawer-left {
     right: auto;
@@ -69,11 +68,11 @@
   display: block;
   width: @drawer-close-size;
   height: @drawer-close-size;
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   padding: @drawer-close-padding;
-  fill: @color-text;
+  fill: @color-light;
   opacity: 0;
   transform: translate3d(110%, 0, 0);
   transition: opacity @transition-duration-base .3s, transform @transition-duration-base .3s;
