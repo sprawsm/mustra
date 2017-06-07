@@ -198,11 +198,9 @@ var options = {
 gulp.task('css', function () {
     return gulp.src(css.src)
         .pipe($.plumber(options.plumber))
-        .pipe($.sourcemaps.init())
         .pipe($.less(options.less))
         .pipe($.autoprefixer(options.autoprefixer))
         .pipe($.size(options.size))
-        .pipe($.sourcemaps.write('/'))
         .pipe(gulp.dest(css.dest))
         .pipe(browserSync.stream({match: '**/*.css'}));
 });
