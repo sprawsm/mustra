@@ -90,7 +90,8 @@ var images = {
 // Icons paths
 var icons = {
     src: srcDir + 'images/icons/*.svg',
-    dest: destDir + 'assets/images/'
+    dest: destDir + 'assets/images/',
+    destIcons: destDir + 'assets/images/icons/'
 };
 
 
@@ -268,6 +269,16 @@ gulp.task('icons', function () {
 
 
 
+// Copies SVG icons to destinations icon folder
+gulp.task('icons:copy', function () {
+    return gulp.src(icons.src)
+        .pipe($.newer(icons.destIcons))
+        .pipe($.svgmin())
+        .pipe(gulp.dest(icons.destIcons));
+});
+
+
+
 // Favicons Task
 // Makes favicon files from one master image
 gulp.task('favicons', function(done) {
@@ -314,7 +325,7 @@ gulp.task('watch', function () {
     gulp.watch(js.src, ['js', reload]);
     gulp.watch(html.watch, ['html', reload]);
     gulp.watch(images.src, ['images', reload]);
-    gulp.watch(icons.src, ['icons', reload]);
+    gulp.watch(icons.src, ['icons', 'icons:copy', reload]);
     gulp.watch(favicons.src, ['favicons']);
     gulp.watch(files.src, ["copy"]);
 });
@@ -344,7 +355,7 @@ gulp.task('deploy', function () {
 
 
 // Default and Utility Tasks
-gulp.task('assets', ['css', 'js', 'images', 'icons', 'fonts', 'favicons']);
+gulp.task('assets', ['css', 'js', 'images', 'icons', 'icons:copy', 'fonts', 'favicons']);
 gulp.task('build', function (callback) {
     runSequence('clean', ['html', 'assets', 'copy'], callback);
 });
