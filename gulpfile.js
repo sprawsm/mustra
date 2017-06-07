@@ -131,6 +131,9 @@ var options = {
     autoprefixer: {
         browsers: ['last 3 versions']
     },
+    pug: {
+        pretty: true
+    },
     size: {
         showFiles: true
     },
@@ -228,9 +231,7 @@ gulp.task('html', function() {
     return gulp.src(html.src)
         .pipe($.newer(html.dest))
         .pipe($.plumber(options.plumber))
-        .pipe($.pug({
-            pretty: true
-        }))
+        .pipe($.pug(options.pug))
         .pipe(gulp.dest(html.dest));
 });
 
