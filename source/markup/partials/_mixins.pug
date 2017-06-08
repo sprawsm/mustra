@@ -29,3 +29,16 @@ mixin breadcrumbs(pages)
         li.breadcrumb-item(itemprop="itemListElement", itemscope itemtype="http://schema.org/ListItem")
           span(property="name")=page
           meta(itemprop="position", content=index + 2)
+
+mixin accordion(slug, title, content, parent, isExpanded)
+  - var isExpandedAria = isExpanded ? "true" : "false";
+  - var linkCssClass = isExpanded ? "" : "collapsed";
+  - var contentCssClass = isExpanded ? "in" : "";
+
+  //- .panel and .collapseX classes has to be present because of the Bootstrap's JS lib. Other classes and markups are optional.
+  .panel.mt-base
+    a(role="button" data-toggle="collapse" data-parent=parent, href="#" + slug, aria-expanded=isExpandedAria, aria-controls=slug, class=linkCssClass)
+      .text-overflow=title
+      span.caret
+    .collapse(id=slug, role="tabpanel", class=contentCssClass)
+      .box.box-default.mt-base=content
