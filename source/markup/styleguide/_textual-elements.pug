@@ -49,7 +49,7 @@ section.styleguide-section#s-textual-elements
     .col-sm-4
       .styleguide-content
         p Quiet text, enforces color and can be combined with other elements.
-  .row
+  .row.mb-md
     .col-sm-8
       p.txtl Left-Aligned text.
       p.txtc Center-Aligned text.
@@ -57,3 +57,10 @@ section.styleguide-section#s-textual-elements
     .col-sm-4
       .styleguide-content
         p Text flow control. It's important to note that the text align classes shouldn't be included into other classes as they contain the <code>!important</code> flag.
+  .row
+    .col-sm-4
+      p.text-overflow Some really long sentence that will be truncated.
+    .col-sm-4.col-sm-offset-4
+      .styleguide-content
+        p Text overflow control. Just wrap your text into #[code .text-truncate] element.
+        p #[strong Note:] Please note that in some cases, due the specific browser's width calculations, this solution might not work as expected.
