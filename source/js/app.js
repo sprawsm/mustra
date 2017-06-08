@@ -299,7 +299,6 @@ $(document).ready(function() {
     selectTabFromLocationHash();
     updateHamburgerVisibility();
     handleBreadcrumbs();
-    svg4everybody(); // JS polyfil for SVG sprites in IE11 (for IE6-IE8 support load *-legacy.js file instead)
   };
 
   var onResize = function () {

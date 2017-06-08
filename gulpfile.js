@@ -57,11 +57,11 @@ var js = {
         npmVendorsDir + 'bootstrap/js/tab.js',
         npmVendorsDir + 'bootstrap/js/collapse.js',
         npmVendorsDir + 'svg4everybody/dist/svg4everybody.js',
-        srcDir + 'js/jquery.throttle-debounce.js',
-        srcDir + 'js/app.js'
+        srcDir + 'js/**/*.js'
     ],
     dest: destDir + 'assets/js/',
-    destFile: 'app.js'
+    destFile: 'app.js',
+    destMinFile: 'app.min.js'
 };
 
 
@@ -128,6 +128,9 @@ var options = {
         errorHandler: errorAlert
     },
     less: {
+        compress: false
+    },
+    lessMin: {
         compress: true
     },
     autoprefixer: {
@@ -138,6 +141,9 @@ var options = {
     },
     size: {
         showFiles: true
+    },
+    rename: {
+        suffix: '.min'
     },
     favicons: {
         masterPicture: favicons.src,
@@ -195,31 +201,55 @@ var options = {
 
 
 
-// Styles Task
-// Compiles, autoprefixes and minifies styles
+//
+// Styles Tasks
+//
+// Compiles and autoprefixes styles
 gulp.task('css', function () {
     return gulp.src(css.src)
         .pipe($.plumber(options.plumber))
-        .pipe($.less(options.less))
+        .pipe($.less())
         .pipe($.autoprefixer(options.autoprefixer))
         .pipe($.size(options.size))
         .pipe(gulp.dest(css.dest))
         .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
+// Compiles, autoprefixes and minifies styles
+gulp.task('css:min', function () {
+    return gulp.src(css.src)
+        .pipe($.plumber(options.plumber))
+        .pipe($.less(options.lessMin))
+        .pipe($.autoprefixer(options.autoprefixer))
+        .pipe($.size(options.size))
+        .pipe($.rename(options.rename))
+        .pipe(gulp.dest(css.dest));
+});
 
 
-// Scripts Task
-// Merges and minifies scripts
+
+//
+// Scripts Tasks
+//
+// Copies listed scripts to the build folder
 gulp.task('js', function () {
     return gulp
         .src(js.src)
-        .pipe($.newer(js.dest + js.destFile))
+        .pipe($.newer(js.dest))
+        .pipe($.plumber(options.plumber))
+        .pipe(gulp.dest(js.dest));
+});
+
+// Merges and minifies scripts
+gulp.task('js:min', function () {
+    return gulp
+        .src(js.src)
+        .pipe($.newer(js.dest + js.destMinFile))
         .pipe($.plumber(options.plumber))
         .pipe($.concat(js.destFile))
-        .pipe(gulp.dest(js.dest))
         .pipe($.uglify())
         .pipe($.size(options.size))
+        .pipe($.rename(options.rename))
         .pipe(gulp.dest(js.dest));
 });
 
@@ -301,7 +331,8 @@ gulp.task('fonts', function () {
 
 
 // Copy Task
-// Copies defined files
+//
+// Copies listed files to destination folder
 gulp.task('copy', function() {
     return gulp.src(files.src)
         .pipe($.newer(files.dest))
@@ -322,8 +353,8 @@ gulp.task('clean', function () {
 // Watch Task
 // Runs watcher mechanism for runing tasks on file update
 gulp.task('watch', function () {
-    gulp.watch(css.watch, ['css']);
-    gulp.watch(js.src, ['js', reload]);
+    gulp.watch(css.watch, ['css', 'css:min']);
+    gulp.watch(js.src, ['js', 'js:min', reload]);
     gulp.watch(html.watch, ['html', reload]);
     gulp.watch(images.src, ['images', reload]);
     gulp.watch(icons.src, ['icons', 'icons:copy', reload]);
@@ -354,11 +385,14 @@ gulp.task('deploy', function () {
 });
 
 
-
+//
 // Default and Utility Tasks
+//
 gulp.task('assets', ['css', 'js', 'images', 'icons', 'icons:copy', 'fonts', 'favicons']);
+
 gulp.task('build', function (callback) {
-    runSequence('clean', ['html', 'assets', 'copy'], callback);
+    runSequence('clean', ['html', 'assets', 'copy'], 'css:min', 'js:min', callback);
 });
+
 gulp.task('start', ['server']);
 gulp.task('default', ['build']);
