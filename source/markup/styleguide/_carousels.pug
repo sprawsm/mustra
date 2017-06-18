@@ -1,0 +1,64 @@
+section.styleguide-section#s-carousels
+  +sectionHeading("Carousels")
+
+  .row
+    .col-sm-8
+      .js-carousel-single
+        div
+          img(src="https://placeimg.com/700/300/people")
+        div
+          img(src="https://placeimg.com/700/300/nature")
+        div
+          img(src="https://placeimg.com/700/300/animals")
+        div
+          img(src="https://placeimg.com/700/300/tech")
+
+    .col-sm-4
+      .styleguide-content
+        p Single slide carousel.
+
+  .row.mt-xl
+    .col-sm-8
+      .js-carousel-multiple
+        div
+          img(src="https://placeimg.com/700/300/people")
+        div
+          img(src="https://placeimg.com/700/300/nature")
+        div
+          img(src="https://placeimg.com/700/300/animals")
+        div
+          img(src="https://placeimg.com/700/300/tech")
+        div
+          img(src="https://placeimg.com/700/300/people")
+        div
+          img(src="https://placeimg.com/700/300/nature")
+        div
+          img(src="https://placeimg.com/700/300/animals")
+        div
+          img(src="https://placeimg.com/700/300/tech")
+        div
+          img(src="https://placeimg.com/700/300/people")
+        div
+          img(src="https://placeimg.com/700/300/nature")
+        div
+          img(src="https://placeimg.com/700/300/animals")
+        div
+          img(src="https://placeimg.com/700/300/tech")
+
+    .col-sm-4
+      .styleguide-content
+        p Multiple slides carousel.
+
+  .row.mt-xl
+    .col-sm-8
+      div(style="position: relative; height: 500px;")
+        .js-carousel-full-wh.carousel-full-wh
+          div(style="background-image: url('https://placeimg.com/700/300/people')")
+          div(style="background-image: url('https://placeimg.com/700/300/animals')")
+          div(style="background-image: url('https://placeimg.com/700/300/tech')")
+          div(style="background-image: url('https://placeimg.com/700/300/nature')")
+
+    .col-sm-4
+      .styleguide-content
+        p Full width & height carousel (relative to the relatively positioned parent container).
+        p Suitable for full width or height page sections like hero/intro blocks.

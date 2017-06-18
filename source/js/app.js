@@ -252,6 +252,58 @@ $(document).ready(function() {
   }
 
   // ===========================================================================
+  // Carousel (Slick.js) initialisation
+
+  var $carouselSingle = $('.js-carousel-single');
+  var carouselSingleOptions = {
+    dots: true
+  };
+  var $carouselMultiple = $('.js-carousel-multiple');
+  var carouselMultipleOptions = {
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+  var $carouselFullWidthHeight = $('.js-carousel-full-wh');
+  var carouselFullWidthHeightOptions = {
+    dots: false
+  };
+
+  function initCarousel () {
+    $carouselSingle.slick(carouselSingleOptions);
+    $carouselMultiple.slick(carouselMultipleOptions);
+    $carouselFullWidthHeight.slick(carouselFullWidthHeightOptions);
+  }
+
+
+  // ===========================================================================
   // Bootstrap tabs update
 
   var tabHashPrefix = 'tab-';
@@ -299,6 +351,7 @@ $(document).ready(function() {
     selectTabFromLocationHash();
     updateHamburgerVisibility();
     handleBreadcrumbs();
+    initCarousel();
   };
 
   var onResize = function () {

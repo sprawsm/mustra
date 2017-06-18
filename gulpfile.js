@@ -57,6 +57,7 @@ var js = {
         npmVendorsDir + 'bootstrap/js/tab.js',
         npmVendorsDir + 'bootstrap/js/collapse.js',
         npmVendorsDir + 'svg4everybody/dist/svg4everybody.js',
+        npmVendorsDir + 'slick-carousel/slick/slick.js',
         srcDir + 'js/**/*.js'
     ],
     dest: destDir + 'assets/js/',
