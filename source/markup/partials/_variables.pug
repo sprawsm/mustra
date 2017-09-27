@@ -1,3 +1,50 @@
-//- Shared variables
+//- META BLOCK
+//- Used for the <head> section of the website.
+//- All variables can be overwritten in any template with `append meta` block
+block meta
+    //- General
+    - var siteName = "Mustra"
+    - var siteUrl = "https://www.sprawsm.com/"
+    - var title = "Front-end starter kit"
+    - var description = "The front-end starter kit from Superawesome"
+    - var author = "sprawsm.com"
+    - var slug = ""
+    - var useDotHTMLExtension = true
 
+    //- Define page title and url extensiton structure
+    - var pageTitle = siteName + " - " + title
+    - var urlExtension = useDotHTMLExtension ? ".html" : ""
+
+    //- Paths
+    - var assetsPath = "assets/"
+    - var imagesPath = assetsPath + "images/"
+    - var cssPath = assetsPath + "css/"
+    - var jsPath = assetsPath + "js/"
+    - var faviconsPath = imagesPath + "favicons/"
+
+    //- Facebook Open Graph
+    - var includeOpenGraph = true
+    - var ogType = "website"
+    - var ogSiteName = "Mustra"
+    - var ogImage = "og-image.png"
+    - var fbAdmins = ""
+    - var fbAppId = ""
+
+    //- Twitter Card
+    - var includeTwitterCard = true
+    - var twtCard = "summary"
+    - var twtAuthor = "@sprawsm"
+
+    //- Favicons
+    - var safariPinnedTabColor = "#0075FF"
+
+    //- DNS Prefetch
+    -
+      var dnsPrefetch = [
+        "//sprawsm.com",
+        "//use.typekit.net"
+      ]
+
+//- PAGE VARIABLES
+//- Various variables used in template files.
 - var homeUrl = '/';

@@ -1,42 +1,12 @@
 doctype html
+
 html(lang="en", prefix="og: http://ogp.me/ns#")
-
-  block meta
-    //- General
-    - var siteName = "Mustra"
-    - var siteUrl = "https://www.sprawsm.com/"
-    - var title = "Front-end starter kit"
-    - var description = "The front-end starter kit from Superawesome"
-    - var author = "sprawsm.com"
-    - var slug = ""
-    - var useDotHTMLExtension = true;
-
-    //- Paths
-    - var assetsPath = "assets/"
-    - var imagesPath = assetsPath + "images/"
-    - var cssPath = assetsPath + "css/"
-    - var jsPath = assetsPath + "js/"
-    - var faviconsPath = imagesPath + "favicons/"
-
-    //- Facebook Open Graph
-    - var ogType = "website"
-    - var ogSiteName = "Mustra"
-    - var ogImage = "og-image.png"
-    - var fbAdmins = ""
-    - var fbAppId = ""
-
-    //- Twitter Card
-    - var twtCard = "summary"
-    - var twtAuthor = "@sprawsm"
-
-    //- Favicons
-    - var safariPinnedTabColor = "#0075FF"
-
-  include _header
 
   include _variables
 
   include _mixins
+
+  include _header
 
   body(itemscope, itemtype="http://schema.org/WebPage")
 
