@@ -302,6 +302,27 @@ $(document).ready(function() {
     $carouselFullWidthHeight.slick(carouselFullWidthHeightOptions);
   }
 
+  // ===========================================================================
+  // State-Content toggler
+  // 
+  // Use this to toggle an element's state along with its contents
+  // 
+  // Example markup:
+  // 
+  // <a href="#my-element" data-toggle="sc-toggle">Show Contents</a>
+  // <div class="sc-target" id="my-element">
+  //   This is toggled
+  // </div>
+
+  var SCToggle = $('[data-toggle="sc-toggle"]');
+  var SCTarget = $('.sc-target');
+
+  SCToggle.click(function(e) {
+    SCTarget.filter(this.hash).toggleClass('active');
+    var t = $(this);
+    t.html(t.text() == 'Show Contents' ? 'Hide Contents' : 'Show Contents');
+    e.preventDefault();
+  });
 
   // ===========================================================================
   // Bootstrap tabs update
@@ -340,7 +361,7 @@ $(document).ready(function() {
     $tab.tab('show');
   }
 
-  // Detect Bootstrape tab shown event
+  // Detect Bootstrap tab shown event
   $('[data-toggle="tab"]').on('shown.bs.tab', afterTabShown);
 
   /**
@@ -368,4 +389,5 @@ $(document).ready(function() {
   $window.on('scroll', $.throttle(throttleDelay, onScroll));
 
   init();
+
 });

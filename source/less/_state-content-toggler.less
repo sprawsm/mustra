@@ -1,0 +1,12 @@
+.sc-target {
+  max-height: 0;
+  transition: max-height @transition-duration-base ease-out;
+  overflow: hidden;
+
+  &.active {
+    // magic number because a freakishly large number will cause a delay
+    max-height: 1500px;
+    transition: max-height @transition-duration-base ease-in;
+  }
+
+}

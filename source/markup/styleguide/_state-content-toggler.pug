@@ -1,0 +1,11 @@
+section.styleguide-section#s-state-content-toggler
+  +sectionHeading("State-Content Toggler")
+
+  .row
+    .col-sm-8
+      a(href="#my-element" data-toggle="sc-toggle") Show Contents
+      .sc-target#my-element
+        .box.box-default This is toggled
+    .col-sm-4
+      .styleguide-content
+        p Use this component when you need to have a trigger element (e.g. a button) that toggles the visibility of another element's contents (e.g. a list of things), and you also need to change the toggler element's content to reflect the state of the target element. 
