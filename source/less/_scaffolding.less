@@ -56,3 +56,21 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
+
+//
+// Collapse
+//
+
+.expanded-text {
+  .collapsed & {
+    display: none;
+  }
+}
+
+.collapsed-text {
+  display: none;
+
+  .collapsed & {
+    display: inline;
+  }
+}

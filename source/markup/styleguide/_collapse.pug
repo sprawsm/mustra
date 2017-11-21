@@ -3,7 +3,7 @@ section.styleguide-section#s-collapse
 
   .row
     .col-sm-8
-      a(href="#collapseExample" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample") Toggle collapse
+      a(href="#collapseExample" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample").collapsed Toggle content
       .collapse#collapseExample
         .box.box-default.mt-base Some hidden content
 
@@ -24,3 +24,15 @@ section.styleguide-section#s-collapse
     .col-sm-4
       .styleguide-content
         p Bootstrap collapse implementation for accordion.
+
+  .row.mt-lg
+    .col-sm-8
+      a(href="#collapseToggleExample" data-toggle="collapse" aria-expanded="false" aria-controls="collapseToggleExample").collapsed
+        span.collapsed-text Show Contents
+        span.expanded-text Hide Contents
+      .collapse#collapseToggleExample
+        .box.box-default.mt-base This is a state-content toggler that switches the text when you expand the content.
+
+    .col-sm-4
+      .styleguide-content
+        p Use this component when you need to have a trigger element (e.g. a button) that toggles the visibility of another element's contents (e.g. a list of things), and you also need to change the toggler element's content to reflect the state of the target element.
