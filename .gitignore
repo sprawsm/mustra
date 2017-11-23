@@ -4,4 +4,3 @@ web
 favicon-data.json
 *.sublime-workspace
 secret.json
-yarn.lock
