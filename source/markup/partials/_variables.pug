@@ -11,10 +11,6 @@ block meta
     - var slug = ""
     - var useDotHTMLExtension = true
 
-    //- Define page title and url extensiton structure
-    - var pageTitle = siteName + " - " + title
-    - var urlExtension = useDotHTMLExtension ? ".html" : ""
-
     //- Paths
     - var assetsPath = "assets/"
     - var imagesPath = assetsPath + "images/"
@@ -44,6 +40,10 @@ block meta
         "//sprawsm.com",
         "//use.typekit.net"
       ]
+
+//- Define page title and url extensiton structure (has to be out of the meta block!)
+- var pageTitle = siteName + " - " + title
+- var urlExtension = useDotHTMLExtension ? ".html" : ""
 
 //- PAGE VARIABLES
 //- Various variables used in template files.

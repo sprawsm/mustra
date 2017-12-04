@@ -38,7 +38,8 @@ head
     link(rel="dns-prefetch", href=href)
 
   //- Website styles
-  link(rel="stylesheet", href=cssPath + "styles.css")
+  block styles
+    link(rel="stylesheet", href=cssPath + "styles.css")
   //- link(rel="stylesheet", href=cssPath + "styles.min.css")
 
   //- Preload Webfont resources (use with caution because it has a high priority)
