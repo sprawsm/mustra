@@ -70,7 +70,7 @@ var js = {
 var html = {
     src: [
         srcDir + 'markup/**/*.pug',
-        '!source/markup/partials/*.pug',
+        '!source/markup/partials/**/*.pug',
         '!source/markup/styleguide/*.pug'
     ],
     dest: destDir,
