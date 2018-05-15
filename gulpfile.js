@@ -8,9 +8,9 @@ var runSequence           = require('run-sequence');
 var browserSync           = require('browser-sync');
 var reload                = browserSync.reload;
 var fs                    = require('fs');
-var secret                = fs.existsSync('./secret.json') ?
-                            require('./secret.json') :
-                            require('./secret.example.json');
+var config                = fs.existsSync('./config.json') ?
+                            require('./config.json') :
+                            require('./config.example.json');
 
 // Global paths
 var npmVendorsDir         = 'node_modules/';
@@ -184,9 +184,9 @@ var options = {
     },
     rsync: {
         root: destDir,
-        hostname: secret.hostname,
-        username: secret.username,
-        destination: secret.destination,
+        hostname: config.staging.hostname,
+        username: config.staging.username,
+        destination: config.staging.destination,
         archive: true,
         incremental: true,
         recursive: true,

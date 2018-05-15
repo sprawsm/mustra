@@ -1,0 +1,7 @@
+{
+  "staging": {
+    "hostname": "188.226.202.210",
+    "username": "sprawsm",
+    "destination": "/var/www/superaweso.me/public_html/mustra"
+  }
+}
