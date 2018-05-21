@@ -103,7 +103,7 @@ var favicons = {
     src: srcDir + 'images/favicons/favicon.png',
     dest: destDir + 'assets/images/favicons/',
     dataFile: srcDir + 'images/favicons/favicon-data.json',
-    androidName: 'Mustra'
+    androidName: config.favicons.androidName
 };
 
 
@@ -153,28 +153,44 @@ var options = {
         iconsPath: favicons.dest,
         design: {
             ios: {
-                pictureAspect: 'noChange'
+                pictureAspect: 'noChange',
+                assets: {
+                    ios6AndPriorIcons: false,
+                    ios7AndLaterIcons: false,
+                    precomposedIcons: false,
+                    declareOnlyDefaultIcon: true
+                }
             },
             desktopBrowser: {},
             windows: {
                 pictureAspect: 'noChange',
-                backgroundColor: '#da532c',
-                onConflict: 'override'
+                onConflict: 'override',
+                assets: {
+                    windows80Ie10Tile: false,
+                    windows10Ie11EdgeTiles: {
+                        small: false,
+                        medium: true,
+                        big: false,
+                        rectangle: false
+                    }
+                }
             },
             androidChrome: {
                 pictureAspect: 'noChange',
-                themeColor: '#ffffff',
                 manifest: {
                     name: favicons.androidName,
-                    display: 'browser',
+                    display: 'standalone',
                     orientation: 'notSet',
                     onConflict: 'override',
                     declared: true
+                },
+                assets: {
+                    legacyIcon: false,
+                    lowResolutionIcons: false
                 }
             },
             safariPinnedTab: {
                 pictureAspect: 'blackAndWhite',
-                themeColor: '#0075FF'
             }
         },
         settings: {

@@ -3,5 +3,8 @@
     "hostname": "server hostname or IP address",
     "username": "ssh username",
     "destination": "destination path e.g. /var/www/user-name/public_html/project-name"
+  },
+  "favicons": {
+    "androidName": "Mustra"
   }
 }
