@@ -1,18 +1,21 @@
 // MUSTRA DROPDOWNS
 //
-//
+// https://getbootstrap.com/docs/4.1/components/dropdowns/
 
-.dropdown {
+.dropup,
+.dropright,
+.dropdown,
+.dropleft {
   position: relative;
   margin-bottom: 0;
 }
 
 .dropdown-toggle {
-  .open &.button {
+  .show &.button {
     transform: translateY(6px) !important;
   }
 
-  .open &.button-primary {
+  .show &.button-primary {
     background-color: $color-primary;
     color: $color-light;
   }
@@ -21,33 +24,45 @@
 // Menu
 
 .dropdown-menu {
+  // position: absolute;
+  // top: 100%;
+  // left: 0;
+  // z-index: $zindex-dropdown;
+  // display: none; // none by default, but block on "open" of the menu
+  // float: left;
+  // min-width: $dropdown-min-width;
+  // padding: $dropdown-padding-y 0;
+  // margin: $dropdown-spacer 0 0; // override default ul
+  // font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
+  // color: $body-color;
+  // text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  // list-style: none;
+  // background-color: $dropdown-bg;
+  // background-clip: padding-box;
+  // border: $dropdown-border-width solid $dropdown-border-color;
+
   @extend .list-unstyled;
+  margin-bottom: 0;
   position: absolute;
   top: 100%;
   left: 0;
-  z-index: $zindex-dropdown;
+  max-height: 40vh;
   background-color: $color-light;
   box-shadow: $box-shadow-base;
-  overflow-y: auto;
-  max-height: 40vh;
+  background-clip: padding-box;
   opacity: 0;
-  transform: translateY(20px)
-             scaleY(0);
+  overflow-y: auto;
   transition: all $transition-duration-fast $transition-easing;
-  transform-origin: bottom;
+  visibility: hidden;
+  z-index: $zindex-dropdown;
 
-  .open & {
+  .show & {
     opacity: 1;
-    transform: translateY(-5px)
-               scaleY(1);
+    visibility: visible;
   }
 
   &.dropdown-menu-full-width {
     right: 0;
-  }
-
-  li {
-    margin: 0;
   }
 }
 

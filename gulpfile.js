@@ -39,11 +39,11 @@ var errorAlert  = function (error) {
 // Styles paths
 var css = {
     src: [
-        srcDir + 'less/styles.less',
-        srcDir + 'less/styleguide.less'
+        srcDir + 'scss/styles.scss',
+        srcDir + 'scss/styleguide.scss'
     ],
     dest: destDir + 'assets/css/',
-    watch: srcDir + 'less/**/*.less'
+    watch: srcDir + 'scss/**/*.scss'
 };
 
 
@@ -51,11 +51,12 @@ var css = {
 var js = {
     src: [
         npmVendorsDir + 'jquery/dist/jquery.js',
-        npmVendorsDir + 'bootstrap/js/modal.js',
-        npmVendorsDir + 'bootstrap/js/dropdown.js',
-        npmVendorsDir + 'bootstrap/js/transition.js',
-        npmVendorsDir + 'bootstrap/js/tab.js',
-        npmVendorsDir + 'bootstrap/js/collapse.js',
+        npmVendorsDir + 'popper.js/dist/umd/popper.js',
+        npmVendorsDir + 'bootstrap/js/dist/modal.js',
+        npmVendorsDir + 'bootstrap/js/dist/dropdown.js',
+        npmVendorsDir + 'bootstrap/js/dist/util.js',
+        npmVendorsDir + 'bootstrap/js/dist/tab.js',
+        npmVendorsDir + 'bootstrap/js/dist/collapse.js',
         npmVendorsDir + 'svg4everybody/dist/svg4everybody.js',
         npmVendorsDir + 'slick-carousel/slick/slick.js',
         srcDir + 'js/**/*.js'
@@ -128,11 +129,11 @@ var options = {
     plumber: {
         errorHandler: errorAlert
     },
-    less: {
-        compress: false
+    sass: {
+        outputStyle: 'expanded'
     },
-    lessMin: {
-        compress: true
+    sassMin: {
+        outputStyle: 'compressed'
     },
     autoprefixer: {
         browsers: ['last 3 versions']
@@ -209,7 +210,7 @@ var options = {
 gulp.task('css', function () {
     return gulp.src(css.src)
         .pipe($.plumber(options.plumber))
-        .pipe($.less())
+        .pipe($.sass(options.sass))
         .pipe($.autoprefixer(options.autoprefixer))
         .pipe($.size(options.size))
         .pipe(gulp.dest(css.dest))
@@ -220,7 +221,7 @@ gulp.task('css', function () {
 gulp.task('css:min', function () {
     return gulp.src(css.src)
         .pipe($.plumber(options.plumber))
-        .pipe($.less(options.lessMin))
+        .pipe($.sass(options.sassMin))
         .pipe($.autoprefixer(options.autoprefixer))
         .pipe($.size(options.size))
         .pipe($.rename(options.rename))

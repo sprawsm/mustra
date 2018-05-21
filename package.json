@@ -41,7 +41,6 @@
     "gulp-autoprefixer": "^5.0.*",
     "gulp-concat": "^2.6.*",
     "gulp-imagemin": "^4.1.*",
-    "gulp-less": "^3.5.*",
     "gulp-load-plugins": "^1.5.*",
     "gulp-newer": "^1.4.*",
     "gulp-notify": "^3.2.*",
