@@ -47,13 +47,13 @@ $grid-gutter:                         30px;
 
 $spacing-type:                        1em;
 
-$spacing-xs:                          ceil($font-size-base * .25); //  5px
-$spacing-sm:                          ceil($font-size-base * .5);  //  10px
-$spacing-base:                        $font-size-base;             //  20px
-$spacing-md:                          ceil($font-size-base * 2);   //  40px
-$spacing-lg:                          ceil($font-size-base * 3);   //  60px
-$spacing-xl:                          ceil($font-size-base * 4);   //  80px
-$spacing-xxl:                         ceil($font-size-base * 6);   // 120px
+$spacing-base:                        $font-size-base;           //  20px
+$spacing-xs:                          ceil($spacing-base * .25); //  5px
+$spacing-sm:                          ceil($spacing-base * .5);  //  10px
+$spacing-md:                          ceil($spacing-base * 2);   //  40px
+$spacing-lg:                          ceil($spacing-base * 3);   //  60px
+$spacing-xl:                          ceil($spacing-base * 4);   //  80px
+$spacing-xxl:                         ceil($spacing-base * 6);   // 120px
 
 $button-spacing-vertical-sm:          $spacing-sm;
 $button-spacing-horizontal-sm:        $spacing-base;
