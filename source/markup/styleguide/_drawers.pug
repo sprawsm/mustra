@@ -8,8 +8,8 @@ section.styleguide-section#s-drawers
       .styleguide-content
         p Custom drawer with support for left (<code>.drawer-left</code> and by default), and right (<code>.drawer-right)</code>) placement.
 
-aside.drawer#my-drawer(role="menu", aria-label="My Drawer", tabindex="-1")
-  a.drawer-close(href="#my-drawer", data-toggle="drawer" aria-label="Close")
+aside.js-drawer.drawer.drawer-left#my-drawer(role="menu", aria-label="My Drawer", tabindex="-1")
+  a.drawer-close(href="#my-drawer", data-dismiss="drawer" aria-label="Close")
     +icon("cross")
 
   .drawer-content.scrollfix

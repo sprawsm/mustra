@@ -3,7 +3,7 @@
  */
 import gulp from 'gulp';
 import { compileStyles, minifyStyles } from './styles';
-import { compileScripts, minifyScripts } from './scripts';
+import { compileScripts, copyScripts, minifyScripts } from './scripts';
 import { compileMarkup } from './markup';
 import { compressImages } from './images';
 import { makeIconSprite, copyIcons } from './icons';
@@ -23,6 +23,7 @@ const build = gulp.series(
     compileStyles,
     minifyStyles,
     compileScripts,
+    copyScripts,
     minifyScripts,
     compileMarkup,
     compressImages,

@@ -36,10 +36,11 @@
   &.drawer-right {
     left: auto;
     right: 0;
+    transform: translate3d(110%, 0, 0);
   }
 
   // When visible
-  &.in {
+  &.show {
     visibility: visible;
     transform: translate3d(0, 0, 0);
   }
@@ -58,7 +59,7 @@
   overflow-y: auto;
 
   // When visible
-  .in & {
+  .show & {
     transform: translate3d(0, 0, 0);
   }
 }
@@ -94,7 +95,7 @@
   }
 
   // When visible
-  .in & {
+  .show & {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }

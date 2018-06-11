@@ -133,6 +133,21 @@
   height: auto;
 }
 
+//
+// Responsive utilities
+//
+.hidden-sm-up {
+  @media (min-width: $screen-sm) {
+    display: none;
+  }
+}
+
+.hidden-sm-down {
+  @media (max-width: $screen-sm-max) {
+    display: none;
+  }
+}
+
 // ==========
 // Margins
 

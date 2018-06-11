@@ -23,7 +23,7 @@
   padding: $spacing-sm;
   border: 2px solid $color-shaded;
 
-  .active & {
+  &.active {
     background-color: $color-shaded;
     outline: none;
   }

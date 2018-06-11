@@ -19,7 +19,19 @@ const compileScripts = () => {
   return gulp
     .src(paths.scripts.src)
     .pipe(newer(paths.scripts.dest))
+    .pipe(plumber(pluginOptions.plumber))
     .pipe(babel())
+    .pipe(gulp.dest(paths.scripts.dest));
+};
+
+/**
+ * Copy Scripts
+ * Some scripts can't be processed with Buble so we must copy them manually
+ */
+const copyScripts = () => {
+  return gulp
+    .src(paths.scripts.srcCopy)
+    .pipe(newer(paths.scripts.dest))
     .pipe(plumber(pluginOptions.plumber))
     .pipe(gulp.dest(paths.scripts.dest));
 };
@@ -32,6 +44,7 @@ const minifyScripts = () => {
     .src(paths.scripts.src)
     .pipe(newer(paths.scripts.dest + paths.scripts.destMinFile))
     .pipe(plumber(pluginOptions.plumber))
+    .pipe(babel())
     .pipe(concat(paths.scripts.destFile))
     .pipe(uglify())
     .pipe(size(pluginOptions.size))
@@ -43,7 +56,7 @@ const minifyScripts = () => {
  * Watch changes on JS files
  */
 const watchScripts = () => {
-  return gulp.watch(paths.scripts.src, gulp.parallel(compileScripts, minifyScripts));
+  return gulp.watch(paths.scripts.src, gulp.parallel(compileScripts, minifyScripts, copyScripts));
 };
 
 /**
@@ -51,6 +64,7 @@ const watchScripts = () => {
  */
 export {
   compileScripts,
+  copyScripts,
   minifyScripts,
   watchScripts
 }

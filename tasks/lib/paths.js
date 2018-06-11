@@ -21,15 +21,19 @@ const paths = {
   scripts: {
     src: [
       npmVendorsDir + 'jquery/dist/jquery.js',
-      npmVendorsDir + 'popper.js/dist/umd/popper.js',
       npmVendorsDir + 'bootstrap/js/dist/modal.js',
       npmVendorsDir + 'bootstrap/js/dist/dropdown.js',
       npmVendorsDir + 'bootstrap/js/dist/util.js',
       npmVendorsDir + 'bootstrap/js/dist/tab.js',
       npmVendorsDir + 'bootstrap/js/dist/collapse.js',
-      npmVendorsDir + 'svg4everybody/dist/svg4everybody.js',
       npmVendorsDir + 'slick-carousel/slick/slick.js',
-      srcDir + 'js/**/*.js'
+      srcDir + 'js/**/*.js',
+      '!source/js/jquery.throttle-debounce.js'
+    ],
+    srcCopy: [
+      npmVendorsDir + 'popper.js/dist/umd/popper.js',
+      npmVendorsDir + 'svg4everybody/dist/svg4everybody.js',
+      srcDir + 'js/jquery.throttle-debounce.js'
     ],
     dest: destDir + 'assets/js/',
     destFile: 'app.js',

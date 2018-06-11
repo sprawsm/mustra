@@ -71,11 +71,11 @@ $border-color:                        $color-text;
 // ==========
 // Media queries
 
-$screen-xs:                           0px;  
-$screen-sm:                           576px;  
-$screen-md:                           768px;  
-$screen-lg:                           993px;  
-$screen-xl:                           1280px; 
+$screen-xs:                           0px;
+$screen-sm:                           576px;
+$screen-md:                           768px;
+$screen-lg:                           993px;
+$screen-xl:                           1280px;
 
 
 // So media queries don't overlap when required, provide a maximum
@@ -216,4 +216,4 @@ $slick-dot-color-active:              $color-text;
 
 $slick-opacity-default:               0.5;
 $slick-opacity-on-hover:              0.8;
-$slick-opacity-not-active:            0.25;
+$slick-opacity-not-active:            0.15;
