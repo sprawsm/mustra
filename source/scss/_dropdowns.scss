@@ -2,14 +2,13 @@
 //
 // https://getbootstrap.com/docs/4.1/components/dropdowns/
 
-.dropup,
-.dropright,
-.dropdown,
-.dropleft {
+// Container
+.dropdown {
   position: relative;
   margin-bottom: 0;
 }
 
+// Toggle
 .dropdown-toggle {
   .show &.button {
     transform: translateY(6px) !important;
@@ -22,43 +21,24 @@
 }
 
 // Menu
-
 .dropdown-menu {
-  // position: absolute;
-  // top: 100%;
-  // left: 0;
-  // z-index: $zindex-dropdown;
-  // display: none; // none by default, but block on "open" of the menu
-  // float: left;
-  // min-width: $dropdown-min-width;
-  // padding: $dropdown-padding-y 0;
-  // margin: $dropdown-spacer 0 0; // override default ul
-  // font-size: $font-size-base; // Redeclare because nesting can cause inheritance issues
-  // color: $body-color;
-  // text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
-  // list-style: none;
-  // background-color: $dropdown-bg;
-  // background-clip: padding-box;
-  // border: $dropdown-border-width solid $dropdown-border-color;
-
   @extend .list-unstyled;
   margin-bottom: 0;
   position: absolute;
   top: 100%;
   left: 0;
+  min-width: 170px;
   max-height: 40vh;
   background-color: $color-light;
   box-shadow: $box-shadow-base;
   background-clip: padding-box;
-  opacity: 0;
   overflow-y: auto;
   transition: all $transition-duration-fast $transition-easing;
-  visibility: hidden;
   z-index: $zindex-dropdown;
+  display: none;
 
-  .show & {
-    opacity: 1;
-    visibility: visible;
+  .dropdown.show & {
+    display: block;
   }
 
   &.dropdown-menu-full-width {
@@ -66,6 +46,7 @@
   }
 }
 
+// Menu item
 .dropdown-item {
   display: block;
   padding: $grid-gutter / 2;

@@ -89,7 +89,7 @@ $screen-xl-max:                       ($screen-xl - 1);
 // Miscellaneous
 
 $zindex-carousel-arrows:              500;
-$z-index-page-header-fixed:           999;
+$zindex-page-header-fixed:            900;
 $zindex-drawer:                       1000;
 $zindex-drawer-close:                 1010;
 $zindex-overlay:                      1100;
@@ -111,6 +111,13 @@ $box-shadow-base-left:                -$font-size-xs 0 $font-size-md rgba(0,0,0,
 $font-path:                           '../fonts/';
 $images-path:                         '../images/';
 $icons-path:                          '../images/icons/';
+
+// ==========
+// Page header
+
+$page-header-padding-x:               0;
+$page-header-padding-y:               $spacing-lg;
+$page-header-collapse-breakpoint:     800px;
 
 // ==========
 // Overlays
