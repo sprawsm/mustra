@@ -37,7 +37,8 @@
   z-index: $zindex-dropdown;
   display: none;
 
-  .dropdown.show & {
+  .dropdown.show &,
+  &.show {
     display: block;
   }
 

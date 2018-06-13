@@ -3,7 +3,9 @@ section.styleguide-section#s-collapse
 
   .row
     .col-sm-8
-      a(href="#collapseExample" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample").collapsed Toggle content
+      a(href="#collapseExample" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample").collapsed
+        span Toggle content
+
       .collapse#collapseExample
         .box.box-default.mt-base Some hidden content
 
@@ -27,7 +29,7 @@ section.styleguide-section#s-collapse
 
   .row.mt-lg
     .col-sm-8
-      a(href="#collapseToggleExample" data-toggle="collapse" aria-expanded="false" aria-controls="collapseToggleExample").collapsed
+      a(href="#collapseToggleExample" data-toggle="collapse" aria-expanded="false" aria-controls="collapseToggleExample" role="button").collapsed
         span.collapsed-text Show Contents
         span.expanded-text Hide Contents
       .collapse#collapseToggleExample

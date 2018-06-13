@@ -38,6 +38,5 @@ mixin accordion(slug, title, content, parent, isExpanded)
   .mt-base
     a(href="#" + slug role="button", data-toggle="collapse", aria-expanded=isExpandedAria, aria-controls=slug, class=linkCssClass, id=slug + '-link')
       .text-overflow=title
-      span.caret
     .collapse(id=slug, class=contentCssClass, data-parent=parent, aria-labelledby=slug + '-link')
       .box.box-default.mt-base=content

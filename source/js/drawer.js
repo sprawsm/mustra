@@ -2,22 +2,21 @@
  * Drawer
  */
 const Drawer = (($) => {
-  const drawer = '.js-drawer';
-  const $drawer = $('.js-drawer');
-  const $toggle = $('[data-toggle="drawer"]');
-  const $close = $('[data-dismiss="drawer"]');
+  const drawer = '.drawer';
+  const toggleAction = '[data-toggle="drawer"]';
+  const closeAction = '[data-dismiss="drawer"]';
   const visibilityClass = 'show';
 
   /**
    * Init
    */
   const init = () => {
-    $(document).on('click', $toggle, toggle);
-    $(document).on('click', $close, close);
+    $(document).on('click', toggleAction, toggle);
+    $(document).on('click', closeAction, close);
   }
 
   /**
-   * Toggle
+   * Toggle (show/hide)
    * @param {object} e
    */
   const toggle = (e) => {
@@ -25,10 +24,6 @@ const Drawer = (($) => {
 
     $($(e.target).attr('href')).toggleClass(visibilityClass);
   }
-
-  /**
-   * Open/Show
-   */
 
   /**
    * Close/Hide
