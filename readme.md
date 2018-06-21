@@ -31,8 +31,6 @@ Cheers.
 
 1. NPM - Node.js package manager ([install][npm]) or Yarn - Node.js dependency manager ([install][yarn-install])
 
-2. GulpJS - Assets build system ([install][gulpjs-install])
-
 ## Installation
 
 1. Install requirements
@@ -51,14 +49,15 @@ Cheers.
 
 5. Start local web server and watch task with:
 
-    `$ gulp server`
+    `$ gulp`
 
 ## Working with Mustra
 
 ### Folder structure
 
 * `/source` - source files (fonts, images, markup, scripts, styles, email templates, etc.)
-* `/web` - built files that are ready for copying to a web server
+* `/dist` - built files that are ready for copying to a web server
+* `/tasks` - GulpJS tasks
 
 ### Basic setup
 
